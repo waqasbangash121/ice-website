@@ -1,69 +1,17 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ButtonLink, Container, Section } from "@/components/ui/primitives";
+import { routes, site } from "@/config/site";
+import { getServices } from "@/lib/content";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+  return <>
+    <section className="hero"><Container className="hero-grid">
+      <div><p className="eyebrow">Homes · Moves · Business Spaces</p><h1>A Fresh Start.<span>A Cleaner Space.</span></h1><p className="intro-copy">Cleaning needs are different for every property. Find the service that fits yours, then talk through the details with Instant Cleaning Experts.</p><div className="actions"><ButtonLink href={routes.quote}>Get a Free Quote</ButtonLink><ButtonLink href={routes.services} variant="secondary">Explore Our Services</ButtonLink></div><p className="hero-note">Tell us what you need. Our team confirms the scope, price and availability before booking.</p></div>
+      <aside className="service-panel" aria-label="Choose your cleaning service"><p className="eyebrow">Cleaning Around Your Needs</p><h2>From Everyday Spaces to Your Next Move</h2><p>Start with the kind of clean you need. We’ll discuss your property and what matters to you.</p><ul className="panel-list"><li>Home and moving cleans</li><li>Floors, carpets and furnishings</li><li>Property and specialist cleaning</li></ul></aside>
+    </Container></section>
+    <Section id="services"><div className="section-heading"><div><p className="eyebrow">Our Services</p><h2>Find the Right Clean for Your Space</h2></div><p>Explore our service range. The agreed scope and any additional work are discussed before your booking.</p></div><div className="service-grid">{getServices().slice(0, 6).map((service) => <article className="service-card" key={service.id}><span className="service-category">{service.category}</span><h3>{service.name}</h3><p>{service.summary}</p><Link href={`/services#${service.id}`}>Explore {service.name}</Link></article>)}</div><div className="actions"><ButtonLink href={routes.services} variant="secondary">View All Cleaning Services</ButtonLink></div></Section>
+    <Section id="how-it-works" className="tinted"><div className="split"><div><p className="eyebrow">A Clear Next Step</p><h2>Let’s Work Out What Your Property Needs</h2><p className="intro-copy">An enquiry starts the conversation. Your requirements, quote and booking details are confirmed with our team.</p></div><ol className="steps">{[{ title: "Tell Us About Your Space", text: "Share the service, location and property details relevant to your clean." }, { title: "Agree on the Details", text: "Discuss the scope, any extras, the price and available appointments." }, { title: "Confirm Your Booking", text: "Proceed once you are clear on the agreed work and booking arrangements." }].map((step, i) => <li key={step.title}><span className="step-number" aria-hidden="true">{i + 1}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol></div></Section>
+    <Section id="coverage"><div className="split"><div><p className="eyebrow">Across Australia</p><h2>Your Location. Your Cleaning Requirements.</h2></div><div><p className="intro-copy">Looking for cleaning in your area? Tell our team your suburb or postcode and the service you need.</p><p className="coverage-note">Australia-wide service coverage is separate from appointment availability. Your property, access and preferred timing are confirmed individually.</p><ButtonLink href={routes.quote}>Discuss My Location</ButtonLink></div></div></Section>
+    <Section id="about" className="green"><div className="split"><div><p className="eyebrow">Instant Cleaning Experts</p><h2>Good Cleaning Starts With Clear Expectations</h2></div><div><p className="intro-copy">Whether you are caring for your home, preparing to move or organising a business clean, start with a conversation about what needs attention.</p><div className="actions"><ButtonLink href={routes.quote}>Get a Free Quote</ButtonLink><ButtonLink href={site.phoneHref} variant="secondary">Call {site.phone}</ButtonLink></div></div></div></Section>
+  </>;
 }

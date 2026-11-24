@@ -1,0 +1,3323 @@
+
+Instant Cleaning Experts — National Website Architecture and Template Specifications
+Skip to document
+ARCHITECTURE FOR APPROVAL · 17 NOVEMBER 2026
+Instant Cleaning Experts
+National Website Architecture
+Brand and template specifications
+20 templates · 44 reusable blocks · 12 service families · 50 blog proposals
+Revision 3 · Populated visual previews for all 20 templates. Demonstration content; no live enquiries.
+Visual previews
+Overview
+Brand rules
+20 templates
+44 blocks
+Template details
+Hierarchy
+Pricing
+Locations
+Page count
+Keywords
+Guides
+50 blogs
+Proof
+Quote journey
+SEER checks
+Approval
+Review controls
+Use the contents links or your browser’s Find command to locate a template, service or block ID. Expand a template to inspect its ordered sections.
+Expand all templates
+Collapse all templates
+Print / save as PDF
+Visual template previews
+41 populated pages demonstrate 20 templates and their important variants.
+ National pages cover all services; detailed examples use End-of-Lease Cleaning and Sydney NSW 2000. Every button opens a separate tab.
+Start with the service page, try the pricing calculator, then continue to the universal quote form. Rates, case records and reviews are clearly labelled demonstration data. The calculator follows the existing field structure; its private live pricing rules have not been copied.
+The preview journey runs locally and sends no enquiries. Open this HTML in a regular browser if your file viewer disables JavaScript or new tabs. Separate HTML files are also included in the ZIP.
+A01
+Cleaning Services Across Australia
+Open Preview ↗
+A02
+Our Cleaning Services
+Open Preview ↗
+A03
+End-of-Lease Cleaning
+Open Preview ↗
+A04
+Cleaning Service Locations
+Open Preview ↗
+A05
+Cleaning Services in Sydney
+Open Preview ↗
+A06
+End-of-Lease Cleaning in Sydney
+Open Preview ↗
+A05
+Cleaning Services in New South Wales
+Open Preview ↗
+A05
+Cleaning Services in the Sydney Region
+Open Preview ↗
+A07
+Cleaning Prices and Estimates
+Open Preview ↗
+A07
+End-of-Lease Cleaning Prices
+Open Preview ↗
+A08
+End-of-Lease Cleaning Checklist
+Open Preview ↗
+A09
+Cleaning Guides
+Open Preview ↗
+A09
+End-of-Lease Cleaning Guides
+Open Preview ↗
+A10
+Preparing for End-of-Lease Cleaning
+Open Preview ↗
+A11
+Cleaning Blog
+Open Preview ↗
+A12
+Moving Truck, Cleaner or Carpet Cleaner?
+Open Preview ↗
+A13
+Cleaning Case Studies
+Open Preview ↗
+A14
+Sydney Apartment Handover — Example Case
+Open Preview ↗
+A15
+Customer Reviews
+Open Preview ↗
+A16
+About Instant Cleaning Experts
+Open Preview ↗
+A16
+Partner with Us
+Open Preview ↗
+A17
+Get a Free Cleaning Quote
+Open Preview ↗
+A18
+Contact Instant Cleaning Experts
+Open Preview ↗
+A18
+Cleaning FAQs
+Open Preview ↗
+A18
+End-of-Lease Rectification Process
+Open Preview ↗
+A19
+Privacy Policy
+Open Preview ↗
+A19
+Terms and Conditions
+Open Preview ↗
+A19
+Accessibility Statement
+Open Preview ↗
+A20
+Page Not Found
+Open Preview ↗
+A03
+House Cleaning
+Open Preview ↗
+A03
+Carpet Cleaning
+Open Preview ↗
+A03
+Upholstery Cleaning
+Open Preview ↗
+A03
+Window Cleaning
+Open Preview ↗
+A03
+End-of-Construction Cleaning
+Open Preview ↗
+A03
+Tile and Grout Cleaning
+Open Preview ↗
+A03
+Hardwood Floor Cleaning
+Open Preview ↗
+A03
+Commercial Floor Cleaning
+Open Preview ↗
+A03
+Pressure Washing
+Open Preview ↗
+A03
+Disinfection and Sanitisation
+Open Preview ↗
+A03
+Pet Urine and Odour Treatment
+Open Preview ↗
+A19
+Website Sitemap
+Open Preview ↗
+Decision and scope
+20 reusable page templates
+ support the national website. These are content and behaviour contracts, not 20 unrelated visual designs. City and suburb service pages use the same local-service template. Pricing uses one template with national and service variants. Blog and guide articles share presentation components but retain different editorial roles.
+This is an architecture and template-specification file with separately opening visual demonstrations. Demo copy is not final production copy. It replaces the planning logic of the previous index; it does not change the live site or rewrite existing HTML drafts. Template IDs below are a new registry, A01–A20, to avoid silently changing the old T01–T14 meanings.
+Decision
+Recommendation
+Pricing
+Summary within every service landing page; national pricing hub; dedicated service price guides only when justified.
+Checklists
+Scope summary within landing pages; full checklist as a separate practical reference where useful.
+End-of-lease
+Own pricing guide candidate, full checklist and conditional rectification policy. Bond/vacate/exit synonyms stay within the same service intent.
+Publishing
+No arbitrary suburb or page cap. A route candidate is not an instruction to publish thin content.
+Approval gate
+Review the architecture, topic directions and detailed template/block specifications together. Final form configuration and customer-page HTML follow approval.
+What is complete and what remains
+Item
+Status for this plan
+Australian suburb/postcode register
+Complete per your confirmation; use unique locality IDs, not postcode as identity.
+Brand guidelines
+Complete; reviewed current supplied document. Nationwide coverage follows your later instruction.
+Keyword inventory
+Complete source inventory; existing route mappings reused. New long-tail topic phrases below remain proposals, not measured exports.
+SEER connection
+Complete per your confirmation. Connection and ongoing scheduling were not retested in this architecture task.
+Brand entity analysis
+Existing report retained as historical baseline; do not repeat routinely or treat its unverified claims as brand facts.
+Architecture
+Updated here for approval.
+Detailed template specifications and blocks
+Proposed in this revision: 20 template specifications and 44 reusable block types, with ordered sections, conditions, evidence requirements and acceptance checks.
+Prices, form fields and proof assets
+Approved price schedules, final universal quote questions, publishable jobs/reviews and policy wording still needed.
+Page production and scoring
+Later stage. No new page copy, live SEER scores or ranking claims in this deliverable.
+Brand application and decision log
+This document applies Brand Guidelines v1.1 (16 November 2026). It specifies the website rather than previewing customer pages. The existing logo and licensed fonts are embedded from the supplied website package; no new logo was created.
+Standard
+Application in this revision
+Visual identity
+Deep navy #092F4D; lime #94D60C; supporting blue #114D7B; white; pale blue #F5F9FC; pale green #F0F8DF. Navy text on lime actions; no white text on lime.
+Typography
+Manrope headings; DM Sans body/interface; 16–18 px body target. Website display headings/primary CTA labels use title case; document headings, body text and FAQ questions use sentence case.
+Voice
+Professional, approachable and calm. Explain what is covered, what may cost extra and what happens next. No unsupported best/cheapest/number-one claims.
+Identity
+Instant Cleaning Experts in full. Preserve supplied logo proportions and descriptor; use full-colour mark on a white panel, not a fabricated reverse version.
+Conversion
+Quote form is the primary commercial action; call 1800 934 009 is secondary. Contextual service labels must accurately describe the next action.
+Service-specific copy
+Preserve approved end-of-lease wording where applicable: “What If Something Included In Your Clean Gets Missed?” and “Get My End-of-Lease Quote”. Do not apply end-of-lease promises to every service.
+Estimate language
+Indicative estimate → enquiry → team confirms scope, price and availability → booking. “Get My Confirmed Quote” is the approved post-estimate action, not confirmation that a quote is already final.
+Claims and proof
+Insurance, ratings, statistics, local jobs, guarantees and credentials need current support. Keep proof outside the form; no generated before/after evidence.
+Component style
+48 px preferred interactive height; 8 px controls, 16 px cards; 1280 px content maximum; readable wrapping and visible focus; restrained borders/shadows.
+Accessibility
+Target text/control contrast from the guidelines; labels, keyboard support, error recovery, safe-area spacing and equal material information across mobile/desktop. Verify actual implementations later.
+Latest instructions take precedence
+Conflict / unresolved detail
+Decision
+Older Central Coast exclusion vs later national coverage
+Use the user-confirmed Australia-wide coverage. Do not copy the older Central Coast exclusion into the new site. Coverage is not a promise of an available appointment.
+Old mobile call-first bar vs quote-first national website
+Use the quote form as primary and call as secondary. The mobile menu gets its own expandable layout; sticky controls must not cover fields or errors.
+Population >2,000 scenario
+Retain as a planning scenario, not a service-coverage exclusion or an irreversible publication cap. Smaller localities can still enquire.
+Existing end-of-lease form vs new universal form
+Protect the existing live form. This specification proposes the new shared journey; the user will provide final service-specific questions and integrations.
+Existing calculator excl. GST presentation
+Record the existing guideline, but require pricing-owner review of the all-service tax/total display before implementation. Keep tax labels and any approved total prominent; do not silently invent a consumer price schedule.
+Eligible 72-hour rectification process
+Use only for the applicable approved service and current terms. Preserve eligibility and agreed scope; never generalise it to every service or promise full bond recovery.
+Missing operational/proof details
+Store editorial placeholders in the CMS/admin specification, not in published customer copy. Hide unsupported optional proof or hold affected claims until evidence is approved.
+Exact template registry
+ID
+Template
+Purpose / variants
+Route pattern
+A01
+Homepage
+Preview ↗
+Brand, all services and national discovery
+/
+A02
+Service directory
+Preview ↗
+Service selection and category groupings
+/services/
+A03
+Service landing
+Preview ↗
+National service and approved subservice variants
+/services/{service}/
+A04
+Location directory
+Preview ↗
+National finder and crawlable geography directory
+/locations/
+A05
+Location hub
+Preview ↗
+State, territory, city, region and locality variants
+/locations/{state}/…/
+A06
+Local service landing
+Preview ↗
+City, region and locality × service variants
+/locations/{state}/…/{service}/
+A07
+Pricing
+Preview ↗
+National overview and substantive service price guide variants
+/pricing/; /services/{service}/prices/
+A08
+Checklist
+Preview ↗
+Full scope checklist with printable presentation
+/services/{service}/checklist/
+A09
+Guide hub
+Preview ↗
+All guides and service-specific guide collections
+/guides/; /guides/{service}/
+A10
+Guide article
+Preview ↗
+Evergreen how-to, preparation, aftercare and comparison variants
+/guides/{service}/{guide}/
+A11
+Blog index
+Preview ↗
+Editorial discovery and service filtering
+/blog/
+A12
+Blog article
+Preview ↗
+Focused question, problem or editorial story
+/blog/{article}/
+A13
+Case study index
+Preview ↗
+Filter real completed work by service and geography
+/case-studies/
+A14
+Case study detail
+Preview ↗
+Evidence-led job story linked to services and locality
+/case-studies/{case-study}/
+A15
+Reviews
+Preview ↗
+Verified-source review collection and useful filters
+/reviews/
+A16
+About and partnerships
+Preview ↗
+Company facts and Partner with Us variant
+/about/; /about/partner-with-us/
+A17
+Quote journey
+Preview ↗
+All-service quote form, estimate handoff and confirmation states
+/get-a-free-quote/
+A18
+Support
+Preview ↗
+Contact, FAQ and service rectification policy variants
+/contact/; /faq/; /services/end-of-lease-cleaning/rectification/
+A19
+Legal and utility
+Preview ↗
+Policy text, accessibility and HTML sitemap variants
+/privacy-policy/; /terms-and-conditions/; /sitemap/
+A20
+Not found
+Preview ↗
+404 recovery with relevant service/location routes
+HTTP 404 response
+20 templates total.
+ Reusable components will include navigation, mobile navigation, service cards, locality finder, pricing tables, scope lists, proof cards, FAQs, breadcrumbs, quote entry and estimator. An estimator is an embedded component, not an extra SEO page template. Confirmation is a quote state, not a new template. XML sitemaps are generated feeds, not page templates. Variants will share the same component library.
+Reusable block registry — 44 blocks
+4 shared shell blocks + 40 content/interaction blocks = 44 reusable block types.
+ A block is a reusable component contract with page-specific data; it is not a paragraph to copy everywhere. These blocks compose the 20 templates. Variants change the data and appropriate presentation without adding a new template ID.
+R — required:
+ the page needs this answer/function.
+C — conditional:
+ include only when the specified evidence, variant or feature applies.
+O — optional:
+ useful enhancement, not necessary for the page’s task. Required answers can be concise; required does not mean a large standalone section.
+ID
+Block
+Content / behaviour contract
+SEER framework labels
+G01
+Header and navigation
+Full approved logo; Services, Locations, Pricing, Our Work, Resources, About; primary quote, secondary phone. Mobile is an expandable menu, not a compressed desktop menu.
+entity_coherence, intent_capture_speed
+G02
+Footer and business identity
+Consistent full name, 1800 934 009, verified contact/profile links, service and location navigation, policies; no invented office addresses.
+entity_reinforcement, grounded_claims
+G03
+Mobile action area
+Quote-first action; secondary call. Reserve safe-area space; suppress obstruction during form entry. Support/legal/404 variants may omit persistent sales actions.
+intent_capture_speed
+G04
+Breadcrumbs
+One meaningful parent chain with real crawlable ancestors; locality identity stays stable across region crosslinks.
+semantic_html
+B01
+Intent-led introduction
+One H1, who/what/where where relevant, short customer outcome, truthful next action; optional illustrative image never presented as job proof.
+explicit_intent, direct_match
+B02
+Direct answer / key facts
+Concise self-contained answer or summary with important scope/price qualifications beside the claim, not hidden below.
+information_gain, direct_match
+B03
+Service selection cards
+Service ID, customer task, brief scope distinction and descriptive canonical link; do not create pages for synonyms.
+keyword_cannibalization, service_dilution_drift
+B04
+Locality finder
+Suburb/postcode input, same-name disambiguation, matched locality ID, clear coverage vs availability wording; unknown input is not automatically unserved.
+local_verification, intent_capture_speed
+B05
+Geographic directory
+State/region/locality links with verified hierarchy; paginate large lists; map optional and never sole navigation.
+geographic_authority, semantic_html
+B06
+Inclusions and exclusions
+Service-specific scope, explicit exclusions and assessment conditions; same approved scope record reused consistently.
+information_gain, content_integrity
+B07
+Extras and suitability
+Optional items, eligibility/material limitations, scope changes and approval before additional work; no assumed cross-service inclusions.
+verification_of_pricing_and_policy
+B08
+Pricing and cost factors
+Approved rates/ranges when available, charging unit, tax treatment, scope, factors, extras and date; otherwise explain assessment without inventing a figure.
+pricing_transparency, obfuscated_pricing
+B09
+Estimate component
+Only use approved calculator rules; selected scope, estimate range and qualification, tailored-quote path for unpriced work, handoff to universal form.
+pricing_transparency, intent_capture_speed
+B10
+Process and next steps
+Numbered 01/02/03 steps reflecting the real enquiry-to-confirmation-to-service journey; no fabricated booking or response promise.
+explicit_intent, intent_capture_speed
+B11
+Case study cards
+Actual approved jobs, relevant service/location relationships, observed outcome and link; omit when no appropriate evidence.
+eeat_experience, grounded_claims
+B12
+Evidence gallery
+Consented same-job before/after assets, captions and honest comparison; keyboard/touch navigation; no fabricated image provenance.
+eeat_experience, grounded_claims
+B13
+Review display
+Source, date, original meaning and applicable service/locality; ratings only where supported; no uncited star count.
+grounded_claims
+B14
+Credentials and accountability
+Only documented insurance/credentials or real responsible people; link evidence where suitable; no generic trust badge filler.
+entity_coherence, grounded_claims
+B15
+Decision FAQs
+Real page-specific objections, concise answers and qualification links. Add suburb only where meaning requires it; no forced question count.
+explicit_intent, information_gain
+B16
+Related links
+Curated contextual services, guides, pricing, checklists, cases or locations; explain the relevance rather than adding a large keyword link cloud.
+entity_reinforcement, keyword_cannibalization
+B17
+Conversion handoff
+One form-first action and secondary 1800 934 009 call where appropriate; preserve selected context without technical customer-facing explanation.
+intent_capture_speed
+B18
+Policy and reassurance
+Approved eligibility, scope, time window, exclusions, reporting steps and full terms link; not an unconditional guarantee.
+verification_of_pricing_and_policy, grounded_claims
+B19
+Interactive / printable checklist
+Tasks grouped by room or surface, included/extra/not included status, conditional notes, scope version and print view. No login gate for core scope.
+information_gain, content_integrity
+B20
+On-page contents
+Anchor links to meaningful sections; visible keyboard focus, sticky-header offset and no automatic scroll hijacking.
+semantic_html, intent_capture_speed
+B21
+Editorial body
+Readable sections with direct answers, concrete examples, material/safety limits and appropriate sources; no fixed word-count padding.
+information_gain, helpful_content
+B22
+Comparison / decision table
+Consistent comparison criteria, suitability and limitations; compare supported methods or scope, not unsupported competitor claims.
+direct_match, grounded_claims
+B23
+Author and review details
+Actual author/reviewer and relevant experience, publication and substantive update dates; never invent a person or artificial freshness.
+eeat_experience, content_integrity
+B24
+Sources and methodology
+Source links, provenance, methods, limitations and reviewed date for factual/technical claims; distinguish job evidence from outside advice.
+grounded_claims, content_integrity
+B25
+Filters and search
+Useful service/location/topic filtering, visible active filters, result count and clear reset; keyboard accessible and no endless indexable combinations.
+direct_match, intent_capture_speed
+B26
+Content results
+Cards for articles, guides, cases or reviews with accurate type-specific metadata and helpful empty states; select type as a variant.
+direct_match, information_gain
+B27
+Pagination
+Crawlable next/previous and numbered pages with stable URLs when needed; optional load-more enhances rather than replaces access.
+semantic_html
+B28
+Job facts
+Service, general locality, property/surface, objective, constraints, date and approved outcome; no private address or invented measurements.
+eeat_experience, local_verification
+B29
+Case narrative
+Problem → agreed scope → process → observed result → limitations/lessons, tied to real evidence; service-specific fields.
+information_gain, grounded_claims
+B30
+Review provenance
+Explain collection/source and moderation honestly; deduplicate records and distinguish rated reviews from unrated testimonials.
+grounded_claims, content_integrity
+B31
+Brand story and standards
+Verified identity/history plus demonstrable scope, quote and service standards; do not convert aspirations into historical facts.
+entity_coherence, entity_reinforcement
+B32
+Partner proposition
+Approved partnership types, audience fit, responsibilities, enquiry route and next steps; no invented franchise/referral earnings.
+explicit_intent, grounded_claims
+B33
+Progressive enquiry form
+Service-aware questions, accessible labels/validation, separate property/contact steps, consent, preserved entries and recovery; field configuration still awaits user input.
+intent_capture_speed, direct_match
+B34
+Editable request summary
+Selected services/location, approved estimate assumptions, edit links and recalculation on scope change; technical IDs remain internal.
+verification_of_pricing_and_policy
+B35
+Submission and recovery states
+Loading, inline error, network retry, accepted enquiry and duplicate protection; success only after lead acceptance, not booking confirmation.
+intent_capture_speed
+B36
+Support pathways
+New quote vs existing enquiry vs service concern; contact methods and factual expectations; sensitive information stays out of public pages.
+direct_match, explicit_intent
+B37
+Policy document
+Owner, effective/reviewed date, readable clauses, contact route and controlled revision history; owner-approved text rather than marketing promises.
+content_integrity
+B38
+HTML sitemap groups
+Hierarchical canonical links to services, resources and paginated location indexes; exclude private sessions, duplicate filters and unpublished paths.
+semantic_html
+B39
+Not-found recovery
+Plain missing-page explanation, useful service/location search and main routes; actual HTTP 404, no fake successful page.
+direct_match
+B40
+Relevant local / service context
+Verified property/access or material requirements that alter the customer decision. Do not infer local housing characteristics from income, population or place names.
+city_modifier_legitimacy, local_verification, information_gain
+Shared layout, content and technical contract
+All templates inherit G01 header and G02 footer. G04 breadcrumbs apply below the homepage where a meaningful parent exists. G03 quote-first mobile actions apply to commercial pages; they are reduced or omitted on focused quote, support, policy and error states. The page sequences below describe the main content only.
+Area
+Required behaviour
+Mobile menu
+Separate expandable Services / Locations / Resources groups; visible menu button and accessible expanded state; Escape closes, focus returns to trigger. Preserve full logo before squeezing labels.
+Mobile content
+Keep essentials visible: answer, scope limits, price conditions and form errors. FAQs may expand; core qualifications must not rely on opening a hidden answer. Galleries use manual controls, not auto-rotation.
+Reading order
+Hero → immediate answer/choice → decision detail → supported proof → next action. Adjust to intent; quote and support tasks start with action rather than a long promotional introduction.
+CTA rules
+Use one primary conversion per task. Commercial pages: universal quote with contextual service/locality. Utility print, contents and filters remain visibly secondary. Support reports and partner enquiries retain accurate task labels.
+Form label conventions
+Use visible labels and attached required markers. Retain Contact Number; Studio where bedrooms apply; DD/MM/YYYY with aligned calendar. Optional Other reveals a field only when selected, with the existing 500-character limit where applicable. Final universal fields still await the user.
+Evidence fallback
+Omit unsupported proof blocks, show accurate assessment requirements for unknown prices and require an editorial reason before publishing a new location page. Missing evidence never justifies a fabricated review or local office.
+Heading and metadata
+One descriptive H1, logical H2/H3 hierarchy, unique intent-led title and description, contextual image alt text. No keyword density target, forced word count or all-city title.
+Schema and entities
+One central provider record; page-type structured data only when accurate and visible. Coverage is distinct from branch address. Markup is not a ranking guarantee and does not manufacture evidence.
+Internal discovery
+Published canonical pages have crawlable contextual links and breadcrumbs. Large directories paginate. Maps/search supplement navigation. Filter/query combinations do not automatically become indexable pages.
+Private form data
+No personal data in URLs, markup or analytics events; use opaque draft references, service-side validation and documented retention. Avoid auto-applying private draft data to another person’s session.
+CMS gates
+Draft → evidence/intent review → business approval → technical checks → publish. Keep owner, source, approval date, change history and canonical intent on each page record.
+Measurement
+Track quote entry/completion, estimate handoff and call action without personal data. Later inspect indexation, query overlap and real conversions; template completeness is not a live SEO diagnosis.
+Detailed sections for all 20 templates
+Each card is a detailed specification for the future customer page, with separate visual examples available through the preview buttons. Sequence numbers set the proposed default reading order. Related short blocks can be combined visually when that improves the flow.
+A01 · Homepage
+A02 · Service directory
+A03 · National service landing
+A04 · National location directory
+A05 · Location hub
+A06 · Local service landing
+A07 · Pricing
+A08 · Checklist
+A09 · Guide hub
+A10 · Guide article
+A11 · Blog index
+A12 · Blog article
+A13 · Case study index
+A14 · Case study detail
+A15 · Reviews
+A16 · About and Partner with Us
+A17 · Universal quote journey
+A18 · Support: contact, FAQ and rectification
+A19 · Legal and utility
+A20 · Not found
+A01
+ Homepage
+10 block placements
+Preview A01 in a New Tab ↗
+Page job:
+ Introduce the national brand, cover the full service range and route each customer quickly.
+Routes:
+/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Broad cleaning-services introduction for Australia; form-first CTA, secondary call. Do not turn the homepage into an end-of-lease or three-city landing page.
+2
+B03 · Service selection cards
+R
+Group all 12 services by customer need; descriptive links make specialist services easy to find.
+3
+B04 · Locality finder
+R
+Find a suburb or postcode and retain selection when requesting a quote.
+4
+B31 · Brand story and standards
+R
+Show how clear scope, transparent extras and straightforward next steps work in practice.
+5
+B08 · Pricing and cost factors
+R
+Short price/assessment explanation and link to all-service pricing; no repeated long price tables.
+6
+B10 · Process and next steps
+R
+Explain enquiry, scope/price confirmation and arranging the clean.
+7
+B11 · Case study cards
+C
+A balanced selection of real work across services; no invented multi-service portfolio.
+8
+B13 · Review display
+C
+Attributable brand reviews with relevant service labels.
+9
+B15 · Decision FAQs
+R
+Answer choosing a service, Australia-wide coverage, quotes and booking expectations.
+10
+B17 · Conversion handoff
+R
+Close with the general quote action; no giant suburb list.
+Specification
+Requirement
+Variants
+One national homepage. Service and location navigation do the detailed routing. A proof strip may appear early only when genuinely supported.
+CMS / evidence fields
+Approved brand introduction; service taxonomy; coverage policy; price policy; approved proof records.
+Internal links
+All services, locations finder, pricing, About, selected cases and quote.
+Technical / search requirements
+Unique broad title/meta; Organisation/WebSite identity where supported; do not invent branches or aggregates.
+Mobile-specific behaviour
+Keep service choice and quote accessible early. Stack service groups; avoid a full-screen hero or long suburb carousel before useful content.
+Acceptance question
+Can a visitor identify the brand, choose any service and begin a quote without scrolling through location names?
+Relevant SEER labels
+explicit_intent, direct_match, keyword_cannibalization, service_dilution_drift, local_verification, intent_capture_speed, entity_coherence, entity_reinforcement, pricing_transparency, obfuscated_pricing, eeat_experience, grounded_claims, information_gain
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A02
+ Service directory
+8 block placements
+Preview A02 in a New Tab ↗
+Page job:
+ Help visitors select the correct service without competing with full service pages.
+Routes:
+/services/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Explain how services are organised; broad professional-cleaning selection intent.
+2
+B03 · Service selection cards
+R
+All 12 services with customer task, key scope difference and canonical destination.
+3
+B22 · Comparison / decision table
+C
+Short decision table for genuinely confusing choices such as ordinary versus builders cleaning.
+4
+B07 · Extras and suitability
+R
+Explain how multiple requirements are assessed; no invented bundles or automatic discounts.
+5
+B04 · Locality finder
+O
+Carry selected area into the chosen service or quote.
+6
+B08 · Pricing and cost factors
+R
+Link to national pricing and explain why some work needs assessment.
+7
+B15 · Decision FAQs
+R
+Service-selection questions only; do not replicate all service FAQs.
+8
+B17 · Conversion handoff
+R
+Help visitors who are unsure choose a service within the quote journey.
+Specification
+Requirement
+Variants
+Category groupings are sections first. Add a category URL only when it has a distinct useful role.
+CMS / evidence fields
+Service ID, category, title, short scope, display order and canonical path.
+Internal links
+Each service, pricing, location finder, quote.
+Technical / search requirements
+CollectionPage semantics where appropriate; crawlable cards; no identical child descriptions repeated at length.
+Mobile-specific behaviour
+Use readable stacked service cards with a one-tap destination. Avoid horizontal category tabs that conceal services.
+Acceptance question
+All services reachable; groups have plain labels; visitors can distinguish overlapping services.
+Relevant SEER labels
+explicit_intent, direct_match, keyword_cannibalization, service_dilution_drift, grounded_claims, verification_of_pricing_and_policy, local_verification, intent_capture_speed, pricing_transparency, obfuscated_pricing, information_gain
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A03
+ National service landing
+14 block placements
+Preview A03 in a New Tab ↗
+Page job:
+ Convert customers seeking one defined service with sufficient scope and pricing detail.
+Routes:
+/services/{service}/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+One service, Australian coverage, customer outcome and service-aware quote CTA.
+2
+B02 · Direct answer / key facts
+R
+What it is, who it suits and principal limitation in a short answer.
+3
+B06 · Inclusions and exclusions
+R
+Detailed approved inclusions and exclusions grouped by room, surface or task.
+4
+B07 · Extras and suitability
+R
+Relevant extras, suitability and assessment needs; cross-link additional services where useful.
+5
+B08 · Pricing and cost factors
+R
+Price summary/factors, unit and tax treatment; link dedicated pricing only if published.
+6
+B09 · Estimate component
+C
+Approved service estimator immediately beside the price explanation.
+7
+B10 · Process and next steps
+R
+Before visit, how work is agreed, service and follow-up expectations.
+8
+B11 · Case study cards
+C
+Relevant service jobs; a real case can carry optional before/after gallery B12.
+9
+B13 · Review display
+C
+Service-matched review; do not imply a generic review describes this service.
+10
+B18 · Policy and reassurance
+C
+Applicable rectification/reassurance and full conditions, particularly end-of-lease.
+11
+B04 · Locality finder
+R
+Useful location selection linking to published local service coverage.
+12
+B15 · Decision FAQs
+R
+Service-specific price, scope, access, preparation and outcome objections.
+13
+B16 · Related links
+R
+Checklist, pricing, relevant guides and genuine related services.
+14
+B17 · Conversion handoff
+R
+Service-prefilled quote; call remains secondary.
+Specification
+Requirement
+Variants
+All 12 services use one template with distinct service configuration. Approved subservices use a narrower version and link to the parent; synonyms do not create subservices.
+CMS / evidence fields
+Service scope/version; material restrictions; cost rules; preparation; optional policy; proof links; keyword owner.
+Internal links
+Parent services hub, service pricing/checklist, guide hub, local service pages, quote.
+Technical / search requirements
+Unique title/H1 and canonical; Service data only for actual visible offer; truthful provider reference.
+Mobile-specific behaviour
+Expose scope and price qualifications before long proof galleries. Compact contents links may jump to inclusions, pricing and FAQs; keep quote available without covering content.
+Acceptance question
+Could this page still describe another service after changing its title? If yes, rewrite the scope and evidence before release.
+Relevant SEER labels
+explicit_intent, direct_match, information_gain, content_integrity, verification_of_pricing_and_policy, pricing_transparency, obfuscated_pricing, intent_capture_speed, eeat_experience, grounded_claims, local_verification, entity_reinforcement, keyword_cannibalization
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A04
+ National location directory
+7 block placements
+Preview A04 in a New Tab ↗
+Page job:
+ Let visitors find their locality and available service path.
+Routes:
+/locations/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Explain Australia-wide coverage separately from booking capacity.
+2
+B04 · Locality finder
+R
+Search by suburb or postcode; disambiguate with state and postcode.
+3
+B05 · Geographic directory
+R
+Nine state/territory reporting groups, region links and paginated locality access.
+4
+B02 · Direct answer / key facts
+R
+What a coverage match means; missing data goes to review, not automatic rejection.
+5
+B03 · Service selection cards
+R
+Link the service catalogue so the finder supports a service decision.
+6
+B15 · Decision FAQs
+R
+Postcode ambiguity, rural coverage, access and booking availability.
+7
+B17 · Conversion handoff
+R
+Quote with selected locality; allow direct entry when no match is found.
+Specification
+Requirement
+Variants
+Map is optional. Current >2,000 population planning scenario controls published locality routes, not whether the company can serve customers elsewhere.
+CMS / evidence fields
+Locality IDs, state, postcode associations, publication flags, region relationships, coverage messaging.
+Internal links
+All state hubs, crawlable directory pages, services and quote.
+Technical / search requirements
+HTML directory available without map; avoid indexable search-result permutations.
+Mobile-specific behaviour
+Make the finder the first practical control. Show locality/state/postcode choices as large tap targets; directory and pagination work without a map.
+Acceptance question
+A rural customer and a same-name-suburb customer can find the right record; omitted page does not mean unserved area.
+Relevant SEER labels
+explicit_intent, direct_match, local_verification, intent_capture_speed, geographic_authority, semantic_html, information_gain, keyword_cannibalization, service_dilution_drift
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A05
+ Location hub
+10 block placements
+Preview A05 in a New Tab ↗
+Page job:
+ Help customers in a state, region or locality select the right local service.
+Routes:
+/locations/{state}/…/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Name geographic entity and describe all-service coverage without claiming a local branch.
+2
+B03 · Service selection cards
+R
+Services available in that geography with links to published service/location children.
+3
+B40 · Relevant local / service context
+R
+Useful verified local access/service context; do not add trivia for apparent uniqueness.
+4
+B05 · Geographic directory
+R
+State/region: child regions/localities. Locality: parent context, postcodes and useful nearby locality links.
+5
+B08 · Pricing and cost factors
+R
+Short applicable price factors and national pricing link; only claim local rates when approved.
+6
+B10 · Process and next steps
+R
+How enquiry and service arrangements work for this area.
+7
+B11 · Case study cards
+C
+Actual geographically relevant jobs; clearly label regional proof when no same-suburb job exists.
+8
+B13 · Review display
+C
+Verified local review where available; never relabel a review from another area.
+9
+B15 · Decision FAQs
+R
+Questions triggered by area/service access; use the place name naturally, not in every question.
+10
+B17 · Conversion handoff
+R
+Location-prefilled quote action.
+Specification
+Requirement
+Variants
+State, city/region and suburb variants share A05. State pages emphasise navigation; suburb pages emphasise local service choices and practical detail. One canonical locality page regardless of postcode count.
+CMS / evidence fields
+Locality/region ID, name/state, postcodes, parent relationships, verified local considerations, eligible services, proof provenance.
+Internal links
+Parent state or region; service-location children; nearby localities only when useful; quote.
+Technical / search requirements
+One canonical per entity; actual breadcrumbs; areaServed is coverage, not a fabricated address.
+Mobile-specific behaviour
+Show service choices before long locality lists. Nearby links and geographic directory collapse by meaningful group; keep coverage qualifications visible.
+Acceptance question
+Local content has a reason to exist beyond the name; reviews/photos match stated geography; missing local proof does not trigger fabrication.
+Relevant SEER labels
+explicit_intent, direct_match, keyword_cannibalization, service_dilution_drift, city_modifier_legitimacy, local_verification, information_gain, geographic_authority, semantic_html, pricing_transparency, obfuscated_pricing, intent_capture_speed, eeat_experience, grounded_claims
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A06
+ Local service landing
+13 block placements
+Preview A06 in a New Tab ↗
+Page job:
+ Answer one service need in one locality or region and convert it.
+Routes:
+/locations/{state}/suburbs/{locality}/{service}/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Service + location + concrete next step; use evidence-supported regional terms naturally.
+2
+B02 · Direct answer / key facts
+R
+Direct answer about service scope and coverage in this locality.
+3
+B06 · Inclusions and exclusions
+R
+Approved service inclusions and exclusions; consistent with national scope source.
+4
+B40 · Relevant local / service context
+R
+Local requirements that materially affect access, timing, scope or assessment, supported by evidence.
+5
+B08 · Pricing and cost factors
+R
+Applicable price explanation, extras and assessment factors; no invented local surcharge.
+6
+B09 · Estimate component
+C
+Same approved estimator with service/locality context retained.
+7
+B10 · Process and next steps
+R
+How to organise this service here; distinguish coverage from available appointment.
+8
+B11 · Case study cards
+C
+Exact service/location case if available; otherwise clearly identified relevant regional example.
+9
+B13 · Review display
+C
+Review with honest service/geography provenance.
+10
+B18 · Policy and reassurance
+C
+Only policies that apply to this service.
+11
+B15 · Decision FAQs
+R
+Specific customer questions; suburb in heading or answer only when it adds meaning.
+12
+B16 · Related links
+R
+National service detail, full checklist/price guide, locality hub and useful preparation guide.
+13
+B17 · Conversion handoff
+R
+Service/location-prefilled form; call as secondary.
+Specification
+Requirement
+Variants
+City and suburb are variants of A06, not extra templates. Bond/end-of-lease/vacate pages for the same location share intent unless research establishes a genuinely different service.
+CMS / evidence fields
+Service ID + locality ID; approved scope; price applicability; genuine local context; evidence IDs; primary intent.
+Internal links
+Locality hub, national service, supporting guides/pricing/checklist and quote.
+Technical / search requirements
+Unique canonical service-locality pair; no postcode duplicates; do not auto-publish content with only name substitutions.
+Mobile-specific behaviour
+Keep service and locality visible in the introduction and quote context. Use concise local facts; price and exclusions must not disappear in accordions.
+Acceptance question
+Can the editor state the useful local difference and its source? Is the service factual, the answer complete and the conversion path working?
+Relevant SEER labels
+explicit_intent, direct_match, information_gain, content_integrity, city_modifier_legitimacy, local_verification, pricing_transparency, obfuscated_pricing, intent_capture_speed, eeat_experience, grounded_claims, verification_of_pricing_and_policy, entity_reinforcement, keyword_cannibalization
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A07
+ Pricing
+11 block placements
+Preview A07 in a New Tab ↗
+Page job:
+ Answer the cost question transparently and route an informed quote request.
+Routes:
+/pricing/ or /services/{service}/prices/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+State national comparison or specific service cost intent, not a generic sales pitch.
+2
+B02 · Direct answer / key facts
+R
+Direct cost answer when approved; otherwise clearly explain what assessment is needed.
+3
+B03 · Service selection cards
+C
+National variant: service selector across all 12 services.
+4
+B08 · Pricing and cost factors
+R
+Rates/ranges or factors, units, inclusions, tax, minimums, extras and effective dates from approved schedules.
+5
+B22 · Comparison / decision table
+C
+Compare scope or approved cost scenarios with their assumptions, never invented illustrative prices presented as real offers.
+6
+B07 · Extras and suitability
+R
+What changes the cost and which conditions require a tailored quote.
+7
+B09 · Estimate component
+C
+Approved calculator with editable assumptions and transparent estimate qualification.
+8
+B10 · Process and next steps
+R
+Estimate → enquiry → confirmed scope/price → booking.
+9
+B15 · Decision FAQs
+R
+Fees, minimum charge, optional extras, quote validity and payment questions only where facts exist.
+10
+B16 · Related links
+R
+Corresponding service, checklist, relevant price children/parent hub.
+11
+B17 · Conversion handoff
+R
+Get My Confirmed Quote after estimate; otherwise a clear quote action.
+Specification
+Requirement
+Variants
+National table summarises all services; dedicated service page provides genuine detail. Do not create location-specific pricing pages unless prices/intent materially differ.
+CMS / evidence fields
+Price schedule/version, unit, scope, tax, range, assessment factors, validity, exclusions, approval owner.
+Internal links
+National pricing ↔ service pricing ↔ service page; checklist and quote.
+Technical / search requirements
+No fabricated Offer values; avoid price schema until accurate and maintained. Summary and detailed page own different intent.
+Mobile-specific behaviour
+Turn comparison rows into labelled cards on small screens or provide an explicitly labelled scroll region. Keep units, tax and assumptions with each price.
+Acceptance question
+Price and conditions stay adjacent on mobile; any estimate matches calculator and backend; scope changes invalidate old figures.
+Relevant SEER labels
+explicit_intent, direct_match, information_gain, keyword_cannibalization, service_dilution_drift, pricing_transparency, obfuscated_pricing, grounded_claims, verification_of_pricing_and_policy, intent_capture_speed, entity_reinforcement
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A08
+ Checklist
+9 block placements
+Preview A08 in a New Tab ↗
+Page job:
+ Provide a usable full scope reference and reduce quote uncertainty.
+Routes:
+/services/{service}/checklist/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Identify service and whether this is a booked-service scope checklist, not universal DIY advice.
+2
+B02 · Direct answer / key facts
+R
+Version, applicability and how to interpret included/extra/excluded labels.
+3
+B20 · On-page contents
+R
+Jump to rooms/surfaces; print action is a utility, not a competing sales CTA.
+4
+B19 · Interactive / printable checklist
+R
+Full grouped task list from approved scope; state conditional tasks clearly.
+5
+B07 · Extras and suitability
+R
+Optional work and assessment-dependent exceptions.
+6
+B18 · Policy and reassurance
+C
+Relevant service conditions and rectification link, not a bond refund promise.
+7
+B15 · Decision FAQs
+R
+Answer practical interpretation questions not already answered by task rows.
+8
+B16 · Related links
+R
+Parent service, preparation guide and pricing.
+9
+B17 · Conversion handoff
+R
+Request a quote for that scope; no gated access to essential inclusions.
+Specification
+Requirement
+Variants
+Recommended for house, end-of-lease and construction cleaning. Others remain conditional. Printable rendering is a view of the same record, not a new content type.
+CMS / evidence fields
+Task IDs, group, status, condition, service scope version, effective date, policy link.
+Internal links
+Parent service and pricing, preparation guide, quote.
+Technical / search requirements
+Accessible list/table; print and screen share source; avoid duplicate indexable print HTML.
+Mobile-specific behaviour
+Use room/surface anchors and text status labels, not colour alone. Checkboxes are optional personal interaction, not changes to the booked scope.
+Acceptance question
+Printed status labels survive without colour; exclusions are not hidden in collapsed content; no accidental cross-service inclusions.
+Relevant SEER labels
+explicit_intent, direct_match, information_gain, semantic_html, intent_capture_speed, content_integrity, verification_of_pricing_and_policy, grounded_claims, entity_reinforcement, keyword_cannibalization
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A09
+ Guide hub
+8 block placements
+Preview A09 in a New Tab ↗
+Page job:
+ Organise useful evergreen advice by service and customer task.
+Routes:
+/guides/ or /guides/{service}/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Explain which practical questions this collection answers.
+2
+B03 · Service selection cards
+C
+National hub: twelve service-specific guide collections.
+3
+B25 · Filters and search
+C
+Search/topic filtering where collection size warrants it.
+4
+B26 · Content results
+R
+Guide cards grouped by preparation, aftercare, comparisons and approved subtopics.
+5
+B02 · Direct answer / key facts
+C
+Highlight a genuinely useful starting guide without fake popularity labels.
+6
+B27 · Pagination
+C
+Pagination when needed; all published guides remain reachable.
+7
+B16 · Related links
+R
+Related service and relevant scope checklist; link blog separately as editorial reading.
+8
+B17 · Conversion handoff
+C
+Light service-aware quote handoff after the educational navigation.
+Specification
+Requirement
+Variants
+National and per-service hubs share A09. Initial 24 guide directions are retained; not every guide needs identical sections.
+CMS / evidence fields
+Guide ID, service taxonomy, task category, title, summary, reviewer/date and canonical path.
+Internal links
+Guide children, service parent, checklist, blog where useful.
+Technical / search requirements
+Collection semantics; index only substantive collections; no empty tag archives.
+Mobile-specific behaviour
+Stack guide cards and keep service/task filters short. Do not force a reader through a multi-level menu to reach preparation advice.
+Acceptance question
+Every guide belongs to a clear service/task and can be reached without relying on JavaScript search.
+Relevant SEER labels
+explicit_intent, direct_match, keyword_cannibalization, service_dilution_drift, intent_capture_speed, information_gain, semantic_html, entity_reinforcement
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A10
+ Guide article
+11 block placements
+Preview A10 in a New Tab ↗
+Page job:
+ Answer an evergreen practical task fully and responsibly.
+Routes:
+/guides/{service}/{guide}/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Task-led title and what the reader will learn.
+2
+B02 · Direct answer / key facts
+R
+Answer summary, who it applies to and material limitations.
+3
+B23 · Author and review details
+R
+Real author/reviewer and genuine review dates.
+4
+B20 · On-page contents
+C
+Contents for a long guide; omit unnecessary navigation on short articles.
+5
+B21 · Editorial body
+R
+Prerequisites, ordered practical guidance, limitations and what to do when professional assessment is needed.
+6
+B22 · Comparison / decision table
+C
+Comparison or decision table where the task involves choosing.
+7
+B12 · Evidence gallery
+C
+Original labelled instructional or job evidence; stock illustration must not imply a result.
+8
+B24 · Sources and methodology
+R
+Sources/evidence appropriate to factual claims; technical advice needs relevant review.
+9
+B15 · Decision FAQs
+C
+Only residual questions beyond the main answer.
+10
+B16 · Related links
+R
+Service, checklist and next useful sub-guide.
+11
+B17 · Conversion handoff
+C
+Relevant low-pressure service quote action after useful instruction.
+Specification
+Requirement
+Variants
+Preparation, aftercare and comparison variants reuse A10. No arbitrary length or required FAQ count. For end-of-lease, aftercare concerns inspection/handover.
+CMS / evidence fields
+Task intent, prerequisites, material limits, author/reviewer, sources, evidence assets and service link.
+Internal links
+Guide hub, parent service, checklist and selected related guide.
+Technical / search requirements
+Article data with real author/date; text instructions accessible; do not promise HowTo or FAQ rich results.
+Mobile-specific behaviour
+Readable article width, optional compact contents, labelled diagrams and tables with accessible alternatives; no sticky quote control covering instructions.
+Acceptance question
+Does it answer the task without a sales detour? Are unsafe material/product claims checked and limits visible?
+Relevant SEER labels
+explicit_intent, direct_match, information_gain, eeat_experience, content_integrity, semantic_html, intent_capture_speed, helpful_content, grounded_claims, entity_reinforcement, keyword_cannibalization
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A11
+ Blog index
+6 block placements
+Preview A11 in a New Tab ↗
+Page job:
+ Help readers discover focused editorial questions across all services.
+Routes:
+/blog/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Explain the editorial purpose; distinguish blog from step-by-step guide library.
+2
+B25 · Filters and search
+R
+Service/topic filters with clear reset and result counts.
+3
+B26 · Content results
+R
+Article title, useful excerpt, service category, real date and canonical link for the 50 proposed topics once written.
+4
+B27 · Pagination
+C
+Crawlable pagination as articles accumulate.
+5
+B16 · Related links
+R
+Guide library and related service collections.
+6
+B17 · Conversion handoff
+C
+Small helpful quote route, not a sales wall before articles.
+Specification
+Requirement
+Variants
+Filtered categories remain views by default; do not generate twelve empty SEO category pages. Curated category pages need their own useful role.
+CMS / evidence fields
+Article ID, service/category, summary, date, author, image rights and status.
+Internal links
+Articles, guides and services.
+Technical / search requirements
+Blog/CollectionPage semantics where useful; canonical/filter policy; real dates only.
+Mobile-specific behaviour
+Use a clear filter toggle, selected filter chips and visible reset. Preserve scroll position when returning from an article.
+Acceptance question
+All articles are discoverable; filters remain usable on a phone; empty states guide recovery.
+Relevant SEER labels
+explicit_intent, direct_match, intent_capture_speed, information_gain, semantic_html, entity_reinforcement, keyword_cannibalization
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A12
+ Blog article
+10 block placements
+Preview A12 in a New Tab ↗
+Page job:
+ Resolve a narrower customer question or explain a relevant situation.
+Routes:
+/blog/{article}/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Specific question-led title; no keyword-stuffed suburb variants.
+2
+B23 · Author and review details
+R
+Actual author/reviewer and publication/update details.
+3
+B02 · Direct answer / key facts
+R
+Answer the main question early, including meaningful qualifications.
+4
+B21 · Editorial body
+R
+Explain causes/choices with examples, limitations and useful next steps; do not duplicate the full evergreen guide.
+5
+B22 · Comparison / decision table
+C
+Decision table if useful to this specific question.
+6
+B11 · Case study cards
+C
+Relevant approved case example as evidence, not an unrelated promotional insertion.
+7
+B24 · Sources and methodology
+R
+Sources and review for technical claims; first-hand observations labelled accurately.
+8
+B15 · Decision FAQs
+C
+Useful unresolved follow-up questions only.
+9
+B16 · Related links
+R
+One principal service destination and the most relevant detailed guide.
+10
+B17 · Conversion handoff
+C
+Contextual quote invitation where commercial help is relevant.
+Specification
+Requirement
+Variants
+The 50 existing topic proposals remain briefs, not completed articles or measured long-tail keywords. Merge overlapping article/guide intent before writing.
+CMS / evidence fields
+Question intent, primary service, editorial body, author/reviewer, evidence and canonical owner.
+Internal links
+Blog index, commercial service, relevant guide and case if cited.
+Technical / search requirements
+BlogPosting/Article based on actual record; no fake freshness or author credentials.
+Mobile-specific behaviour
+Lead with the answer and readable byline; use inline context links. Avoid intrusive lead popups or automatic galleries.
+Acceptance question
+Article adds a useful answer beyond parent service/guide; no repeated sales filler or automatic city versions.
+Relevant SEER labels
+explicit_intent, direct_match, eeat_experience, content_integrity, information_gain, helpful_content, grounded_claims, entity_reinforcement, keyword_cannibalization, intent_capture_speed
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A13
+ Case study index
+7 block placements
+Preview A13 in a New Tab ↗
+Page job:
+ Help prospects inspect genuine examples relevant to their job.
+Routes:
+/case-studies/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Explain what the work examples show without unsupported success statistics.
+2
+B25 · Filters and search
+R
+Service first, then location/property/challenge filters as sufficient records exist.
+3
+B26 · Content results
+R
+Real case cards with service, locality, challenge, observed outcome and permitted image.
+4
+B27 · Pagination
+C
+Crawlable pagination when needed.
+5
+B24 · Sources and methodology
+R
+Short explanation of evidence/consent and any outcome limitations.
+6
+B16 · Related links
+R
+Relevant services and reviews.
+7
+B17 · Conversion handoff
+R
+Request a quote for a comparable job, not a promise of identical results.
+Specification
+Requirement
+Variants
+No fabricated sample jobs at launch. If none are approved, hold the public index until it is useful rather than displaying empty proof.
+CMS / evidence fields
+Case IDs, service/locality relationships, captions, permission, summary and publication state.
+Internal links
+Case detail, service and reviews.
+Technical / search requirements
+Collection semantics; filters do not automatically create indexable URLs.
+Mobile-specific behaviour
+Service filter first; image cards keep captions and outcomes visible. Provide a clear empty-result reset.
+Acceptance question
+Filtering never attributes a case to a service/location it does not represent.
+Relevant SEER labels
+explicit_intent, direct_match, intent_capture_speed, information_gain, semantic_html, grounded_claims, content_integrity, entity_reinforcement, keyword_cannibalization
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A14
+ Case study detail
+9 block placements
+Preview A14 in a New Tab ↗
+Page job:
+ Demonstrate actual work, scope and bounded outcomes.
+Routes:
+/case-studies/{case-study}/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Specific real job title without private identifying detail.
+2
+B28 · Job facts
+R
+Service, locality, property/surface, job date, objective and constraints.
+3
+B29 · Case narrative
+R
+Starting problem → agreed scope → work performed → observed result → limitations.
+4
+B12 · Evidence gallery
+C
+Permissioned comparable before/after evidence; explain if photographs are unavailable.
+5
+B13 · Review display
+C
+Linked customer review only with source/permission; no invented quotation.
+6
+B23 · Author and review details
+R
+Responsible writer/reviewer with connection to job evidence.
+7
+B24 · Sources and methodology
+R
+Evidence provenance, outcome measurement method where applicable and consent record held privately.
+8
+B16 · Related links
+R
+Relevant service, local service page if published and related case.
+9
+B17 · Conversion handoff
+R
+Quote for a similar requirement with no identical-outcome guarantee.
+Specification
+Requirement
+Variants
+Service choice controls fields: carpet material/stain, end-of-lease agreed inspection scope, exterior surface/access, etc. Images may be absent; auditable job evidence may not.
+CMS / evidence fields
+Case model from architecture: service/locality IDs, approved scope, process, outcome, limitations, assets, consent, job source and dates.
+Internal links
+Case index, service, genuine locality/service page and quote.
+Technical / search requirements
+Article/CreativeWork semantics where appropriate; protect customer identity; avoid fake Person/LocalBusiness facts.
+Mobile-specific behaviour
+Stack problem, scope and outcome in that order. Before/after images remain separately viewable and labelled, not dependent on a drag slider.
+Acceptance question
+Every measurable result is supported; image pair represents the same job; failed/partial outcomes are not concealed.
+Relevant SEER labels
+explicit_intent, direct_match, eeat_experience, local_verification, information_gain, grounded_claims, content_integrity, entity_reinforcement, keyword_cannibalization, intent_capture_speed
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A15
+ Reviews
+9 block placements
+Preview A15 in a New Tab ↗
+Page job:
+ Let visitors assess attributable customer experience by service and location.
+Routes:
+/reviews/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Plain introduction without an invented aggregate rating.
+2
+B30 · Review provenance
+R
+Explain review sources and verification/moderation truthfully.
+3
+B25 · Filters and search
+R
+Service/location filters only where relationships are known.
+4
+B13 · Review display
+R
+Accessible review cards: source, date, permitted name, text and rating scale if present.
+5
+B27 · Pagination
+C
+Pagination with stable accessible records.
+6
+B02 · Direct answer / key facts
+C
+Aggregate only from an eligible, deduplicated and clearly scoped dataset; never combine incompatible ratings.
+7
+B36 · Support pathways
+R
+Route service concerns to support; no review-gating based on positive sentiment.
+8
+B16 · Related links
+R
+Related cases and services.
+9
+B17 · Conversion handoff
+C
+Quote action after visitors can inspect evidence.
+Specification
+Requirement
+Variants
+One main page; no public URL per short review by default. Empty filters explain no matching records rather than implying no service coverage.
+CMS / evidence fields
+Review/source IDs, original URL/date, permitted text/name, rating scale, service/location evidence and deduplication status.
+Internal links
+Original sources, cases, services and contact.
+Technical / search requirements
+No promised self-serving business review stars; do not add unsupported AggregateRating markup.
+Mobile-specific behaviour
+Reviews remain readable without forced carousels. Show source/date with the text; expose a clear expand action for long reviews.
+Acceptance question
+Original meaning preserved, sources reachable and no misattributed geography or edited sentiment.
+Relevant SEER labels
+explicit_intent, direct_match, grounded_claims, content_integrity, intent_capture_speed, semantic_html, information_gain, entity_reinforcement, keyword_cannibalization
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A16
+ About and Partner with Us
+8 block placements
+Preview A16 in a New Tab ↗
+Page job:
+ Explain the business or an approved partnership proposition with clear accountability.
+Routes:
+/about/ and /about/partner-with-us/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+About: clear identity. Partner: who the opportunity is for and truthful enquiry action.
+2
+B31 · Brand story and standards
+R
+Verified business story and practical service standards, or partner-facing delivery standards.
+3
+B32 · Partner proposition
+C
+Partner variant requires approved models, fit criteria and mutual responsibilities.
+4
+B14 · Credentials and accountability
+C
+Real responsible people and evidenced credentials, no fictional team biographies.
+5
+B11 · Case study cards
+C
+Relevant work illustrating standards or an approved partnership example.
+6
+B10 · Process and next steps
+R
+About: customer process. Partner: enquiry → suitability discussion → agreed arrangement.
+7
+B15 · Decision FAQs
+C
+Meaningful identity/partnership questions; avoid invented fees or earnings.
+8
+B17 · Conversion handoff
+R
+About: cleaning quote. Partner: labelled partnership enquiry using an explicit enquiry-type path, not a misleading cleaning-price form.
+Specification
+Requirement
+Variants
+Partner with Us retains the brand shell but needs its own proposition and enquiry type. Do not promise a franchise or employment arrangement.
+CMS / evidence fields
+Business facts, approved partnership types/terms, evidence, accountable contact and enquiry routing.
+Internal links
+Services, cases, reviews, contact and relevant enquiry route.
+Technical / search requirements
+AboutPage semantics for About; Organisation facts shared centrally; partner affiliations need approval.
+Mobile-specific behaviour
+Partner eligibility and enquiry label appear early. The partnership enquiry must not look like a residential price calculator.
+Acceptance question
+Can readers distinguish customer cleaning quotes from partnership enquiries and understand what happens next?
+Relevant SEER labels
+explicit_intent, direct_match, entity_coherence, entity_reinforcement, grounded_claims, eeat_experience, intent_capture_speed, information_gain
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A17
+ Universal quote journey
+8 block placements
+Preview A17 in a New Tab ↗
+Page job:
+ Collect the right information once, preserve context and confirm enquiry receipt.
+Routes:
+/get-a-free-quote/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Short quote-purpose introduction; no long sales hero pushing fields down.
+2
+B34 · Editable request summary
+C
+For estimator/service entry, show editable selected service/location and indicative estimate.
+3
+B33 · Progressive enquiry form
+R
+Service selection, relevant property/scope details, preferred timing and contact steps; final fields supplied by user.
+4
+B18 · Policy and reassurance
+R
+Required service terms/privacy and optional marketing choice remain separate; estimate/booking distinction visible.
+5
+B35 · Submission and recovery states
+R
+Validation, loading, accepted submission, retry and duplicate protection states; retain entered values.
+6
+B10 · Process and next steps
+R
+Explain what happens after enquiry without unapproved response-time promises.
+7
+B13 · Review display
+C
+Separate supporting proof section outside the form, never inserted between form fields.
+8
+B36 · Support pathways
+R
+Accessible call alternative and assistance for a stuck customer.
+Specification
+Requirement
+Variants
+Direct empty entry, service-prefilled, location-prefilled, estimator handoff and partnership enquiry variant. Success is a state, not a new indexed landing page.
+CMS / evidence fields
+Opaque draft ID; service/locality IDs; estimate version and assumptions; source attribution; answers; consent versions; submission status. Final field inventory remains pending.
+Internal links
+Relevant service/price/checklist, privacy, terms and contact; avoid taking users out of an incomplete form unnecessarily.
+Technical / search requirements
+Public quote URL has its own canonical; private draft/session/success URLs excluded from indexing and sitemaps; no PII in URL or analytics events.
+Mobile-specific behaviour
+16 px minimum input text, 48 px preferred controls, appropriate keyboards, visible labels and focus-to-error. Suppress overlapping sticky bars while editing. Summary can collapse but essential estimate conditions stay visible.
+Acceptance question
+Test direct entry, prefill, back/refresh, edits/recalculation, expired draft, failed request and duplicate click; success only after lead system acceptance.
+Relevant SEER labels
+explicit_intent, direct_match, verification_of_pricing_and_policy, intent_capture_speed, grounded_claims
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A18
+ Support: contact, FAQ and rectification
+9 block placements
+Preview A18 in a New Tab ↗
+Page job:
+ Resolve an enquiry or concern with accurate steps and policy.
+Routes:
+/contact/; /faq/; /services/end-of-lease-cleaning/rectification/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Name support task and provide the shortest useful route.
+2
+B36 · Support pathways
+R
+Contact: new quote vs existing request vs concern. FAQ: service/topic routes. Rectification: report a scoped concern.
+3
+B02 · Direct answer / key facts
+R
+Direct answer and any eligibility/time qualification beside it.
+4
+B18 · Policy and reassurance
+C
+Rectification variant requires the full approved eligible 72-hour process, exclusions and reporting requirements; no unconditional guarantee.
+5
+B15 · Decision FAQs
+C
+FAQ variant requires grouped real questions; contact variant only if useful.
+6
+B33 · Progressive enquiry form
+C
+Support enquiry if configured, with accessible recovery and secure evidence upload where approved.
+7
+B10 · Process and next steps
+R
+Clear next steps and truthful acknowledgement; no unsupported response SLA.
+8
+B16 · Related links
+R
+Applicable service, checklist, full terms and contact route.
+9
+B17 · Conversion handoff
+C
+Cleaning quote only for new-service enquiry; never make a complaining customer restart a sales journey.
+Specification
+Requirement
+Variants
+Contact is lean; FAQ is grouped Q&A; rectification is policy plus reporting path. Same layout system, explicitly different required content.
+CMS / evidence fields
+Enquiry type, contact details, policy/eligibility version, FAQ owners, response process, secure report routing.
+Internal links
+Services, checklist, conditions, quote for new work only.
+Technical / search requirements
+ContactPage semantics where suitable; useful visible FAQs without rich-result promises. General contact exempt from requested score target.
+Mobile-specific behaviour
+Put the relevant contact/report action before supporting detail. Support form recovery must retain entries; eligibility and deadline information stay visible.
+Acceptance question
+No lost support report, no forced new booking, and conditions match the agreed policy across landing pages.
+Relevant SEER labels
+explicit_intent, direct_match, information_gain, verification_of_pricing_and_policy, grounded_claims, intent_capture_speed, entity_reinforcement, keyword_cannibalization
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A19
+ Legal and utility
+6 block placements
+Preview A19 in a New Tab ↗
+Page job:
+ Provide readable controlled policy information or navigation.
+Routes:
+/privacy-policy/; /terms-and-conditions/; /accessibility/; /sitemap/
+Order
+Block
+Rule
+What this page must contain
+1
+B01 · Intent-led introduction
+R
+Clear document or sitemap title; no promotional hero.
+2
+B20 · On-page contents
+C
+Contents for long policies; useful for quick access to clauses.
+3
+B37 · Policy document
+C
+Policy/accessibility variant requires approved text, owner, effective date and contact path.
+4
+B38 · HTML sitemap groups
+C
+Sitemap variant requires grouped canonical published links with scalable location pagination.
+5
+B36 · Support pathways
+R
+Appropriate privacy/accessibility/support contact or a contact link in the shell.
+6
+B24 · Sources and methodology
+C
+Document change/standards references where relevant; do not make unsupported accessibility-conformance claims.
+Specification
+Requirement
+Variants
+Privacy, terms and accessibility use document variant; sitemap uses directory variant. No sales FAQ, reviews or sticky quote bar in the reading flow.
+CMS / evidence fields
+Policy content/version, owner, dates, contact; sitemap canonical route records.
+Internal links
+Relevant policies and contact; sitemap links public canonical pages only.
+Technical / search requirements
+Semantic headings; correct canonical/index policy; no FAQ/Review schema fabrication. Privacy and terms exempt from content score target.
+Mobile-specific behaviour
+Readable long text, contents anchors and no intrusive sales bar. Sitemap groups expand accessibly and still expose crawlable links.
+Acceptance question
+Policy version matches form consent links; long content readable at zoom; sitemap excludes private/404/draft paths.
+Relevant SEER labels
+explicit_intent, direct_match, semantic_html, intent_capture_speed, content_integrity, grounded_claims
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+A20
+ Not found
+4 block placements
+Preview A20 in a New Tab ↗
+Page job:
+ Help a visitor recover from a missing URL.
+Routes:
+HTTP 404 response
+Order
+Block
+Rule
+What this page must contain
+1
+B39 · Not-found recovery
+R
+Plain missing-page message; never imply the requested service or location is unavailable merely because the URL is missing.
+2
+B04 · Locality finder
+C
+Location lookup when the failed path suggests location intent.
+3
+B03 · Service selection cards
+R
+Useful core service links plus homepage and contact navigation.
+4
+B36 · Support pathways
+C
+Help route if visitor cannot find what they need.
+Specification
+Requirement
+Variants
+The layout is a reusable error state, not thousands of separate SEO pages. No heavy sales sections or reviews.
+CMS / evidence fields
+Requested path handled safely, known published route suggestions and error telemetry without personal data.
+Internal links
+Home, services, locations and contact.
+Technical / search requirements
+Return actual 404; omit from sitemap; never serve a soft-404 200 page or redirect every missing URL to home.
+Mobile-specific behaviour
+Short explanation and a few large recovery links; do not recreate a full landing page or obscure the missing-page message.
+Acceptance question
+Keyboard-accessible recovery and correct HTTP response; no broken links among suggestions.
+Relevant SEER labels
+direct_match, local_verification, intent_capture_speed, keyword_cannibalization, service_dilution_drift, explicit_intent
+Current status
+Addressed in specification; needs business evidence where noted; needs live implementation test. No score assigned.
+Service-specific requirements within A03 and A06
+One service template does not mean one generic service page. These configurations determine the useful sections and evidence for each service. They are editorial requirements, not new claims about equipment, inclusions or guaranteed outcomes.
+Service
+Scope and practical content
+Price / proof / FAQ emphasis
+House cleaning
+Regular vs one-off requirements; rooms and task scope; access, pets and recurring arrangements only where offered.
+What changes between visits, exclusions, approved charging basis and arranging a suitable time.
+End-of-lease cleaning
+Approved room scope, oven cleaning and carpet vacuuming; steam cleaning separately priced; access/handover and eligible rectification.
+Scope-based price, extras, full checklist and eligibility conditions; do not promise bond refund.
+Carpet cleaning
+Fibre/condition assessment, treatment limitations, furniture access and drying considerations.
+Area/room charging basis if approved, stain limitations and real before/after context.
+Upholstery cleaning
+Fabric/leather suitability where offered, care labels, cushions, access and drying.
+Item/material assessment, colour/stain risks and no blanket all-fabric promise.
+Window cleaning
+Internal/external scope, screens/tracks, height and safe access distinctions.
+Which surfaces/access are included; do not imply every height or access method is available.
+End-of-construction cleaning
+Dust/debris stage, surfaces, trade completion and residue assessment; separate from ordinary house cleaning.
+Work completion/access requirements, approved debris scope and task checklist.
+Tile and grout cleaning
+Tile/stone type, grout condition, staining vs damage and optional sealing only if approved.
+Area/material factors and cleaning vs repair limits.
+Hardwood floor cleaning
+Finish type, manufacturer requirements, moisture/material limitations; distinguish cleaning from sanding/refinishing.
+Condition assessment and what cleaning cannot correct.
+Commercial floor cleaning
+Floor material, traffic, work area/access and scheduling; site requirements and maintenance only when approved.
+Site-specific scope, interruption planning and documented procedures; do not broaden into every commercial cleaning service.
+Pressure washing
+Surface type, access, neighbouring areas, drainage/runoff planning and damage assessment.
+Area/surface factors, treatment limits and comparable job evidence.
+Disinfection and sanitisation
+Difference from routine cleaning, intended surface/use, product suitability and qualified technical review.
+No unsupported disease-prevention, hospital-grade or universal pathogen claims.
+Pet urine and odour treatment
+Source/extent, carpet vs underlay/substrate, assessment and treatment limitations.
+Distinguish visible stain and odour outcomes; no permanent odour-removal guarantee without approved terms.
+Expandable national hierarchy
+Expand each branch to inspect its children. Paths are proposed canonical routes, not live links. “Conditional” means reserved for a justified page, not an approved publication. Services and Guides are linked taxonomies: their URLs serve commercial and informational intent respectively.
+x.open=true)">Expand all
+x.open=false)">Collapse all
+Home
+A01
+/
+Services
+A02
+/services/
+House Cleaning
+A03
+/services/house-cleaning/
+Service pricing
+A07 · conditional
+/services/house-cleaning/prices/
+Priority candidate: validate cost intent and approved pricing detail.
+Full checklist
+A08 · recommended
+/services/house-cleaning/checklist/
+Publish a useful full scope reference; summary stays on the service page.
+Approved subservices
+A03 · conditional
+/services/house-cleaning/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+End-of-Lease Cleaning
+A03
+/services/end-of-lease-cleaning/
+Service pricing
+A07 · conditional
+/services/end-of-lease-cleaning/prices/
+Priority candidate: validate cost intent and approved pricing detail.
+Full checklist
+A08 · recommended
+/services/end-of-lease-cleaning/checklist/
+Publish a useful full scope reference; summary stays on the service page.
+Rectification policy
+A18 · conditional
+/services/end-of-lease-cleaning/rectification/
+Explain approved reporting process, eligibility, exclusions and resolution. Keep short reassurance on the service page. Do not imply a separate paid service or guaranteed bond refund.
+Approved subservices
+A03 · conditional
+/services/end-of-lease-cleaning/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Carpet Cleaning
+A03
+/services/carpet-cleaning/
+Service pricing
+A07 · conditional
+/services/carpet-cleaning/prices/
+Priority candidate: validate cost intent and approved pricing detail.
+Full checklist
+A08 · conditional
+/services/carpet-cleaning/checklist/
+Only add if a standalone task checklist helps. Preparation and aftercare usually belong in guides.
+Approved subservices
+A03 · conditional
+/services/carpet-cleaning/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Upholstery Cleaning
+A03
+/services/upholstery-cleaning/
+Service pricing
+A07 · conditional
+/services/upholstery-cleaning/prices/
+Reserved candidate: keep pricing in the parent until distinct intent and substantial approved price information justify this page.
+Full checklist
+A08 · conditional
+/services/upholstery-cleaning/checklist/
+Only add if a standalone task checklist helps. Preparation and aftercare usually belong in guides.
+Approved subservices
+A03 · conditional
+/services/upholstery-cleaning/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Window Cleaning
+A03
+/services/window-cleaning/
+Service pricing
+A07 · conditional
+/services/window-cleaning/prices/
+Reserved candidate: keep pricing in the parent until distinct intent and substantial approved price information justify this page.
+Full checklist
+A08 · conditional
+/services/window-cleaning/checklist/
+Only add if a standalone task checklist helps. Preparation and aftercare usually belong in guides.
+Approved subservices
+A03 · conditional
+/services/window-cleaning/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+End-of-Construction Cleaning
+A03
+/services/end-of-construction-cleaning/
+Service pricing
+A07 · conditional
+/services/end-of-construction-cleaning/prices/
+Reserved candidate: keep pricing in the parent until distinct intent and substantial approved price information justify this page.
+Full checklist
+A08 · recommended
+/services/end-of-construction-cleaning/checklist/
+Publish a useful full scope reference; summary stays on the service page.
+Approved subservices
+A03 · conditional
+/services/end-of-construction-cleaning/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Tile and Grout Cleaning
+A03
+/services/tile-and-grout-cleaning/
+Service pricing
+A07 · conditional
+/services/tile-and-grout-cleaning/prices/
+Reserved candidate: keep pricing in the parent until distinct intent and substantial approved price information justify this page.
+Full checklist
+A08 · conditional
+/services/tile-and-grout-cleaning/checklist/
+Only add if a standalone task checklist helps. Preparation and aftercare usually belong in guides.
+Approved subservices
+A03 · conditional
+/services/tile-and-grout-cleaning/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Hardwood Floor Cleaning
+A03
+/services/hardwood-floor-cleaning/
+Service pricing
+A07 · conditional
+/services/hardwood-floor-cleaning/prices/
+Reserved candidate: keep pricing in the parent until distinct intent and substantial approved price information justify this page.
+Full checklist
+A08 · conditional
+/services/hardwood-floor-cleaning/checklist/
+Only add if a standalone task checklist helps. Preparation and aftercare usually belong in guides.
+Approved subservices
+A03 · conditional
+/services/hardwood-floor-cleaning/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Commercial Floor Care
+A03
+/services/commercial-floor-cleaning/
+Service pricing
+A07 · conditional
+/services/commercial-floor-cleaning/prices/
+Reserved candidate: keep pricing in the parent until distinct intent and substantial approved price information justify this page.
+Full checklist
+A08 · conditional
+/services/commercial-floor-cleaning/checklist/
+Only add if a standalone task checklist helps. Preparation and aftercare usually belong in guides.
+Approved subservices
+A03 · conditional
+/services/commercial-floor-cleaning/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Pressure Washing
+A03
+/services/pressure-washing/
+Service pricing
+A07 · conditional
+/services/pressure-washing/prices/
+Reserved candidate: keep pricing in the parent until distinct intent and substantial approved price information justify this page.
+Full checklist
+A08 · conditional
+/services/pressure-washing/checklist/
+Only add if a standalone task checklist helps. Preparation and aftercare usually belong in guides.
+Approved subservices
+A03 · conditional
+/services/pressure-washing/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Disinfection and Sanitisation
+A03
+/services/disinfection-and-sanitisation/
+Service pricing
+A07 · conditional
+/services/disinfection-and-sanitisation/prices/
+Reserved candidate: keep pricing in the parent until distinct intent and substantial approved price information justify this page.
+Full checklist
+A08 · conditional
+/services/disinfection-and-sanitisation/checklist/
+Only add if a standalone task checklist helps. Preparation and aftercare usually belong in guides.
+Approved subservices
+A03 · conditional
+/services/disinfection-and-sanitisation/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Pet Urine and Odour Treatment
+A03
+/services/pet-urine-removal/
+Service pricing
+A07 · conditional
+/services/pet-urine-removal/prices/
+Reserved candidate: keep pricing in the parent until distinct intent and substantial approved price information justify this page.
+Full checklist
+A08 · conditional
+/services/pet-urine-removal/checklist/
+Only add if a standalone task checklist helps. Preparation and aftercare usually belong in guides.
+Approved subservices
+A03 · conditional
+/services/pet-urine-removal/{subservice}/
+Only for genuinely distinct purchasable scope and search intent. Do not turn every add-on, method or synonym into a page.
+Pricing — all services
+A07
+/pricing/
+Locations
+A04
+/locations/
+New South Wales
+A05
+/locations/nsw/
+Cities and regions
+A05
+/locations/nsw/regions/{region}/
+Service in region
+A06
+/locations/nsw/regions/{region}/{service}/
+Suburb / locality
+A05
+/locations/nsw/suburbs/{locality-slug}/
+Service in locality
+A06
+/locations/nsw/suburbs/{locality-slug}/{service}/
+Victoria
+A05
+/locations/vic/
+Cities and regions
+A05
+/locations/vic/regions/{region}/
+Service in region
+A06
+/locations/vic/regions/{region}/{service}/
+Suburb / locality
+A05
+/locations/vic/suburbs/{locality-slug}/
+Service in locality
+A06
+/locations/vic/suburbs/{locality-slug}/{service}/
+Queensland
+A05
+/locations/qld/
+Cities and regions
+A05
+/locations/qld/regions/{region}/
+Service in region
+A06
+/locations/qld/regions/{region}/{service}/
+Suburb / locality
+A05
+/locations/qld/suburbs/{locality-slug}/
+Service in locality
+A06
+/locations/qld/suburbs/{locality-slug}/{service}/
+South Australia
+A05
+/locations/sa/
+Cities and regions
+A05
+/locations/sa/regions/{region}/
+Service in region
+A06
+/locations/sa/regions/{region}/{service}/
+Suburb / locality
+A05
+/locations/sa/suburbs/{locality-slug}/
+Service in locality
+A06
+/locations/sa/suburbs/{locality-slug}/{service}/
+Western Australia
+A05
+/locations/wa/
+Cities and regions
+A05
+/locations/wa/regions/{region}/
+Service in region
+A06
+/locations/wa/regions/{region}/{service}/
+Suburb / locality
+A05
+/locations/wa/suburbs/{locality-slug}/
+Service in locality
+A06
+/locations/wa/suburbs/{locality-slug}/{service}/
+Tasmania
+A05
+/locations/tas/
+Cities and regions
+A05
+/locations/tas/regions/{region}/
+Service in region
+A06
+/locations/tas/regions/{region}/{service}/
+Suburb / locality
+A05
+/locations/tas/suburbs/{locality-slug}/
+Service in locality
+A06
+/locations/tas/suburbs/{locality-slug}/{service}/
+Northern Territory
+A05
+/locations/nt/
+Cities and regions
+A05
+/locations/nt/regions/{region}/
+Service in region
+A06
+/locations/nt/regions/{region}/{service}/
+Suburb / locality
+A05
+/locations/nt/suburbs/{locality-slug}/
+Service in locality
+A06
+/locations/nt/suburbs/{locality-slug}/{service}/
+Australian Capital Territory
+A05
+/locations/act/
+Cities and regions
+A05
+/locations/act/regions/{region}/
+Service in region
+A06
+/locations/act/regions/{region}/{service}/
+Suburb / locality
+A05
+/locations/act/suburbs/{locality-slug}/
+Service in locality
+A06
+/locations/act/suburbs/{locality-slug}/{service}/
+Other territories
+A05
+/locations/other-territories/
+Cities and regions
+A05
+/locations/other-territories/regions/{region}/
+Service in region
+A06
+/locations/other-territories/regions/{region}/{service}/
+Suburb / locality
+A05
+/locations/other-territories/suburbs/{locality-slug}/
+Service in locality
+A06
+/locations/other-territories/suburbs/{locality-slug}/{service}/
+About
+A16
+/about/
+Partner with Us
+A16
+/about/partner-with-us/
+Case studies
+A13
+/case-studies/
+Completed job
+A14
+/case-studies/{case-study}/
+Reviews
+A15
+/reviews/
+Guides
+A09
+/guides/
+House Cleaning guides
+A09
+/guides/house-cleaning/
+Preparing for house cleaning
+A10
+/guides/house-cleaning/preparation/
+Aftercare following house cleaning
+A10
+/guides/house-cleaning/aftercare/
+End-of-Lease Cleaning guides
+A09
+/guides/end-of-lease-cleaning/
+Preparing for end of lease cleaning
+A10
+/guides/end-of-lease-cleaning/preparation/
+Aftercare following end of lease cleaning
+A10
+/guides/end-of-lease-cleaning/aftercare/
+Carpet Cleaning guides
+A09
+/guides/carpet-cleaning/
+Preparing for carpet cleaning
+A10
+/guides/carpet-cleaning/preparation/
+Aftercare following carpet cleaning
+A10
+/guides/carpet-cleaning/aftercare/
+Upholstery Cleaning guides
+A09
+/guides/upholstery-cleaning/
+Preparing for upholstery cleaning
+A10
+/guides/upholstery-cleaning/preparation/
+Aftercare following upholstery cleaning
+A10
+/guides/upholstery-cleaning/aftercare/
+Window Cleaning guides
+A09
+/guides/window-cleaning/
+Preparing for window cleaning
+A10
+/guides/window-cleaning/preparation/
+Aftercare following window cleaning
+A10
+/guides/window-cleaning/aftercare/
+End-of-Construction Cleaning guides
+A09
+/guides/end-of-construction-cleaning/
+Preparing for end of construction cleaning
+A10
+/guides/end-of-construction-cleaning/preparation/
+Aftercare following end of construction cleaning
+A10
+/guides/end-of-construction-cleaning/aftercare/
+Tile and Grout Cleaning guides
+A09
+/guides/tile-and-grout-cleaning/
+Preparing for tile and grout cleaning
+A10
+/guides/tile-and-grout-cleaning/preparation/
+Aftercare following tile and grout cleaning
+A10
+/guides/tile-and-grout-cleaning/aftercare/
+Hardwood Floor Cleaning guides
+A09
+/guides/hardwood-floor-cleaning/
+Preparing for hardwood floor cleaning
+A10
+/guides/hardwood-floor-cleaning/preparation/
+Aftercare following hardwood floor cleaning
+A10
+/guides/hardwood-floor-cleaning/aftercare/
+Commercial Floor Care guides
+A09
+/guides/commercial-floor-cleaning/
+Preparing for commercial floor cleaning
+A10
+/guides/commercial-floor-cleaning/preparation/
+Aftercare following commercial floor cleaning
+A10
+/guides/commercial-floor-cleaning/aftercare/
+Pressure Washing guides
+A09
+/guides/pressure-washing/
+Preparing for pressure washing
+A10
+/guides/pressure-washing/preparation/
+Aftercare following pressure washing
+A10
+/guides/pressure-washing/aftercare/
+Disinfection and Sanitisation guides
+A09
+/guides/disinfection-and-sanitisation/
+Preparing for disinfection and sanitisation cleaning
+A10
+/guides/disinfection-and-sanitisation/preparation/
+Aftercare following disinfection and sanitisation cleaning
+A10
+/guides/disinfection-and-sanitisation/aftercare/
+Pet Urine and Odour Treatment guides
+A09
+/guides/pet-urine-removal/
+Preparing for pet urine removal
+A10
+/guides/pet-urine-removal/preparation/
+Aftercare following pet urine removal
+A10
+/guides/pet-urine-removal/aftercare/
+Blog
+A11
+/blog/
+Article — 50 proposals below
+A12
+/blog/{article}/
+Get a Free Quote
+A17
+/get-a-free-quote/
+Contact
+A18
+/contact/
+FAQs
+A18
+/faq/
+Privacy policy
+A19
+/privacy-policy/
+Terms and conditions
+A19
+/terms-and-conditions/
+Accessibility statement
+A19
+/accessibility/
+HTML sitemap
+A19
+/sitemap/
+Primary navigation: Services, Locations, Pricing, Our Work, Resources and About, plus Get a Free Quote. “Our Work” and “Resources” can be menu groups without creating empty wrapper pages. Reviews and case studies sit under Our Work; guides and blog under Resources. Contact, policies and sitemap remain accessible in the footer. Mobile uses an accessible expandable menu and a quote-first action area with a secondary call action.
+Pricing, checklists and intent ownership
+The old index mixed draft availability with architecture decisions. House-cleaning pricing being planned while end-of-lease pricing was absent was not a principled SEO distinction. This version applies the same test to all twelve services.
+Every service page answers the immediate price question.
+ Include approved indicative pricing where available, charging unit, scope, extras, GST treatment and factors that change the estimate. Link to a detailed price guide only when it adds useful depth. The visitor should never have to leave the landing page merely to understand how a quote works.
+/pricing/ compares services.
+ It owns broad cleaning-price intent and provides a service selector, consistent cost summaries and estimate entry. A service pricing child owns detailed service cost intent. The parent service page owns hiring intent. This avoids three competing pages all targeting the same phrase.
+Service
+Pricing section
+Separate pricing recommendation
+Reserved pricing URL
+Checklist recommendation
+House Cleaning
+Required
+Priority dedicated guide candidate
+/services/house-cleaning/prices/
+Recommended full checklist
+End-of-Lease Cleaning
+Required
+Priority dedicated guide candidate
+/services/end-of-lease-cleaning/prices/
+Recommended full checklist
+Carpet Cleaning
+Required
+Priority dedicated guide candidate
+/services/carpet-cleaning/prices/
+Scope section; separate checklist only if useful
+Upholstery Cleaning
+Required
+Dedicated guide when evidence/data support it
+/services/upholstery-cleaning/prices/
+Scope section; separate checklist only if useful
+Window Cleaning
+Required
+Dedicated guide when evidence/data support it
+/services/window-cleaning/prices/
+Scope section; separate checklist only if useful
+End-of-Construction Cleaning
+Required
+Dedicated guide when evidence/data support it
+/services/end-of-construction-cleaning/prices/
+Recommended full checklist
+Tile and Grout Cleaning
+Required
+Dedicated guide when evidence/data support it
+/services/tile-and-grout-cleaning/prices/
+Scope section; separate checklist only if useful
+Hardwood Floor Cleaning
+Required
+Dedicated guide when evidence/data support it
+/services/hardwood-floor-cleaning/prices/
+Scope section; separate checklist only if useful
+Commercial Floor Care
+Required
+Dedicated guide when evidence/data support it
+/services/commercial-floor-cleaning/prices/
+Scope section; separate checklist only if useful
+Pressure Washing
+Required
+Dedicated guide when evidence/data support it
+/services/pressure-washing/prices/
+Scope section; separate checklist only if useful
+Disinfection and Sanitisation
+Required
+Dedicated guide when evidence/data support it
+/services/disinfection-and-sanitisation/prices/
+Scope section; separate checklist only if useful
+Pet Urine and Odour Treatment
+Required
+Dedicated guide when evidence/data support it
+/services/pet-urine-removal/prices/
+Scope section; separate checklist only if useful
+Do not publish twelve near-identical price guides with no prices. For every candidate, require approved price data or meaningful cost scenarios, distinct query intent, clear inclusions/exclusions and a maintenance owner. Where those conditions are absent, the service section and national pricing hub are sufficient. No rates or savings are invented here.
+Full checklist pages are useful when customers need an itemised, printable scope. Keep a concise inclusion/exclusion summary on the service landing page; link to the full reference. A checklist is not automatically a DIY guide. Canonicalise the authoritative web checklist to itself; avoid creating duplicate indexable printable HTML versions.
+National locations and scale
+Use a stable locality ID from the completed register. A locality with multiple postcodes is one locality page, with its postcodes listed as attributes. A state/locality route avoids forcing rural and remote places under the nearest capital city. City and regional hubs curate relevant localities through verified mappings; SA4, LGA and postal regions are not interchangeable with cities.
+Layer
+Quantity / rule
+State/territory reporting hubs
+9: eight states/mainland territories plus an Other territories grouping. This is a navigation grouping, not a claim that external territories form a single jurisdiction.
+Locality hub candidates
+15,647 named localities in the completed register; no filtering by income or competitor coverage.
+Locality × service candidates
+15,647 × 12 = 187,764, assuming each approved service is offered in each locality. Confirm service-level eligibility before publishing.
+Combined locality candidate universe
+203,411 (15,647 hubs + 187,764 service pages). These are potential routes, not pages generated or approved for publication.
+City / region hubs
+Data-driven, unique approved region records; count is not invented before mapping. Their service children add 12 × eligible region count.
+Other pages
+National, service, editorial, proof and utility routes add to the above; dynamic job/article/subservice totals remain open.
+Use readable locality slugs, adding a stable disambiguator only when names repeat within a state. Use the register’s source mapping for external territories and show their real names. Do not create empty settlement pages for territories with no eligible locality record. City/locality relationships are many-to-many where necessary, while each locality has one canonical URL.
+Local pages need genuinely useful service information: relevant property/access considerations, actual service conditions, approved job examples where available, a clear quote path and location-relevant answers. Do not repeat a generic FAQ with the suburb inserted in every sentence or manufacture local reviews/offices. Regional terminology can lead with “bond cleaning” where keyword evidence supports it while remaining the same end-of-lease service entity.
+Population and income are planning attributes, not customer-facing proof of service quality. Hire A Hubby coverage is competitor intelligence, not a reason to include or exclude a location. Automated generation must validate data, check duplicates and pass editorial quality gates before a URL becomes indexable.
+Population scenario and page-count boundary
+The preceding calculation used recorded 2021 Census-area population strictly above 2,000, deduplicated by locality ID. This scenario is retained for planning; it does not change the nationwide coverage promise.
+Component
+Count
+Qualifying unique localities
+3,022
+One hub per locality
+3,022
+Twelve service pages per locality
+36,264
+Locality-related total
+39,286
+Defined additional architecture pages
+127
+Planning baseline
+39,413
+Reusable templates / blocks
+20 templates / 44 block types
+The 127 comprises 17 core/directory/utility pages, 12 national service pages, nine state/territory hubs, 12 service guide hubs, 24 initial guides, 50 blogs and three recommended checklists. City/region pages and service children, case-study records and conditional pricing/checklist/subservice pages add to the baseline when specified.
+The register has 3,023 qualifying suburb–postcode rows but 3,022 unique localities. Do not generate a page for every postcode row. One qualifying locality, Maningrida, has a missing postcode in the register; requiring a populated postcode gives 39,400 baseline pages. Population is unavailable for 347 localities, and 129 qualifying records describe historical boundaries. These counts are a scenario, not a completed publication set.
+Existing keyword ownership
+Service page
+Primary keyword
+Secondary cluster
+Existing evidence
+/services/house-cleaning/
+house cleaning
+domestic cleaning | home cleaning services | regular house cleaning
+Historical measured exact match
+/services/end-of-lease-cleaning/
+end of lease cleaning
+bond cleaning | vacate cleaning | move out cleaning | exit cleaning
+Historical measured exact match
+/services/carpet-cleaning/
+carpet cleaning
+carpet steam cleaning | professional carpet cleaning | carpet cleaners
+Historical measured exact match
+/services/upholstery-cleaning/
+upholstery cleaning
+sofa cleaning | couch cleaning | fabric upholstery cleaning
+Historical measured exact match
+/services/window-cleaning/
+window cleaning
+window cleaners | residential window cleaning | house window cleaning
+Research hypothesis — volume not measured in supplied exports
+/services/end-of-construction-cleaning/
+end of construction cleaning
+builders cleaning | after builders cleaning | post construction cleaning
+Research hypothesis — volume not measured in supplied exports
+/services/tile-and-grout-cleaning/
+tile and grout cleaning
+tile cleaning | grout cleaning | floor tile cleaning
+Historical measured exact match
+/services/hardwood-floor-cleaning/
+hardwood floor cleaning
+timber floor cleaning | wood floor cleaning | wooden floor cleaning
+Historical measured exact match
+/services/commercial-floor-cleaning/
+commercial floor cleaning
+commercial floor cleaners | commercial floor maintenance | office floor cleaning
+Research hypothesis — volume not measured in supplied exports
+/services/pressure-washing/
+pressure washing
+pressure cleaning | high pressure cleaning | driveway cleaning
+Historical measured exact match
+/services/disinfection-and-sanitisation/
+disinfection and sanitisation cleaning
+home disinfection services | house sanitisation | disinfection cleaning
+Research hypothesis — volume not measured in supplied exports
+/services/pet-urine-removal/
+pet urine removal
+pet urine carpet cleaning | pet odour removal | urine stain removal
+Research hypothesis — volume not measured in supplied exports
+The source file marks some clusters “historical measured exact match” and others “research hypothesis”. This plan preserves those distinctions; it does not imply fresh search-volume verification. Service, price, checklist, guide and blog intents must each have one preferred URL. Use regional synonyms naturally, not separate duplicate pages.
+Guides and sub-guides for every service
+One national guide index, twelve service guide hubs and an initial framework of 24 sub-guides. These are structural proposals, not written articles. Each service can gain material-specific, safety, comparison or troubleshooting guides when expertise and keyword evidence justify them. Keep articles short enough to answer the task; do not inflate all guides to a fixed word count.
+Service hub
+Sub-guide direction
+Proposed route
+Evidence status
+House Cleaning
+Preparing for house cleaning
+/guides/house-cleaning/preparation/
+Proposed informational intent; validate against inventory before writing
+House Cleaning
+Aftercare following house cleaning
+/guides/house-cleaning/aftercare/
+Proposed informational intent; validate against inventory before writing
+End-of-Lease Cleaning
+Preparing for end of lease cleaning
+/guides/end-of-lease-cleaning/preparation/
+Proposed informational intent; validate against inventory before writing
+End-of-Lease Cleaning
+Aftercare following end of lease cleaning
+/guides/end-of-lease-cleaning/aftercare/
+Proposed informational intent; validate against inventory before writing
+Carpet Cleaning
+Preparing for carpet cleaning
+/guides/carpet-cleaning/preparation/
+Proposed informational intent; validate against inventory before writing
+Carpet Cleaning
+Aftercare following carpet cleaning
+/guides/carpet-cleaning/aftercare/
+Proposed informational intent; validate against inventory before writing
+Upholstery Cleaning
+Preparing for upholstery cleaning
+/guides/upholstery-cleaning/preparation/
+Proposed informational intent; validate against inventory before writing
+Upholstery Cleaning
+Aftercare following upholstery cleaning
+/guides/upholstery-cleaning/aftercare/
+Proposed informational intent; validate against inventory before writing
+Window Cleaning
+Preparing for window cleaning
+/guides/window-cleaning/preparation/
+Proposed informational intent; validate against inventory before writing
+Window Cleaning
+Aftercare following window cleaning
+/guides/window-cleaning/aftercare/
+Proposed informational intent; validate against inventory before writing
+End-of-Construction Cleaning
+Preparing for end of construction cleaning
+/guides/end-of-construction-cleaning/preparation/
+Proposed informational intent; validate against inventory before writing
+End-of-Construction Cleaning
+Aftercare following end of construction cleaning
+/guides/end-of-construction-cleaning/aftercare/
+Proposed informational intent; validate against inventory before writing
+Tile and Grout Cleaning
+Preparing for tile and grout cleaning
+/guides/tile-and-grout-cleaning/preparation/
+Proposed informational intent; validate against inventory before writing
+Tile and Grout Cleaning
+Aftercare following tile and grout cleaning
+/guides/tile-and-grout-cleaning/aftercare/
+Proposed informational intent; validate against inventory before writing
+Hardwood Floor Cleaning
+Preparing for hardwood floor cleaning
+/guides/hardwood-floor-cleaning/preparation/
+Proposed informational intent; validate against inventory before writing
+Hardwood Floor Cleaning
+Aftercare following hardwood floor cleaning
+/guides/hardwood-floor-cleaning/aftercare/
+Proposed informational intent; validate against inventory before writing
+Commercial Floor Care
+Preparing for commercial floor cleaning
+/guides/commercial-floor-cleaning/preparation/
+Proposed informational intent; validate against inventory before writing
+Commercial Floor Care
+Aftercare following commercial floor cleaning
+/guides/commercial-floor-cleaning/aftercare/
+Proposed informational intent; validate against inventory before writing
+Pressure Washing
+Preparing for pressure washing
+/guides/pressure-washing/preparation/
+Proposed informational intent; validate against inventory before writing
+Pressure Washing
+Aftercare following pressure washing
+/guides/pressure-washing/aftercare/
+Proposed informational intent; validate against inventory before writing
+Disinfection and Sanitisation
+Preparing for disinfection and sanitisation cleaning
+/guides/disinfection-and-sanitisation/preparation/
+Proposed informational intent; validate against inventory before writing
+Disinfection and Sanitisation
+Aftercare following disinfection and sanitisation cleaning
+/guides/disinfection-and-sanitisation/aftercare/
+Proposed informational intent; validate against inventory before writing
+Pet Urine and Odour Treatment
+Preparing for pet urine removal
+/guides/pet-urine-removal/preparation/
+Proposed informational intent; validate against inventory before writing
+Pet Urine and Odour Treatment
+Aftercare following pet urine removal
+/guides/pet-urine-removal/aftercare/
+Proposed informational intent; validate against inventory before writing
+End-of-lease aftercare means inspection and handover after the clean, not maintaining a property the tenant has left. Disinfection guidance needs qualified technical review and must not promise disease prevention. Hardwood and upholstery advice must respect material/manufacturer restrictions.
+50 proposed launch blog topics
+These are editorial briefs by title and intent, not drafted copy. All twelve confirmed service clusters are covered. Housekeeping, carpet, upholstery, windows, construction, tile, timber, commercial floors, pressure washing and sanitisation each have four topics; end-of-lease and pet urine each have five.
+Blog posts answer narrower situations; the evergreen preparation/aftercare guides own procedural instruction, pricing pages own cost intent, and service pages own hiring intent. Consolidate a blog into a guide if later keyword review shows the same intent. Validate each exact long-tail phrase in the recurring research workflow before commissioning; no search volumes have been invented.
+#
+Service
+Proposed article
+Primary query proposal
+Route
+Commercial parent link
+Evidence
+1
+House Cleaning
+Regular or one-off house cleaning: which fits your household?
+regular vs one off house cleaning
+/blog/regular-vs-one-off-house-cleaning/
+/services/house-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+2
+House Cleaning
+What to tell a cleaner when you work from home
+house cleaning working from home
+/blog/house-cleaning-working-from-home/
+/services/house-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+3
+House Cleaning
+Why the same home can need a different cleaning scope each visit
+house cleaning scope
+/blog/house-cleaning-scope/
+/services/house-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+4
+House Cleaning
+Sharing a home: agreeing on a cleaning brief with housemates
+shared house cleaning
+/blog/shared-house-cleaning/
+/services/house-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+5
+End-of-Lease Cleaning
+Bond cleaning, vacate cleaning and end-of-lease cleaning: what do the names mean?
+bond cleaning vs end of lease cleaning
+/blog/bond-cleaning-vs-end-of-lease-cleaning/
+/services/end-of-lease-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+6
+End-of-Lease Cleaning
+Moving truck, cleaner or carpet cleaner: which comes first?
+when to book end of lease cleaning
+/blog/when-to-book-end-of-lease-cleaning/
+/services/end-of-lease-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+7
+End-of-Lease Cleaning
+Moving out of a furnished rental: what changes in the cleaning brief?
+furnished rental end of lease cleaning
+/blog/furnished-rental-end-of-lease-cleaning/
+/services/end-of-lease-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+8
+End-of-Lease Cleaning
+What to do when an inspection report identifies a missed cleaning item
+end of lease cleaning missed items
+/blog/end-of-lease-cleaning-missed-items/
+/services/end-of-lease-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+9
+End-of-Lease Cleaning
+What photos help explain your end-of-lease cleaning requirements?
+end of lease cleaning photos
+/blog/end-of-lease-cleaning-photos/
+/services/end-of-lease-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+10
+Carpet Cleaning
+Why a carpet stain can reappear after cleaning
+carpet stains reappearing
+/blog/carpet-stains-reappearing/
+/services/carpet-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+11
+Carpet Cleaning
+Why carpet drying times vary between homes
+carpet cleaning drying time
+/blog/carpet-cleaning-drying-time/
+/services/carpet-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+12
+Carpet Cleaning
+Does carpet cleaning remove every stain? Understanding the limits
+can carpet cleaning remove all stains
+/blog/can-carpet-cleaning-remove-all-stains/
+/services/carpet-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+13
+Carpet Cleaning
+Cleaning carpets in an occupied home: furniture and access questions
+carpet cleaning furniture moving
+/blog/carpet-cleaning-furniture-moving/
+/services/carpet-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+14
+Upholstery Cleaning
+What upholstery care labels can tell you before booking
+upholstery cleaning care labels
+/blog/upholstery-cleaning-care-labels/
+/services/upholstery-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+15
+Upholstery Cleaning
+Cushion covers and the rest of the sofa: why they need different decisions
+sofa cushion cover cleaning
+/blog/sofa-cushion-cover-cleaning/
+/services/upholstery-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+16
+Upholstery Cleaning
+Why an old water mark may need assessment before sofa cleaning
+upholstery water marks
+/blog/upholstery-water-marks/
+/services/upholstery-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+17
+Upholstery Cleaning
+Sofa cleaning in a busy family home: planning around use and drying
+sofa cleaning drying time
+/blog/sofa-cleaning-drying-time/
+/services/upholstery-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+18
+Window Cleaning
+Why a window-cleaning quote should distinguish glass, tracks and screens
+window cleaning tracks and screens
+/blog/window-cleaning-tracks-and-screens/
+/services/window-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+19
+Window Cleaning
+Windows above ground level: what access information matters?
+high window cleaning access
+/blog/high-window-cleaning-access/
+/services/window-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+20
+Window Cleaning
+Why marks can remain when damage is mistaken for dirty glass
+window stains vs glass damage
+/blog/window-stains-vs-glass-damage/
+/services/window-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+21
+Window Cleaning
+Cleaning windows in an apartment: whose access permission is needed?
+apartment window cleaning access
+/blog/apartment-window-cleaning-access/
+/services/window-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+22
+End-of-Construction Cleaning
+Builders clean or ordinary house clean: why the scope differs
+builders clean vs house cleaning
+/blog/builders-clean-vs-house-cleaning/
+/services/end-of-construction-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+23
+End-of-Construction Cleaning
+Why construction dust can return after the first clean
+construction dust after cleaning
+/blog/construction-dust-after-cleaning/
+/services/end-of-construction-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+24
+End-of-Construction Cleaning
+When should post-construction cleaning happen in the handover schedule?
+post construction cleaning timing
+/blog/post-construction-cleaning-timing/
+/services/end-of-construction-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+25
+End-of-Construction Cleaning
+Paint, adhesive and protective film: what to disclose before a builders clean
+builders cleaning paint residue
+/blog/builders-cleaning-paint-residue/
+/services/end-of-construction-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+26
+Tile and Grout Cleaning
+Dirty grout or damaged grout: why the difference matters
+dirty grout vs damaged grout
+/blog/dirty-grout-vs-damaged-grout/
+/services/tile-and-grout-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+27
+Tile and Grout Cleaning
+Why grout colour can vary after cleaning
+grout colour after cleaning
+/blog/grout-colour-after-cleaning/
+/services/tile-and-grout-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+28
+Tile and Grout Cleaning
+Does tile cleaning include sealing? Questions to ask before booking
+tile cleaning and sealing
+/blog/tile-cleaning-and-sealing/
+/services/tile-and-grout-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+29
+Tile and Grout Cleaning
+Natural stone and ceramic tiles: why the cleaning brief should identify the material
+natural stone vs ceramic tile cleaning
+/blog/natural-stone-vs-ceramic-tile-cleaning/
+/services/tile-and-grout-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+30
+Hardwood Floor Cleaning
+Timber-floor cleaning or sanding: which problem are you trying to solve?
+timber floor cleaning vs sanding
+/blog/timber-floor-cleaning-vs-sanding/
+/services/hardwood-floor-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+31
+Hardwood Floor Cleaning
+Why a sticky timber floor may need more than another mop
+sticky timber floors
+/blog/sticky-timber-floors/
+/services/hardwood-floor-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+32
+Hardwood Floor Cleaning
+Sealed and unsealed wood floors: what your cleaner needs to know
+sealed vs unsealed wood floor cleaning
+/blog/sealed-vs-unsealed-wood-floor-cleaning/
+/services/hardwood-floor-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+33
+Hardwood Floor Cleaning
+Why scratches and wear do not disappear with ordinary floor cleaning
+wood floor cleaning scratches
+/blog/wood-floor-cleaning-scratches/
+/services/hardwood-floor-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+34
+Commercial Floor Care
+Planning floor cleaning around staff and customer access
+commercial floor cleaning scheduling
+/blog/commercial-floor-cleaning-scheduling/
+/services/commercial-floor-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+35
+Commercial Floor Care
+Why a floor maintenance brief should separate daily and periodic work
+commercial floor maintenance schedule
+/blog/commercial-floor-maintenance-schedule/
+/services/commercial-floor-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+36
+Commercial Floor Care
+Slip concerns after floor cleaning: questions for your contractor
+commercial floor cleaning slip risk
+/blog/commercial-floor-cleaning-slip-risk/
+/services/commercial-floor-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+37
+Commercial Floor Care
+Vinyl, tile or timber: identifying the floor before requesting a quote
+commercial floor types cleaning
+/blog/commercial-floor-types-cleaning/
+/services/commercial-floor-cleaning/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+38
+Pressure Washing
+Pressure washing or surface damage: why material assessment matters
+pressure washing surface damage
+/blog/pressure-washing-surface-damage/
+/services/pressure-washing/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+39
+Pressure Washing
+Why driveway stains may need different treatments
+driveway pressure washing stains
+/blog/driveway-pressure-washing-stains/
+/services/pressure-washing/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+40
+Pressure Washing
+Pressure cleaning near gardens and drains: what needs planning?
+pressure cleaning drainage gardens
+/blog/pressure-cleaning-drainage-gardens/
+/services/pressure-washing/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+41
+Pressure Washing
+Preparing shared access areas for an exterior cleaning visit
+shared driveway pressure cleaning
+/blog/shared-driveway-pressure-cleaning/
+/services/pressure-washing/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+42
+Disinfection and Sanitisation
+Cleaning, sanitising and disinfecting: understanding the difference
+cleaning sanitising disinfecting difference
+/blog/cleaning-sanitising-disinfecting-difference/
+/services/disinfection-and-sanitisation/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+43
+Disinfection and Sanitisation
+Why product contact time matters in a disinfection service
+disinfection contact time
+/blog/disinfection-contact-time/
+/services/disinfection-and-sanitisation/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+44
+Disinfection and Sanitisation
+What to ask about a sanitisation service before accepting a quote
+sanitisation service questions
+/blog/sanitisation-service-questions/
+/services/disinfection-and-sanitisation/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+45
+Disinfection and Sanitisation
+Why a disinfection claim should name the surface and intended use
+disinfection surface compatibility
+/blog/disinfection-surface-compatibility/
+/services/disinfection-and-sanitisation/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+46
+Pet Urine and Odour Treatment
+Why pet urine odour can return after surface cleaning
+pet urine smell returns
+/blog/pet-urine-smell-returns/
+/services/pet-urine-removal/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+47
+Pet Urine and Odour Treatment
+Pet urine in carpet or underlay: why the source matters
+pet urine carpet underlay
+/blog/pet-urine-carpet-underlay/
+/services/pet-urine-removal/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+48
+Pet Urine and Odour Treatment
+Why odour removal and stain removal are different outcomes
+pet urine stain vs odour removal
+/blog/pet-urine-stain-vs-odour-removal/
+/services/pet-urine-removal/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+49
+Pet Urine and Odour Treatment
+What to tell a cleaner about repeated pet accidents
+repeated pet urine carpet cleaning
+/blog/repeated-pet-urine-carpet-cleaning/
+/services/pet-urine-removal/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+50
+Pet Urine and Odour Treatment
+When professional assessment is more useful than another deodoriser
+pet urine deodoriser not working
+/blog/pet-urine-deodoriser-not-working/
+/services/pet-urine-removal/
+Proposed long-tail; derived from existing service cluster, exact phrase unmeasured
+Case studies and reviews: backend structure
+Case studies
+Select a primary service first. The editor then loads the relevant prompts: for example, end-of-lease inspection scope, carpet material/stain limitations or pressure-washing surface/access. The final page uses A14 with conditional service fields, not twelve different case-study templates.
+Record group
+Required structure
+Identity
+Case ID, slug, title, primary service ID, optional secondary service IDs, locality ID, region relationships and job date.
+Customer context
+Property type, customer objective, starting condition, access constraints and approved scope. Do not publish street address or identifying client information without permission.
+Work and evidence
+Process actually used, exclusions, before/after assets with captions, dates and publication consent; comparable images rather than manipulated results.
+Outcome
+Observed result, limitations, customer confirmation where available and linked review record. No invented bond recovery, stain removal or turnaround claims.
+Publishing
+Author/reviewer, evidence references, customer/media consent, last reviewed date and draft/review/approved/published status.
+Discovery
+Filter by service, state/region, property type and relevant challenge. Link each case to its service and locality pages; no automatic indexed filter combinations.
+Reviews
+Record group
+Required structure
+Identity and provenance
+Review ID, source/platform, original source URL, source review ID, date, permitted reviewer display name and exact approved text.
+Rating
+Value and scale only if the source supplies them; keep unrated testimonials distinct.
+Relationships
+Service IDs and locality ID only when supported by the review or associated consented job; optional case-study/job relationship.
+Trust and governance
+Permission/use basis, moderation status, deduplication key, verification method, edited/translated flag and retrieval date.
+Display
+Filter by service and location; show source/date and clear empty states. Use relevant excerpts on landing pages without changing meaning.
+SEO
+One main reviews page by default. No automatic page per review or filter. Self-serving LocalBusiness reviews do not qualify for Google review stars; do not promise rich results.
+One quote journey across all services
+Direct entry:
+ /get-a-free-quote/ starts an empty draft and lets the visitor choose the service.
+Service/location entry:
+ the page passes service ID, locality ID where selected and source route into the same quote draft.
+Estimate entry:
+ an estimator saves selected inputs, estimate range, assumptions and pricing version, then opens the same quote draft.
+Review and edit:
+ prefilled details remain visible and editable. Changing scope, location or service invalidates the previous estimate and triggers recalculation.
+Submit:
+ the server validates the final payload, prevents duplicate submissions and sends it to the agreed lead system.
+Confirmation:
+ show the received request summary and approved next-step expectations. A quote request is not a booking confirmation.
+Use an opaque draft/session identifier and server-side draft storage where feasible. Do not put names, addresses, email or phone numbers into URLs. Same-session back/forward navigation and refresh should preserve the draft with a documented expiry. Retain attribution separately from editable customer selections. Server-side pricing validation is authoritative; do not trust a client-supplied total.
+The final questions, estimator inputs, service combinations, consent wording, CRM destination, draft retention and response commitments await your details. This plan sets the journey without pretending those fields have been approved. Include accessible errors, mobile input types, progress/resume in the same session and a secondary call option. Every commercial page uses the form as the primary CTA and calling as secondary; avoid obstructive sticky bars or competing primary actions.
+Shared content relationships
+Entity
+Relationships and constraints
+Service
+Stable ID → landing page, pricing record, checklist, guides, blog topics, reviews, cases and eligible location relationships.
+Locality
+Stable official ID → state/territory, one or more postcodes, verified city/region and LGA mappings; one canonical locality page.
+Region
+Curated city/region type and verified locality membership; not inferred solely from postal codes.
+Price schedule
+Service, unit, scope, extras, currency/GST, effective dates, region applicability, version and approval owner.
+Page
+Template ID, canonical path, parent, primary intent, keyword evidence, content owner, sources, status and redirect history.
+Guide / blog
+Distinct content type, service taxonomy, author/reviewer, evidence, dates and related commercial route.
+Case / review
+Evidence-backed records as above; one shared record can appear on several relevant pages.
+Quote draft
+Session identity, source context, selected services/location, estimate version and user-entered answers; private and never indexable.
+Partner with Us lives under About and explains only the partnership models the business actually offers. Do not assume franchise recruitment, employment, lead resale or guaranteed referral income. Careers, team biographies, press, industry pages and portals remain optional extensions until there is a real operational purpose and source content; they do not require speculative launch pages.
+Search, AI discovery and quality gates
+The website needs consistent entity facts, clear intent ownership and useful evidence. Google says the established SEO requirements also apply to its AI features; no special AI schema or extra optimisation is required for inclusion. Treat broader LLM visibility as a discovery goal, not a guaranteed outcome.
+Use crawlable HTML navigation, descriptive headings and contextual links. Every published locality must be discoverable through paginated directories, not only a search box or map.
+Keep the national homepage broad across services and Australia. Link to service and location hubs; do not fill it with suburb names.
+Use one canonical URL per intent. Include breadcrumbs and internal links reflecting meaningful relationships, even where a locality is linked from more than one regional hub.
+Serve substantive content in accessible HTML. Keep filters controlled; do not index every parameter combination. Separate indexable curated collections from ordinary filter states.
+Split XML sitemaps by content type and size as needed. Include only published canonical, indexable successful URLs; private quote drafts and confirmation states stay out.
+Use factual Organisation/LocalBusiness data only where supported, BreadcrumbList, and appropriate article markup. Structured data must match visible content. Do not fabricate offices, review aggregates or FAQ rich-result eligibility.
+Use succinct direct answers, explain scope and limitations, name sources and show genuine job evidence. These improve comprehension without keyword repetition.
+Give each service/locality page the right proof and terminology; automation must not manufacture claims or name-swap large batches of otherwise unhelpful pages.
+Measure leads, form completion, search queries, indexed coverage and useful engagement. A content score is an editorial signal, not a ranking guarantee.
+SEER application
+Reuse the existing brand/entity baseline. For new page briefs, run relevant keyword/intent research, then score approved draft content within the ongoing workflow. Your target remains 90+ for applicable generated pages, with the agreed privacy, terms and general-contact exclusions. Do not report a score until an actual output exists; do not add repetition solely to raise a score.
+Diagnostic theme
+Architecture response
+Entity coherence and grounded claims
+One approved brand fact source, consistent identity, explicit evidence for claims.
+Cannibalisation / service dilution
+Separate hiring, cost, checklist and informational ownership; one end-of-lease entity for regional synonyms.
+Information gain / local relevance
+Evidence-bearing cases, contextual service answers and maintained location facts.
+Pricing transparency / intent capture
+Price summaries on service pages, deeper guides where useful, clear quote handoff.
+Schema consistency / scaled content
+Shared data records, visible-content alignment and publication gates.
+These are applications of the SEER framework, not new scan findings. The historical entity report was geographically limited and included uncertain entity matching; its unverified brand allegations and competitor metrics are not adopted as facts. No live scoring was requested or performed for this planning document.
+SEER application and release checks
+SEER-informed editorial review; no live SEER scan.
+ The labels below are from the supplied SEER catalogues. The block mappings and page sequences are our application of that framework to this brand, not SEER-generated page scores or confirmed Google/OpenAI internal classifiers.
+Check
+Where applied
+Evidence / pass condition
+Entity coherence and reinforcement
+G01/G02, B01/B14/B31
+Full brand identity, approved offer and shared facts stay consistent; do not invent branches or credentials.
+Intent and cannibalisation risk
+B01/B02/B03/B16; A03/A07/A08/A10/A12
+One canonical owner for hiring, cost, scope and informational intent; diagnose actual competition only with query/page evidence.
+Information gain and experience
+B06/B11/B12/B21/B28/B29/B40
+Specific useful scope and real evidence; the page contributes more than interchangeable suburb/service labels.
+Local legitimacy and verification
+B04/B05/B40; A05/A06
+Correct locality identity and genuine local usefulness; distinguish operational coverage from local branch presence.
+Pricing and policy transparency
+B07/B08/B09/B18/B34
+Known scope, factors, taxes and eligibility are visible; prices match approved source and unpriced work goes to assessment.
+Intent capture and accessibility
+B10/B17/B25/B33/B35
+Customer can take the correct next step, retain context and recover from errors on mobile and keyboard.
+Grounded claims and content integrity
+B13/B14/B23/B24/B30/B37
+Claims have sources/owners and meaningful review dates; no fake freshness, review count or score.
+Semantic HTML and schema consistency
+G04/B20/B27/B38 plus build checks
+Crawlable links, logical headings, visible-content alignment and consistent provider details; verify on implemented pages.
+Recurring checks after copy and implementation
+Reuse the existing brand/entity baseline. Revisit it when brand facts, scope or contradictions change; do not repeat a full brand scan for each page.
+Validate each page brief and exact keyword intent before drafting. Existing cluster mappings remain the source; the 50 long-tail blog phrases remain proposed until checked.
+When content is approved for drafting, use the relevant functioning SEER workflow and retain exact inputs, output, timestamp and mode. Aim for the user-requested 90+ on applicable content; never claim the template specification itself scored 90+.
+Privacy, terms and general contact retain the agreed score exemptions. Sitemap/error/transaction states require functional and accuracy checks rather than padded prose to pursue a score.
+Where a live score is low, investigate the specific finding and evidence. Do not invent proof or stuff keywords to raise it. A 90+ score never overrides an unresolved factual or usability defect.
+After implementation, test canonical/index rules, rendering, structured data, links and the complete form journey. Verify real mobile behaviour; no claim of device testing is made for this planning file.
+Official Google guidance separately confirms that standard SEO practices apply to its AI features and that no special AI schema is required. Structured data must match visible accurate content; neither markup nor a third-party score guarantees inclusion or rankings.
+AI features guidance
+ ·
+Structured data policies
+.
+Migration and route decisions
+Previous route / behaviour
+Proposed direction
+Before implementation
+/free-quote/ and service-specific quote entry
+/get-a-free-quote/ for every service
+Inventory existing traffic, integrations and URLs; map appropriate redirects and preserve campaign parameters.
+City-nested suburb URLs
+/locations/{state}/suburbs/{locality}/
+Build an exact one-to-one mapping by locality ID; avoid redirect chains or guessed matches.
+/locations/{state}/{city}/
+/locations/{state}/regions/{region}/
+New architecture proposal; assess existing URL equity and migration cost before changing live routes.
+Old T01–T14 identifiers
+New A01–A20 architecture IDs
+Retain the old registry for traceability; detailed template/block specifications are now included; implementation migration follows approval.
+Flat guide article routes
+/guides/{service}/{guide}/
+Only redirect real existing URLs to the closest equivalent; do not create empty replacements.
+Partner label
+Partner with Us under About
+Confirm existing partner URL before deciding whether a URL change is needed.
+Old draft/planned status
+All proposals here require architecture approval
+Prior HTML availability does not prove an intent needs a separate page.
+No redirects, live URLs, robots rules or production content were changed. Existing URLs with traffic may be retained where migration adds no user benefit; the new route convention is the preferred design for unbuilt pages.
+Approval and next steps
+Approve or amend the 20-template registry, service catalogue and hierarchy.
+Approve the pricing/checklist policy, location routing approach and guide/blog separation.
+Approve the 50 topic directions, subject to exact-intent validation and duplicate checks before writing.
+Supply universal quote requirements, approved price data and available proof assets when ready.
+Review the detailed sections, reusable blocks, mobile behaviour, SEO rules and acceptance checks now included for all 20 templates.
+Only after that approval, produce the individual page HTML drafts and run the agreed content checks.
+Current deliverable:
+ architecture plus detailed template/block specifications. Visual demonstration pages are now included. No production pages or live form integration have been published.
+Master prompt executed
+The original architecture prompt is retained below. Revision instruction: apply Brand Guidelines v1.1 and retrieve applicable SEER catalogue entries; add ordered blocks, variants, evidence requirements, CMS needs, mobile behaviour, links and acceptance checks for all 20 templates. Retain the existing hierarchy and topic inventory. Do not create customer-page previews or claim live scores.
+Act as the information architect for Instant Cleaning Experts. Review the supplied current brand guidelines, completed geography register, existing keyword/route inventory, earlier national website package and historical SEER baseline. Honour nationwide service coverage and the primary form / secondary phone conversion model. Produce one standalone HTML planning document, not a website preview. State an exact reusable template count without equating templates with page count. Show a navigable hierarchy, all confirmed services, national pricing and consistent conditional service-pricing/checklist rules. Cover service-linked guides and sub-guides, 50 distinct launch blog proposals, case studies, reviews, Partner with Us, all-service quote handoff and shared backend entities. Separate historical measured keywords from proposed long-tail phrases. Avoid invented prices, results, guarantees, service capabilities, operational locations or live SEER scores. Keep rural and external-territory geography representable; locality identity is not postcode identity. Explain SEO/AI discovery using official sources and the SEER framework without promising rankings. Include migration considerations and clear approval gates. Validate template/topic counts and file structure. Add detailed, brand-aligned section/block specifications for all 20 templates using the relevant SEER source entries. Include order, conditional evidence, CMS fields, mobile behaviour, links and acceptance checks. Stop before customer-page HTML previews and final copy.
+SEER source traceability
+Relevant entries were retrieved from both supplied classifier catalogues. The catalogue describes SEER’s diagnostic model; its causal ranking statements, numerical duplication thresholds and timing estimates are not adopted as universal search-engine rules.
+Catalogue
+Entry
+ID
+Source text line
+Google-oriented
+Entity Coherence
+entity_coherence
+34
+Google-oriented
+Keyword Cannibalization
+keyword_cannibalization
+41
+Google-oriented
+Entity Reinforcement
+entity_reinforcement
+62
+Google-oriented
+Service Dilution Drift
+service_dilution_drift
+76
+Google-oriented
+Geographic Authority
+geographic_authority
+175
+Google-oriented
+City Modifier Legitimacy
+city_modifier_legitimacy
+259
+Google-oriented
+Grounded Claims
+grounded_claims
+386
+Google-oriented
+Helpful Content System
+helpful_content
+450
+Google-oriented
+E-E-A-T Experience Signals
+eeat_experience
+457
+Google-oriented
+Information Gain
+information_gain
+464
+Google-oriented
+Content Integrity & Decay
+content_integrity
+471
+Google-oriented
+Obfuscated Pricing
+obfuscated_pricing
+576
+Google-oriented
+Semantic HTML
+semantic_html
+1148
+Google-oriented
+Intent Capture Speed
+intent_capture_speed
+1269
+ChatGPT-oriented
+Explicit Intent
+explicit_intent
+14
+ChatGPT-oriented
+Local Verification
+local_verification
+1010
+ChatGPT-oriented
+Direct Match
+direct_match
+1880
+ChatGPT-oriented
+Verification Of Pricing And Policy
+verification_of_pricing_and_policy
+2973
+ChatGPT-oriented
+Pricing Transparency
+pricing_transparency
+3297
+ChatGPT-oriented
+Grounded Claims
+grounded_claims
+4119
+Also consulted: source-index.md, editorial-workflow.md, signal-mapping-guide.md and current-platform-notes-2026-11-16.md. Applied the sequencing as identity → intent/current facts → supported trust → useful content → reputation. No vendor percentages or guaranteed outcomes have been carried into the page requirements.
+Sources and limits
+Revised 17 November 2026. Brand Guidelines v1.1 and the attached architecture are the direct sources for this revision. Source priority: your latest instructions → approved current brand facts and completed registers → existing keyword mappings → historical diagnostics → recommendations.
+Existing National Website Rethink package: Template_Registry.json, Routes_and_Keywords.csv (80 routes), Candidate_Route_Review.csv (421 candidate rows), handover and scan notes. These are planning records, not a complete current live crawl.
+Instant Cleaning Experts Brand Guidelines.docx: current supplied version. Earlier regional limits are superseded by your Australia-wide instruction.
+Completed Australian suburb register: the 15,647-locality planning baseline excludes duplicate postcode combinations from the locality count.
+SEER Research Checkpoint: historical entity baseline and limitations. No new live SEER assessment in this task.
+Google: AI features and your website
+ — standard SEO foundations apply; no special inclusion guarantee.
+Google: spam policies
+ — doorway and scaled-content concerns concern purpose and usefulness, not a fixed maximum URL count.
+Google: review snippet guidance
+ — self-serving local-business review limitations.
+The 50 article phrases, 24 guide directions and conditional pricing URLs are recommendations derived from existing clusters. They are not new keyword exports or approved final copy. The existing file does not justify claiming every phrase has measurable volume.
