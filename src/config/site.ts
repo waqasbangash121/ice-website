@@ -8,7 +8,7 @@ export const routes = { home: "/", services: "/services", quote: "/get-a-free-qu
 // Add destinations only when their pages exist.
 export const navigation = [
   { label: "Services", href: routes.services },
-  { label: "Locations", href: "/#coverage" },
+  { label: "Locations", href: "/locations" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "About", href: "/#about" },
 ] as const;

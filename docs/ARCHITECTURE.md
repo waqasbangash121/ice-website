@@ -59,12 +59,10 @@ geographic level; it does not require a separate component per region.
 
 ## Current route availability
 
-Implemented: /, /services, /get-a-free-quote, /robots.txt and a custom not-found UI.
-The quote route is an honest phone enquiry bridge; there is no submission backend,
-calculator, booking confirmation or context persistence yet.
-Home service links target real service-directory anchors. Planned service detail,
-pricing, resources, proof and geography routes are not advertised as working pages.
-The root provides homepage anchors for coverage, process and company introduction.
+Phase 2 adds the end-of-lease service page, /locations, NSW/Sydney hubs, a Sydney
+local service page and the two-step quote review journey. Draft APIs implement private
+server-side recovery. CRM submission remains disabled as requested.
+See PHASE-2.md for the exact route list, storage lifecycle and deferred activation.
 
 Development metadata is noindex/nofollow and robots.txt disallows crawling.
 These are development controls, not access protection. No domain, canonical origin,
@@ -104,3 +102,14 @@ Production domain/hosting; CMS/database/auth/media choice; actual locality regis
 approved detailed service scopes; final quote questions, consent and retention;
 lead system and receipt behaviour; pricing/GST rules; evidence and policy wording;
 existing route inventory; original preview design review.
+
+## Phase 2 decisions
+
+Draft content and proposed form questions were authorised on 24 November 2026.
+The user authorised the live ICE website as a content/image source; see SOURCE-INVENTORY.md.
+Older regional limits do not replace the national architecture. Existing-site claims
+are not all newly approved facts. CRM delivery and pricing remain disabled.
+A single-node filesystem draft adapter is implemented behind a server-only module;
+replace it with durable transactional storage in Phase 3/before production hosting.
+Quote contracts live in src/lib/quote/schema.ts; saved entry context is separate from
+editable selections and immutable first-entry attribution. Contact fields are not saved.

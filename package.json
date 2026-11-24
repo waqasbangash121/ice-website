@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
-    "verify:foundation": "node scripts/check-foundation.mjs"
+    "verify:foundation": "node scripts/check-foundation.mjs",
+    "test:journey": "node --test tests/quote-journey.test.mjs"
   },
   "dependencies": {
     "next": "16.4.6",

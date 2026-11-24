@@ -1,70 +1,78 @@
 # Project checkpoint
 
 Updated: 24 November 2026 (Asia/Karachi).
-Current phase: Phase 1 — Foundation.
-Status: Phase 1 complete. Ready for Phase 2.
+Current phase: Phase 2 — Customer journey.
+Status: review build complete; CRM, pricing and final business approval deferred
+by the user's instructions. Phase 1 remains complete.
 
 ## Start here when resuming
 
-1. Read this file, ROADMAP.md and ARCHITECTURE.md.
-2. Run git status and inspect uncommitted changes before editing.
-3. Reuse the existing Next.js project and read relevant installed Next.js docs.
-4. Phase 1 is complete; preserve its checks and start the Phase 2 tasks.
-5. Next feature milestone is Phase 2: end-of-lease service and Sydney journey;
-   obtain the real scope/locality/quote requirements before inventing operational data.
+1. Read this file, ROADMAP.md, ARCHITECTURE.md and PHASE-2.md.
+2. Run git status and inspect any uncommitted changes.
+3. Read the relevant installed Next.js documentation before editing.
+4. Next implementation phase is Phase 3: durable content storage, staff auth,
+   protected editing and approval workflows.
+5. Do not enable CRM submission, publish prices or remove noindex automatically.
+   The user explicitly requested disabled delivery and draft content.
 
-## Implemented this session
+## Latest delivered checkpoint
 
-- Extracted original logo and locally hosted Manrope/DM Sans with font licences.
-- Replaced starter theme with ICE colours, spacing and responsive primitives.
-- Added shared header/footer, skip link, breadcrumbs and Escape-dismissable menu.
-- Added development home, twelve-service directory, phone quote bridge and 404 UI.
-- Added service catalogue, content loader, initial domain types and template registry.
-- Added slug-validating canonical route builders independent of postcode.
-- Added typecheck script and development-only noindex/robots controls.
-- Preserved extracted source text and documented provenance and architecture.
-- Added roadmap and mandatory handoff reading/updating instructions in AGENTS.md.
+- End-of-lease service page, NSW/Sydney directory and Sydney service example.
+- Shared two-step quote review flow with service/locality context.
+- Server-side cleaning drafts, autosave/recovery, fixed 24-hour expiry, reset and
+  optimistic concurrency. Contact fields stay in browser memory only.
+- CRM disabled in both UI and backend; no enquiry or booking is acknowledged.
+- Existing-site scope topics, photograph and icons; provenance in SOURCE-INVENTORY.md.
+- Initial Phase 1 brand/shell/domain foundation retained.
+- Roadmap, architecture, technical notes and integration tests updated.
 
-## Validation
+## Verification
 
-- Passed: pnpm lint, pnpm typecheck and production pnpm build.
-- Passed: pnpm verify:foundation http://localhost:3001 (three pages, twelve services,
-  all internal links/anchors, noindex, robots and an actual HTTP 404).
-- Browser checked at 1440px desktop and 390px mobile; mobile menu opens, Escape
-  closes it and returns focus. Service and quote destinations were inspected.
-- No horizontal overflow observed at the tested mobile width; no browser console errors.
-- Initial build exposed a Cache Components restriction on runtime new Date() in the
-  footer. Removed the runtime date and reran the production build successfully.
-- Repository checkpoint: commit containing this file; pushed to origin/main.
-- Temporary production QA server is stopped after validation.
+- Passed: pnpm lint, pnpm typecheck and pnpm build.
+- Passed: pnpm verify:foundation http://localhost:3001 (eight public pages, service
+  count, links/anchors, metadata, robots and HTTP 404).
+- Passed: pnpm test:journey (server sessions, expiry/deletion, validation, conflicting updates,
+  attribution, context, conditional answers, reset and disabled submission).
+- Browser checked at 1440px/390px: service/Sydney context, errors, Studio/Other,
+  review, edit-and-refresh recovery, disabled send, reset and locality finder.
+- No observed horizontal overflow or browser console errors at tested widths.
+- Temporary QA production server is stopped at session end.
+- This checkpoint is committed and pushed to origin/main with its code.
 
-## Important limitations
+## Deferred work / limits
 
-Not production-ready. There is no CMS, connected quote form, pricing calculator,
-geography import, service-detail template, published proof or live hosting.
-All twelve services appear in the catalogue, not twelve complete landing pages.
-Original interactive HTML is not in the repo; extracted architecture text is.
-Copy is provisional. Do not remove noindex until production content is approved.
-No credentials or customer personal data are stored in the repository.
+Phase 2 is a review build, not production lead acceptance. The CRM and estimator
+are deliberately disabled. Final copy, scope, policies, consent and questions need
+approval. Sydney is a sourced planning example pending official-register reconciliation.
+Other services have catalogue/quote entry, not full service-detail templates.
+
+Draft storage is an ignored private .data/quote-drafts directory suitable for local
+single-node review, not a multi-instance production database. See PHASE-2.md for
+expiry, retention, cookies and deployment requirements. No live credentials or
+customer contact records are committed. CMS and website hosting are not configured.
 
 ## Development environment
 
-Windows PowerShell opens this WSL checkout through a UNC path. Native Windows Git
-cannot reliably read the working directory. Use WSL Git from
-/home/waqasbangash/apps/ice-website. Node is available after sourcing
-/home/waqasbangash/.nvm/nvm.sh; the verified Node version is 22.23.2.
-Use pnpm 10.10.0. On a new environment install requirements normally; the nvm path
-is specific to this workstation.
+Use WSL Git from /home/waqasbangash/apps/ice-website; Windows Git cannot reliably
+read this UNC working directory. Source /home/waqasbangash/.nvm/nvm.sh for Node
+22.23.2 and pnpm 10.10.0 on this workstation.
 
-Commands: pnpm lint; pnpm typecheck; pnpm build; pnpm dev.
-If WSL returns access denied, request the tool's escalation rather than bypass it.
-Windows Git Credential Manager is available through WSL at
-/mnt/c/Program Files/Git/mingw64/bin/git-credential-manager.exe when pushing.
-Do not store tokens. The normal WSL credential helper may point to an unavailable
-credential-manager executable; use a per-command helper override if necessary.
+Commands:
+- pnpm lint
+- pnpm typecheck
+- pnpm build
+- pnpm start --port 3001 (production QA)
+- pnpm verify:foundation http://localhost:3001
+- pnpm test:journey (run against this checkout on localhost:3001; expiry test edits its own fixture)
+- pnpm dev (local development)
+
+Request tool escalation if WSL/network access is denied. Windows Git Credential
+Manager is available at /mnt/c/Program Files/Git/mingw64/bin/git-credential-manager.exe
+for per-command Git overrides; never store tokens in the repo.
+Live-site network reads may need executor escalation. Do not change live WordPress
+content or its quote integration while working on this custom site.
 
 ## Session handoff rule
 
-At session end, record current phase/status, actual checks, remaining limitations
-and exact next action here; update roadmap checkboxes. Never infer completion from
-the plan alone. Keep the code and checkpoint in the same Git commit where feasible.
+Update this file and phase checkboxes at session end with actual checks, remaining
+limits and an exact next step. Keep the handoff and code in the same commit.

@@ -1,9 +1,13 @@
 import assert from "node:assert/strict";
 
-// Run against a started production server: pnpm verify:foundation [base URL].
 const origin = new URL(process.argv[2] ?? "http://localhost:3000");
 const pages = new Map();
-for (const path of ["/", "/services", "/get-a-free-quote"]) {
+const paths = [
+  "/", "/services", "/services/end-of-lease-cleaning", "/get-a-free-quote",
+  "/locations", "/locations/nsw", "/locations/nsw/suburbs/sydney",
+  "/locations/nsw/suburbs/sydney/end-of-lease-cleaning",
+];
+for (const path of paths) {
   const response = await fetch(new URL(path, origin));
   assert.equal(response.status, 200, path);
   const html = await response.text();
@@ -16,7 +20,7 @@ assert.equal((pages.get("/services").match(/<article[\s>]/g) ?? []).length, 12);
 
 for (const [path, html] of pages) {
   for (const match of html.matchAll(/<a\s[^>]*href="([^"]+)"/g)) {
-    const url = new URL(match[1], new URL(path, origin));
+    const url = new URL(match[1].replaceAll("&amp;", "&"), new URL(path, origin));
     if (url.origin !== origin.origin) continue;
     assert.ok(pages.has(url.pathname), `${path}: destination exists: ${url.pathname}`);
     if (url.hash) {
@@ -25,9 +29,7 @@ for (const [path, html] of pages) {
   }
 }
 const missing = await fetch(new URL("/foundation-missing-page", origin));
-assert.equal(missing.status, 404, "unknown routes must return HTTP 404");
+assert.equal(missing.status, 404);
 assert.match(await missing.text(), /Page Not Found/);
-const robots = await fetch(new URL("/robots.txt", origin));
-assert.equal(robots.status, 200);
-assert.match(await robots.text(), /Disallow: \//);
-console.log("Foundation checks passed: pages, 12 services, internal links/anchors, metadata, robots and HTTP 404.");
+assert.match(await (await fetch(new URL("/robots.txt", origin))).text(), /Disallow: \//);
+console.log("Journey page checks passed: 8 pages, 12 services, internal links/anchors, metadata, robots and HTTP 404.");

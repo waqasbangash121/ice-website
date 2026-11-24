@@ -26,22 +26,27 @@ This phase does not implement all 44 blocks, twenty full templates, CMS, calcula
 or connected form. The initial pages are development compositions, not approved copy.
 
 ## Phase 2 — Complete customer journey
-Status: not started.
+Status: review build complete (24 November 2026). Production activation deferred.
 
-- [ ] Refine homepage and service directory against the visual architecture.
-- [ ] Build the end-of-lease A03 service template with approved scope.
-- [ ] Build a Sydney A05 location hub and A06 local-service example from real records.
-- [ ] Define and implement final service-specific quote questions.
-- [ ] Add opaque server-side drafts, same-session recovery and expiry.
-- [ ] Add service/locality context handoff, editable summaries and accessible errors.
-- [ ] Connect submission to an agreed lead destination with duplicate protection.
-- [ ] Only enable the estimator after approved rules, GST display and versioning exist.
-- [ ] Verify successful/rejected submissions and context/estimate invalidation.
+The user requested draft content/proposed fields and disabled CRM delivery,
+then authorised existing-site content and image reuse. See PHASE-2.md and SOURCE-INVENTORY.md.
 
-Acceptance: customer can discover a service, select a real location, complete the
-quote journey and receive an accurate acknowledgement after accepted delivery.
-Dependencies: approved scope, locality record, quote fields/consent, lead destination;
-production pricing is required for estimator delivery, not for a non-priced enquiry.
+- [x] Refine homepage with sourced imagery and improve service/context links.
+- [x] Build A03 end-of-lease page with sourced draft scope, extras, process and FAQs.
+- [x] Build A04 directory, NSW/Sydney A05 hubs and Sydney A06 service example.
+- [x] Implement proposed universal/service-specific quote questions and review step.
+- [x] Add opaque server-side drafts, recovery, reset and fixed 24-hour expiry.
+- [x] Add contextual handoff, editable summary, errors and service-dependent normalization.
+- [x] Verify session isolation, concurrency, validation, refresh and disabled submission.
+- [x] Preserve explicit no-submission UI and backend rejection as requested.
+- [ ] Reconcile the Sydney planning ID with the authoritative register before expansion.
+- [ ] Obtain final business approval of scope, exclusions, form and consent wording.
+- [ ] Connect the CRM and verify idempotent accepted/rejected delivery when requested.
+- [ ] Enable estimator only after approved prices, GST display and versioned rules exist.
+
+Review acceptance: service/locality discovery, editable saved draft and complete review
+flow work without transmitting an enquiry. Achieved. Original production acceptance
+(real lead receipt and approved operational data) remains deferred, not silently passed.
 
 ## Phase 3 — Content administration
 Status: not started.

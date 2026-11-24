@@ -1,12 +1,12 @@
 # Instant Cleaning Experts Website
 
-Website project for Instant Cleaning Experts (ICE), bootstrapped with Create Next App. Phase 1 now provides the branded site foundation, responsive layout, twelve-service catalogue, initial content types and route conventions. The quote destination currently supports phone enquiries; the connected form and CMS are later phases.
+Website project for Instant Cleaning Experts (ICE), bootstrapped with Create Next App. Phase 1 provides the branded foundation. Phase 2 adds end-of-lease/Sydney pages and a saved two-step quote review journey. CRM submission and pricing remain disabled as requested; operational content and questions are draft.
 
 ## Project continuity
 
 Read [Project status](docs/PROJECT-STATUS.md) first when resuming, then [Roadmap](docs/ROADMAP.md) and [Architecture decisions](docs/ARCHITECTURE.md). These files record completed phases, checks, outstanding inputs and the next implementation step. `AGENTS.md` directs future sessions to maintain this handoff.
 
-Phase 1 routes: `/`, `/services`, `/get-a-free-quote`, `/robots.txt`, and a custom 404. Development pages are intentionally **noindex** and crawling is disallowed until production approval. No live hosting has been configured.
+Current routes and deferred work are listed in [Phase 2 notes](docs/PHASE-2.md). Existing-site content and image provenance is recorded in [Source inventory](docs/SOURCE-INVENTORY.md). Development pages remain **noindex** with crawling disallowed. No live hosting has been configured.
 
 ## Technology stack
 
@@ -46,7 +46,7 @@ Open [http://localhost:3000](http://localhost:3000). Edit `src/app/page.tsx` to 
 
 On Windows with WSL, run these commands inside the WSL terminal with Node.js and pnpm installed in that environment.
 
-No environment variables or external services are required by Phase 1. Fonts and their SIL OFL licences are stored in `src/app/fonts`; builds do not fetch Google Fonts.
+No external services are required for the review build. Cleaning drafts are stored privately under `.data/quote-drafts` (ignored by Git) and expire after 24 hours. `QUOTE_DRAFT_DIR` optionally sets another private server directory. Contact fields are not persisted; submission is disabled. Replace local file storage before multi-instance/serverless deployment. Fonts and their SIL OFL licences are stored in `src/app/fonts`; builds do not fetch Google Fonts.
 
 ## Available commands
 
@@ -66,7 +66,7 @@ pnpm build
 pnpm start
 ```
 
-With a development or production server running, use `pnpm verify:foundation` to check page responses, service count, internal destinations/anchors, development metadata, robots and HTTP 404 behaviour. Pass another origin when needed: `pnpm verify:foundation http://localhost:3001`. Full quote/CMS integration tests will follow those features.
+With a development or production server running, use `pnpm verify:foundation` to check page responses, service count, internal destinations/anchors, development metadata, robots and HTTP 404 behaviour. Pass another origin when needed: `pnpm verify:foundation http://localhost:3001`. With the server on port 3001, run `pnpm test:journey` for quote API integration checks; run against this checkout locally because the expiry test ages its own synthetic draft fixture. The tests remove their synthetic drafts afterward.
 
 ## Project structure
 
