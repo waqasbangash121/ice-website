@@ -36,3 +36,13 @@ The old site and any existing live quote integration have not been modified.
 Original imagery is stored locally and rendered through next/image. Its appearance
 on the old site does not establish job provenance. Customer/job evidence requires
 separate approval and consent before being used as proof.
+
+## Favicons (24 November 2026)
+
+Reused the existing live-site icon assets without changing their artwork:
+- public/brand/favicon-32.png: https://www.instantcleaningexperts.com.au/wp-content/uploads/2023/05/cropped-final-32x32.png
+- src/app/icon.png: https://www.instantcleaningexperts.com.au/wp-content/uploads/2023/05/cropped-final-192x192.png
+- src/app/apple-icon.png: https://www.instantcleaningexperts.com.au/wp-content/uploads/2023/05/cropped-final-180x180.png
+
+src/app/favicon.ico packages the original 32px PNG in an ICO container. Next.js
+file conventions generate icon metadata; the old full-width logo override was removed.

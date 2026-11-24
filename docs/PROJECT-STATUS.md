@@ -26,6 +26,13 @@ by the user's instructions. Phase 1 remains complete.
 - Initial Phase 1 brand/shell/domain foundation retained.
 - Roadmap, architecture, technical notes and integration tests updated.
 
+## Favicon follow-up (24 November 2026)
+
+- Replaced the Next.js starter favicon with the existing ICE site icon.
+- Added 192px browser and 180px Apple touch icons through Next.js file conventions.
+- Removed the full-width logo metadata override; phase status is unchanged.
+- Verified production build and icon HTTP responses/metadata before pushing.
+
 ## Verification
 
 - Passed: pnpm lint, pnpm typecheck and pnpm build.

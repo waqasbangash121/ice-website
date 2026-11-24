@@ -29,7 +29,6 @@ const headingFont = localFont({
 export const metadata: Metadata = {
   title: { default: `${site.name} | Cleaning Services Across Australia`, template: `%s | ${site.name}` },
   description: site.description,
-  icons: { icon: "/brand/ice-logo.png", apple: "/brand/ice-logo.png" },
   // Phase 1 is a development foundation, not approved production content.
   robots: { index: false, follow: false },
 };
