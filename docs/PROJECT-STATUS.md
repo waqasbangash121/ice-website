@@ -10,12 +10,95 @@ remains open. Phase 2 review build remains complete with production activation d
 1. Read this file, ROADMAP.md, ARCHITECTURE.md, PHASE-2.md and PHASE-3.md.
 2. Run git status and inspect any uncommitted changes.
 3. Read the relevant installed Next.js documentation before editing.
-4. Next: choose production database/auth/media and migrate adapters; extend block
-   renderers/composers to homepage/directories and evidence with staff roles.
+4. Next: read TEMPLATE-REFERENCE-AUDIT.md; implement B03/B05 and connect managed
+   homepage/directory families, then variant rules and checklist contents/printing.
 5. Do not enable CRM submission, publish prices or remove noindex automatically.
    The user explicitly requested disabled delivery and draft content.
 
+## Source checkpoint and next session
+
+25 November 2026: user requested committing and pushing the current implementation
+before continuing tomorrow. Checkpoint includes visual page/block/template builders,
+admin UI polish, collapsible/history-safe navigation, the architecture catalogue and
+reference-driven drafts/publication gates. Latest lint/typecheck/build and expanded
+admin regressions passed; browser/foundation verification is recorded below.
+Resume with TEMPLATE-REFERENCE-AUDIT.md and implement B03/B05 before connecting the
+remaining homepage/directory families. Full Phase 3/4 acceptance remains open.
+Credentials/private data stay ignored; repository publication is not site deployment.
+
 ## Latest delivered checkpoint
+
+- Thoroughly reviewed the supplied architecture HTML (matching recorded SHA-256),
+  all twenty specs, 41 demo layouts/variants and runtime interactions. Verified all
+  177 ordered placements against the HTML. See TEMPLATE-REFERENCE-AUDIT.md.
+- Added a visible searchable 20-family catalogue and protected specification pages
+  containing purpose, variants, evidence, links, mobile/technical rules and acceptance.
+- All twenty references create complete private design drafts. Planned sections are
+  retained and labelled; required reference functions and family identity are protected.
+- Designer includes source guidance/readiness, all 40 content-block contracts for
+  planning and duplication of saved layouts. Existing schema-2 records remain valid.
+- Server blocks approval/publication for missing required renderers and unconnected
+  families. A03/A06 stay connected; conditional unavailable blocks remain omitted.
+- Page creation enforces service/locality context for A03/A06 and their derivatives.
+- Passed lint, typecheck, production build, expanded admin regression (all 20 imports,
+  required-slot/family guards, publication holds and context rules), builder tests
+  and public foundation checks. Browser checked search/spec/import/save/duplicate,
+  missing-renderer errors, 390px inspectors/spec navigation and no console errors.
+- This is reference-driven template administration, not completed production coverage
+  of all twenty families. Variant rule engine, evidence/media models and family wiring
+  remain open. Included in this source checkpoint; demo prices/reviews/jobs were not imported.
+
+- Added a desktop sidebar icon rail with accessible collapse/expand controls and
+  a saved local browser preference. Mobile retains the full labelled toggle menu.
+- Replaced shell `:has(.page-builder)` selectors with active-pathname editor state;
+  hidden retained routes no longer select builder padding, width or topbar styles.
+- Removed shell/navigation overrides from builder.css. Sidebar geometry now uses
+  one width variable, with explicit expanded/collapsed/mobile rules in studio.css.
+- Navigation resets its mobile menu on route changes and supports Escape/focus
+  return. Preview iframes stay hidden until measured and clamp their scale safely.
+- Passed lint, typecheck, production build and admin/builder regressions. Browser
+  checked collapse/reload, repeated Back/Forward across all three builder types,
+  menu reset and preview fit. No overflow at 390, 700/701, 900/901, 1150/1151 and
+  1440px in the tested views; no observed console errors. Included in this source checkpoint.
+
+- Polished the full admin UI: branded sign-in, responsive sidebar with active-route
+  states and mobile toggle, workspace topbar, consistent typography/cards/forms.
+- Added shared searchable libraries for pages, blocks, templates and services,
+  with combined status/type filters, live result counts and recoverable empty states.
+- Dashboard uses actual counts (including custom templates), review/approval queue
+  and recent saved revision activity across all four content collections.
+- Reorganised settings as readable access/integration/capability panels and added
+  a page-creation guide. Original architecture registries are collapsed references.
+- Verified lint, typecheck, production build, admin integration, builder model tests
+  and public foundation checks. Browser checked desktop/mobile navigation, combined
+  filtering/clear, empty template state, form focus/overflow, settings, service save
+  and review, populated dashboard activity, and page-builder shell compatibility.
+- Included in this source checkpoint. No production activation or content migration.
+
+- Block and custom-template builders now match Page Studio: three panels, live
+  desktop/mobile previews, inspector, undo/redo, keyboard save and responsive tabs.
+- Drag block items/FAQs/links or template slots; template section library supports
+  click/drop additions. Required introduction and trailing CTA constraints remain.
+- Preserved owner/source, shared usage, variants, revision workflow and template
+  structure locks. Dirty drafts disable saved workflow actions.
+- Browser verified creation/save, live text, pointer dragging, keyboard movement,
+  template publication/page availability and used-template locks. Mobile 390px
+  preview selection opens the inspector without horizontal overflow or console errors.
+- Lint, typecheck, build and existing admin/builder checks passed. Template canvas
+  uses labelled structure placeholders; production CMS acceptance remains open.
+
+- Replaced the long page form with a visual Page Studio: layers/library, large
+  live canvas and section/page inspector, with responsive panel navigation.
+- Native drag/drop reorders layers and places compatible shared content directly
+  on canvas sections. Arrow-key handles, move buttons and touch layer handles
+  supplement mouse dragging. Required/pinned template constraints remain enforced.
+- Inspector edits headings, text, items/FAQs and related links with live draft
+  preview. Save draft persists changed shared drafts then the page; partial
+  failures retain edits and report which stage failed. Publication stays separate.
+- Added undo/redo for unsaved edits, keyboard save, source/SEO settings, revision
+  history and clear save/workflow states. Successful saves reset undo history.
+- Refresh synchronizes saved shared records/versions while retaining unsaved local
+  edits and stale-write protection. These builder changes are included in this source checkpoint.
 
 - Added Create block, Create template and Create page flows. Twelve supported
   block structures include general editorial sections; template slots can repeat
@@ -71,6 +154,14 @@ remains open. Phase 2 review build remains complete with production activation d
 ## Verification
 
 25 November admin checkpoint:
+- Visual-builder checks: lint/typecheck/build, three focused drag/drop model
+  tests, admin suite, foundation verification and all quote journey tests passed.
+- Browser verified actual layer dragging, library-to-iframe drop, canvas selection,
+  live text edits, undo/redo, saved order/content recovery, keyboard reordering,
+  external shared-draft refresh and subsequent save, approval gating and 390px
+  panel navigation without horizontal overflow. No observed console errors.
+- Physical touch-device drag testing remains open; pointer handlers and explicit
+  move/add controls exist. QA uses temporary isolated records/credentials only.
 - Creation/publication follow-up: passed lint, typecheck, build and the expanded
   admin suite twice consecutively. Actual private-404 → published-200 behavior,
   metadata, repeated slots, migration, collisions and draft isolation are checked.

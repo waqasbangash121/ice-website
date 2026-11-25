@@ -13,7 +13,7 @@ export interface BlockContent {
 }
 export interface Placement { slot?: string; type: string; ref: string; enabled: boolean }
 export interface TemplateSlot { id: string; block: string; rule: string; contract: string }
-export interface ManagedTemplate { id: string; name: string; description: string; placements: TemplateSlot[] }
+export interface ManagedTemplate { id: string; name: string; description: string; referenceId?: string; placements: TemplateSlot[] }
 export interface PageComposition {
   id: string;
   template: string;
@@ -62,15 +62,29 @@ export function validateTemplate(input: unknown, previous: ManagedTemplate): Man
   const value = input as Record<string, unknown>;
   if (value.id !== previous.id) fail("Template identity cannot change.");
   if (!Array.isArray(value.placements) || value.placements.length < 1 || value.placements.length > 30) fail("Use between 1 and 30 template slots.");
+  if (value.referenceId !== previous.referenceId || (value.referenceId !== undefined && !templateContracts.some((t) => t.id === value.referenceId))) fail("Choose a valid architecture family and preserve its identity.");
   const seen = new Set<string>();
   const placements = value.placements.map((slot) => {
-    if (!slot || typeof slot !== "object" || typeof slot.id !== "string" || !/^[a-z0-9-]{1,80}$/.test(slot.id) || seen.has(slot.id) || !supportsBlock(slot.block) || !["R", "C", "O"].includes(slot.rule)) fail("Each slot needs a unique ID, a supported block type and a visibility rule.");
+    if (!slot || typeof slot !== "object" || typeof slot.id !== "string" || !/^[a-z0-9-]{1,80}$/.test(slot.id) || seen.has(slot.id) || !blockContracts.some((b) => b.id === slot.block && b.id.startsWith("B")) || !["R", "C", "O"].includes(slot.rule)) fail("Each slot needs a unique ID, a registered content block type and a visibility rule.");
     seen.add(slot.id);
     return { id: slot.id as string, block: slot.block as string, rule: slot.rule as string, contract: text(slot.contract, "Slot guidance", 500, false) };
   });
-  if (placements[0].block !== "B01" || placements[0].rule !== "R" || placements.filter((slot) => slot.block === "B01").length !== 1) fail("Start with exactly one required introduction (B01).");
+  if (value.referenceId === "A20" ? placements[0].block !== "B39" || placements[0].rule !== "R" : placements[0].block !== "B01" || placements[0].rule !== "R" || placements.filter((slot) => slot.block === "B01").length !== 1) fail("Start with exactly one required introduction (B01).");
   if (placements.filter((slot) => slot.block === "B17").length > 1 || placements.some((slot, index) => slot.block === "B17" && index !== placements.length - 1)) fail("Place a single conversion handoff at the end, if needed.");
-  return { id: previous.id, name: text(value.name, "Template name", 150), description: text(value.description, "Template description", 1000), placements };
+  if (value.referenceId) {
+    const reference = templateContracts.find((t) => t.id === value.referenceId)!;
+    for (const required of reference.placements.filter((s) => s.rule === "R")) {
+      if (!placements.some((s) => s.block === required.block && s.rule === "R")) fail(`${reference.id} requires ${required.block}. Keep its required answer/function in the layout.`);
+    }
+  }
+  return { id: previous.id, name: text(value.name, "Template name", 150), description: text(value.description, "Template description", 1000), ...(previous.referenceId ? { referenceId: previous.referenceId } : {}), placements };
+}
+export function templatePublicationIssues(template: ManagedTemplate): string[] {
+  const issues: string[] = [];
+  if (template.referenceId && !["A03", "A06"].includes(template.referenceId)) issues.push(`${template.referenceId}: its dedicated page-family renderer is not connected to the composer yet.`);
+  const missing = [...new Set(template.placements.filter((slot) => slot.rule === "R" && !supportsBlock(slot.block)).map((slot) => slot.block))];
+  if (missing.length) issues.push(`Required blocks need renderers: ${missing.join(", ")}.`);
+  return issues;
 }
 export class CompositionInputError extends Error {}
 function fail(message: string): never { throw new CompositionInputError(message); }

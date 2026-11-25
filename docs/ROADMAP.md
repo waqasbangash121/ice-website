@@ -64,6 +64,20 @@ Status: in progress (25 November 2026); initial local service-admin review build
   unique public URLs; verify private 404 and actual publication without rebuilding.
 - [x] Upgrade version-1 composition storage without losing existing records and
   resolve stale publication metadata with request-local public snapshots.
+- [x] Replace the page form with a styled visual drag/drop builder, live content
+  inspector, unsaved undo/redo, keyboard movement and responsive panel controls.
+
+- [x] Match block/template creation and editing to the visual studio, including
+  live previews, item/slot dragging, undo/redo and responsive inspectors.
+
+- [x] Polish the full admin shell, sign-in, dashboard, searchable libraries, settings
+  and forms; verify mobile navigation, filtering and visual builder compatibility.
+
+- [x] Add persistent collapsible desktop navigation and repair retained-route shell
+  styling; verify history restoration and responsive breakpoint boundaries.
+
+- [x] Audit the original HTML; expose all 20 architecture families, exact draft
+  imports/guidance, required-slot protection and server publication readiness.
 
 These checks cover service cards, twelve block renderers, custom page compositions
 and one operator, not the full acceptance

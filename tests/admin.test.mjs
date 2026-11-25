@@ -38,7 +38,7 @@ test("staff authentication, publication isolation, concurrency and revocation", 
     assert.match(setCookie, /HttpOnly/i);
     assert.match(setCookie, /SameSite=strict/i);
     const cookie = setCookie.split(";")[0];
-    assert.match(await (await request("/admin", { headers: { cookie } })).text(), /A clear view of your content/);
+    assert.match(await (await request("/admin", { headers: { cookie } })).text(), /Ready for your attention/);
     const route = "/api/admin/services/end-of-lease-cleaning";
     const marker = "Private synthetic service revision " + randomBytes(8).toString("hex");
     const save = await post(route, { action: "save", version: "0", name: "End-of-Lease Cleaning", summary: marker, owner: "QA operator", source: "Synthetic QA fixture" }, cookie);
@@ -136,6 +136,30 @@ test("staff authentication, publication isolation, concurrency and revocation", 
     assert.ok((await compose("blocks", "new", { action: "create", copyFrom: "lease-faqs", newId: "../escape" })).headers.get("location").includes("error="));
     // New records are created through the admin and become real public routes without rebuilding.
     const create = (kind, id, content, auth = cookie) => compose(kind, "new", { action: "create", newId: id, content: JSON.stringify(content), owner: "QA operator", source: "Synthetic creation fixture" }, auth);
+    // Every original family can be retained as a design; unfinished required behavior cannot publish.
+    const contracts = JSON.parse(await readFile("src/config/block-contracts.json", "utf8"));
+    const reference = JSON.parse(await readFile("src/config/template-reference.json", "utf8"));
+    assert.equal(reference.templates.length, 20);
+    for (const spec of contracts.templates) {
+      assert.ok(reference.templates.some((r) => r.id === spec.id && r.acceptance && r.mobile && r.evidence));
+      const design = { id: `qa-reference-${spec.id.toLowerCase()}`, referenceId: spec.id, name: `${spec.id} reference design`, description: "Reference design fixture.", placements: spec.placements.map((slot, i) => ({ id: `slot-${i}`, block: slot.block, rule: slot.rule, contract: slot.contract })) };
+      assert.ok((await create("templates", design.id, design)).headers.get("location").includes("saved=1"), `${spec.id} full design import`);
+      assert.equal((await workspace()).templates[design.id].draft.placements.length, spec.placements.length);
+    }
+    const heldId = "qa-reference-a20";
+    assert.ok((await compose("templates", heldId, { action: "review", version: "1" })).headers.get("location").includes("saved=1"));
+    assert.ok((await compose("templates", heldId, { action: "approve", version: "2" })).headers.get("location").includes("error="));
+    assert.equal((await workspace()).templates[heldId].publishedRevision, 0);
+    const based = (await workspace()).templates["qa-reference-a03"].draft;
+    assert.ok((await saveContent("templates", based.id, { ...based, placements: based.placements.filter((slot) => slot.block !== "B06") }, 1)).headers.get("location").includes("error="));
+    assert.ok((await saveContent("templates", based.id, { ...based, referenceId: undefined }, 1)).headers.get("location").includes("error="));
+    for (const [action, version] of [["review", 1], ["approve", 2], ["publish", 3]]) assert.ok((await compose("templates", based.id, { action, version: String(version) })).headers.get("location").includes("saved=1"));
+    assert.equal((await workspace()).templates[based.id].publishedRevision, 4);
+    const familyPage = { id: "qa-family-context", template: based.id, path: "/services/qa-family-context", serviceId: "", localityId: "", title: "Family context test", description: "Context fixture.", intent: "Check reference family context." };
+    assert.ok((await create("pages", familyPage.id, familyPage)).headers.get("location").includes("error="));
+    assert.ok((await create("pages", familyPage.id, { ...familyPage, serviceId: "carpet-cleaning", localityId: "planning-sydney-nsw" })).headers.get("location").includes("error="));
+    assert.ok((await create("pages", familyPage.id, { ...familyPage, serviceId: "carpet-cleaning" })).headers.get("location").includes("saved=1"));
+    assert.ok((await create("pages", "qa-local-context", { ...familyPage, id: "qa-local-context", template: "A06", path: "/locations/nsw/suburbs/sydney/qa-local", serviceId: "carpet-cleaning" })).headers.get("location").includes("error="));
     const createdIntro = { id: "qa-new-intro", type: "B01", title: "A newly created public page", eyebrow: "QA", body: "Created by the administrator.", items: [], links: [] };
     const createdBody = { id: "qa-new-body", type: "B21", title: "New editorial section", eyebrow: "", body: "New published content " + randomBytes(8).toString("hex"), items: [], links: [] };
     const customTemplate = { id: "qa-custom-template", name: "QA custom template", description: "A template created in the admin.", placements: [{ id: "intro", block: "B01", rule: "R", contract: "Introduce the page." }, { id: "first-body", block: "B21", rule: "R", contract: "First editorial section." }, { id: "second-body", block: "B21", rule: "R", contract: "Second editorial section." }] };

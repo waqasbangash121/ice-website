@@ -5,7 +5,7 @@ import path from "node:path";
 import { seedCompositions } from "./seeds";
 import { services } from "@/data/services";
 import { sydney } from "@/data/locations";
-import { CompositionInputError, knownLinks, slotsFor, supportsBlock, templateContracts, validateBlock, validatePage, validatePublicPath, validateTemplate, type BlockContent, type CompositionStore, type ManagedTemplate, type PageComposition, type Revision } from "./schema";
+import { CompositionInputError, knownLinks, slotsFor, templatePublicationIssues, supportsBlock, templateContracts, validateBlock, validatePage, validatePublicPath, validateTemplate, type BlockContent, type CompositionStore, type ManagedTemplate, type PageComposition, type Revision } from "./schema";
 export type RecordKind = "blocks" | "pages" | "templates";
 const directory = (dataRoot?: string) => path.join(dataRoot || process.env.ADMIN_DATA_DIR || path.join(process.cwd(), ".data", "admin"), "composition");
 const file = (dataRoot?: string) => path.join(directory(dataRoot), "workspace.json");
@@ -95,6 +95,10 @@ export async function mutateComposition(kind: RecordKind, id: string, form: Form
         const localityId = typeof input.localityId === "string" ? input.localityId : "";
         if (serviceId && !services.some((service) => service.id === serviceId)) throw new CompositionInputError("Choose an existing service.");
         if (localityId && localityId !== sydney.id) throw new CompositionInputError("Choose an existing locality.");
+        const family = store.templates[template]?.published.referenceId || template;
+        if (["A03", "A06"].includes(family) && !serviceId) throw new CompositionInputError(`${family} needs a service context.`);
+        if (family === "A06" && !localityId) throw new CompositionInputError("A06 needs a locality context.");
+        if (family === "A03" && localityId) throw new CompositionInputError("A03 is a national service family. Choose A06 for a local service page.");
         const draft: PageComposition = { id: nextId, template, path: publicPath, serviceId, ...(localityId ? { localityId } : {}), title: required(input.title, "a page title", 150), description: required(input.description, "a meta description", 320), intent: required(input.intent, "the canonical intent", 500), placements: slotsFor(template, store.templates, true).map((slot) => ({ slot: slot.id, type: slot.block, ref: "", enabled: slot.rule === "R" })) };
         store.pages[nextId] = revision(draft, actor);
         form.set("content", JSON.stringify(draft));
@@ -129,6 +133,10 @@ export async function mutateComposition(kind: RecordKind, id: string, form: Form
       if (record.status !== transition[0]) throw new CompositionInputError("Invalid workflow transition.");
       if (!record.owner || !record.source || !record.version) throw new CompositionInputError("Save an owner, source and content before requesting review.");
       validate(record.draft, action === "approve" || action === "publish");
+      if (kind === "templates" && (action === "approve" || action === "publish")) {
+        const issues = templatePublicationIssues(store.templates[id].draft);
+        if (issues.length) throw new CompositionInputError(issues.join(" ") + " Save the layout as a draft while these capabilities are implemented.");
+      }
       if (kind === "pages") {
         const page = store.pages[id].draft;
         if (action === "approve" || action === "publish") checkDependencies(page, store);

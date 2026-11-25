@@ -151,6 +151,21 @@ after Refresh blocks. Device controls use real 1280px/390px iframe viewports,
 scaled to fit the admin panel. Embedded links are intercepted to retain the editing
 context; the standalone saved-draft preview remains available.
 
+The page editor now uses Page Studio with layers, a searchable record library,
+canvas and inspector. Drag payloads carry the page ID plus a slot/record identity;
+same-origin frame commands are checked against known slots and record types.
+Shared pure helpers preserve required first/last reading order and distinguish
+repeated block types using slot identities. Server validation remains authoritative.
+
+Unsaved block edits preview through validated overrides in the authenticated
+iframe. Refresh sends canonical saved records/versions back to the parent; dirty
+local records retain their prior version so concurrent writes still conflict.
+Saving writes changed shared drafts sequentially, then the composition. This is
+not a multi-record transaction: a later failure reports partial saves and retains
+browser edits. Successful saves clear the unsaved undo/redo stack and reload the
+iframe while preserving device/selection. Publication remains the existing guarded
+workflow; source data, consent/evidence rules and indexation controls are unchanged.
+
 Page publication checks required slots, supported refs, stable identity, order,
 metadata/intent and published approved block dependencies. Approval binds the
 current dependency revisions and becomes stale if they change before publication.
@@ -189,3 +204,38 @@ A single-node filesystem draft adapter is implemented behind a server-only modul
 replace it with durable transactional storage in Phase 3/before production hosting.
 Quote contracts live in src/lib/quote/schema.ts; saved entry context is separate from
 editable selections and immutable first-entry attribution. Contact fields are not saved.
+
+Block/template studios share the page builder visual language. Block draft previews
+reuse ComposedServicePage on the client; template previews are labelled layout
+placeholders and never produce public content. Both submit existing versioned
+composition endpoints; saved workflow remains separate and disabled during local
+unsaved edits. Pointer-captured layer grips support mouse/touch, with keyboard and
+button alternatives. No additional dependencies, schema fields or authorization
+exceptions were introduced. Structural template locks remain server-enforced.
+
+Admin library and shell presentation is shared through admin-navigation.tsx,
+content-library.tsx and admin/studio.css. Navigation derives active states from
+usePathname; filtering is local to each library view and does not mutate content.
+Dashboard metrics and activity are computed from existing server-loaded records,
+including templates. Shared UI changes preserve staff guards, versioned endpoints,
+public/draft isolation and the dedicated full-width builder canvas. No dependencies
+or storage schema changes were introduced in the admin UI polish.
+
+Shell layout mode must be derived from the active pathname (`data-editor`), never
+from DOM presence with `:has()`: Next.js retained hidden route trees can contain a
+previous builder after navigation. AdminShell owns this flag and the persisted
+sidebar-width preference. Builder CSS owns canvas internals; studio.css owns shell
+geometry. Mobile navigation is keyed by pathname so history restores cannot reopen
+an old menu. Preview iframes remain hidden until their current stage is measured.
+
+Template architecture reference is data, not executable instructions. The source
+hash/revision and extracted family metadata live in template-reference.json; exact
+ordered placements remain in block-contracts.json. Reference templates are immutable
+specifications; creating a design makes a new managed record with optional immutable
+referenceId. Schema-2 compatibility is preserved. All registered content block types
+may exist in design drafts; actual block content/rendering still uses supportedBlocks.
+Server approval/publication checks required renderer availability and family wiring.
+Reference-required functions remain required, including B39-first A20. A03/A06 page
+creation validates service/locality context using the published template family.
+Variant-specific executable requirements, canonical family routes and evidence models
+remain future work, as documented in TEMPLATE-REFERENCE-AUDIT.md.

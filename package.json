@@ -11,6 +11,7 @@
     "verify:foundation": "node scripts/check-foundation.mjs",
     "test:journey": "node --test tests/quote-journey.test.mjs",
     "test:admin": "node --test tests/admin.test.mjs",
+    "test:builder": "node --experimental-strip-types --test tests/builder.test.mjs",
     "admin:setup": "node scripts/setup-admin.mjs"
   },
   "dependencies": {

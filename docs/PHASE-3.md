@@ -56,6 +56,34 @@ editable content is structured plain text; arbitrary executable HTML is not acce
 
 ## Embedded preview
 
+### Visual Page Studio
+
+The page editor now has a full visual layout: layers and searchable shared-block
+library, a large live canvas and a focused section/page inspector. Drag handles
+reorder sections; library records can be dropped onto compatible canvas sections.
+Click the canvas to select a section. Arrow keys on layer handles and explicit
+move/add controls are alternatives to dragging. Touch pointer handlers support
+layer movement; physical-device drag QA is still open.
+
+The inspector edits headings, labels, body text, FAQs/items and related links
+without leaving the page. Edits preview live as validated draft overrides. Source,
+owner, metadata, canonical intent, search preview and revision history are under
+Page settings. Required sections cannot be hidden; the introduction/CTA remain
+at the reading-order boundaries. Adding content uses the template's available
+slots rather than silently changing the template's structure.
+
+Undo/redo covers unsaved changes and resets after a successful save. Ctrl/Cmd+S
+saves; Ctrl/Cmd+Z outside text fields undoes. Save draft writes changed shared
+drafts before the page and reports partial failure while retaining browser input.
+Shared publication remains separate, with usage/impact explained in the inspector.
+The top bar keeps save, review, approval and publication separate and disables
+advancing while unsaved changes remain. No new persistence schema is introduced.
+
+Refresh reloads saved shared records/versions into the canvas and inspector.
+Unsaved overrides remain local; dirty records keep their original version so
+changes in another tab cannot be silently overwritten. Canvas commands/payloads
+must match the current page, known slots and compatible records.
+
 /admin/pages/{id} includes a desktop/mobile iframe using 1280px/390px viewports
 scaled to fit. It is sticky beside the editor on desktop and above it on narrow
 screens. Unsaved record selection/order updates live. Save shared-block edits,
@@ -108,6 +136,15 @@ open; this favors correct immediate publication during local review.
 
 ## Verification
 
+- Page Studio: passed lint/typecheck/build, pnpm test:builder (three constraint/
+  drag-payload tests), admin integration, foundation and quote journey regressions.
+- Browser checked actual mouse layer dragging and library-to-canvas drop, canvas
+  selection, live text edits, undo/redo, saving and refresh recovery, keyboard
+  reordering, separately edited shared-record refresh and a subsequent successful
+  save, approval gating and 390px panel navigation. No observed horizontal overflow
+  after refinement or console errors in the final flow. Physical touch QA remains
+  an explicit limitation; move/add controls are available on mobile.
+
 - Passed lint, typecheck and production build.
 - Passed the expanded admin integration suite twice consecutively: authentication,
   origin checks, private iframe routes, workflow/dependency checks, concurrency,
@@ -136,3 +173,120 @@ backups, media/evidence/consent and remaining block renderers are still open.
 Next: choose production database/auth/media, migrate the adapters with explicit
 migrations/backups and separate permissions, then implement the remaining original
 block contracts and template-specific acceptance checks. Phase 3 is not complete.
+
+## Visual block and template studios — 25 November 2026
+
+Block and custom-template new/edit screens now share the Page Studio design:
+three panels, live draft canvas, desktop/mobile width controls, focused inspector,
+unsaved undo/redo, keyboard save and responsive panel navigation. Blocks preview
+through the existing public renderer, with clickable content items and reorderable
+FAQ/items/links. Templates show explicitly labelled structure placeholders and a
+searchable section library; pointer/touch grips, keyboard arrows and move buttons
+reorder slots while preserving introduction/CTA rules. Template structure remains
+locked after page use; metadata is still editable. Owner/source, usage links,
+variants and saved revision workflow remain available. Dirty edits disable saved
+workflow actions. No storage schema or publication-policy changes were needed.
+
+Verified: lint, typecheck, production build, existing admin integration and three
+page-builder model tests passed. Browser QA on an isolated temporary store covered
+new template and FAQ creation/save, persistence of reordered content, native mouse
+pointer drags for template slots and FAQ items, keyboard movement, live answer edits,
+undo, template review/approval/publication, availability for new-page creation and
+used-template disabled structural controls. At 390px, panel navigation and preview
+click-to-inspector worked without horizontal overflow; no observed console errors.
+Template previews are structure samples, not a populated page or publishable content.
+Current supported block types and single-operator filesystem limits still apply.
+Next: review all three studios with the user, then choose production database,
+authentication and media adapters. These UI changes remain local and uncommitted.
+
+## Admin UI polish — 25 November 2026
+
+The full workspace now uses a shared navy/lime visual system. Added client-side
+active-route navigation and an accessible mobile menu, workspace topbar, branded
+sign-in layout, content cards, consistent fields, status badges and focus states.
+Pages/blocks/templates/services use one searchable library with combined status
+and type filters, result counts, clear-filter recovery and empty states. Original
+block/template contracts remain available in collapsed reference panels. Settings
+now separates staff access, website controls and supported capabilities. New-page
+creation has an adjacent three-step guide. Builders retain their full-width canvas.
+Dashboard counts include templates; review queue and recent activity use existing
+saved revisions across services, pages, blocks and templates. No fabricated metrics.
+
+Verification: lint, typecheck and production build passed. Admin integration and
+three builder model tests passed; updated the old dashboard-headline assertion to
+the new dashboard section. Foundation checks passed for eight pages/twelve services,
+internal links, metadata, robots and real 404. Browser QA on an isolated temporary
+store checked sign-in, active navigation, search + status + type filtering, clear
+filters and empty states, service save/review, resulting dashboard counts/activity,
+settings, create-page form focus and existing page canvas. At 390px, mobile menu
+opened/closed on navigation and the library/create form had no horizontal overflow.
+No observed browser console errors. Temporary server/store are stopped/removed.
+
+Limits: local single-operator storage/auth and existing supported block types remain.
+Libraries currently filter loaded records in browser memory, appropriate to current
+bounded local collections; large production collections will need server pagination.
+Next: user review of the complete studio, then production database/auth/media adapter
+selection. Keep Phase 3 acceptance open until production requirements are verified.
+
+## Collapsible sidebar and navigation layout repair — 25 November 2026
+
+The desktop sidebar can collapse to a 76px icon rail. Its non-sensitive preference
+is saved in localStorage with a useSyncExternalStore subscription and a safe fallback
+when browser storage is unavailable. Labels remain accessible via aria-label and
+native title tooltips. Mobile ignores the rail geometry and retains full labelled
+navigation. Escape closes the mobile menu and returns focus to its button; pathname
+keys reset that menu for browser history as well as ordinary link navigation.
+
+Removed shell/navigation selectors from builder.css and replaced all admin shell
+`:has(.page-builder)` selectors with an explicit active-pathname `data-editor` flag.
+Retained hidden builder DOM can therefore no longer force a library into builder
+padding/width/topbar rules. studio.css owns the shared sidebar-width variable and
+responsive collapse overrides. Preview scaling has a positive minimum; the frame
+is hidden until ResizeObserver has measured its stage to avoid oversized flashes
+on history restoration. Public page styles and publication policy are unchanged.
+
+Verified lint, typecheck, production build, admin integration and three builder
+model tests. Browser QA used isolated disposable credentials/content: collapse,
+expand inside a builder, reload persistence, menu navigation, Escape, and repeated
+browser Back/Forward through page, block and template builders and their libraries.
+Checked 390, 700, 701, 900, 901, 1150, 1151 and 1440px layouts with expanded and/or
+collapsed navigation across page/template builders and libraries; no horizontal
+overflow in those checks. Verified final mobile menu closes after Back/Forward,
+preview iframe fits its measured stage and no observed console errors. Temporary
+server/store stopped and QA script removed. Cross-browser/touch-device exhaustive
+coverage is not claimed. Next: user review of sidebar/history behavior, then resume
+production adapter decisions; full Phase 3 acceptance remains open.
+
+## Architecture-driven template administration — 25 November 2026
+
+See TEMPLATE-REFERENCE-AUDIT.md for the full source review, twenty-family use/status
+matrix, exact behavior delivered and remaining work. The user's original HTML hash
+matches the recorded reference. All 177 placements match the original order, block,
+R/C/O rule and contract. Extracted per-family metadata is in template-reference.json;
+the 41 visual demos/runtime were reviewed as demonstrations, not business data.
+
+Delivered catalogue/search, protected specification details, full reference design
+import for all twenty families, source-aware inspector, planned block placeholders,
+readiness and duplication. ManagedTemplate has optional immutable referenceId;
+existing schema-2 records without it retain their behavior. Reference-required
+functions cannot be removed/downgraded. All registered B types can be designed;
+unsupported required blocks and unconnected families block server approval/publish.
+A03/A06 are connected; unimplemented optional features stay disabled in actual pages.
+Page creation now enforces their service/locality requirements on built-ins and
+published reference-derived templates. Demo prices, reviews/jobs, lead delivery and
+indexing remain disabled. No public route was replaced by a template draft.
+
+Verification: lint, typecheck, build, expanded admin integration, builder model tests
+and public foundation checks passed. Integration imports all twenty original layouts,
+verifies full placement retention, protected requirements/identity, A20 publication
+hold, A03 publication with omitted unsupported conditionals and page context rules.
+Browser QA with disposable isolated credentials/store covered search, A08 specification,
+all-nine-section import/save, required control locks, review/failed approval, named
+B19/B20 readiness error, nine-section duplication, 390px inspector/spec navigation,
+no horizontal overflow and no observed console errors. QA server/store stopped;
+temporary scripts/extracts removed. User review remains the next UI acceptance step.
+
+Next implementation milestone: B03 service selection and B05 geography directory
+repositories/renderers, followed by managed A01/A02/A04/A05 wiring. Variant-specific
+requirements and B19/B20 shared-scope checklist/contents/print are the next bounded
+follow-ups. Full production Phase 3/4 acceptance is still open.
