@@ -9,7 +9,9 @@
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
     "verify:foundation": "node scripts/check-foundation.mjs",
-    "test:journey": "node --test tests/quote-journey.test.mjs"
+    "test:journey": "node --test tests/quote-journey.test.mjs",
+    "test:admin": "node --test tests/admin.test.mjs",
+    "admin:setup": "node scripts/setup-admin.mjs"
   },
   "dependencies": {
     "next": "16.4.6",

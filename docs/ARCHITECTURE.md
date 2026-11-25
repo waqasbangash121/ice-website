@@ -31,9 +31,10 @@ No persistent mobile sales bar in Phase 1: the header/menu provides quote access
 without overlapping fields. Revisit the commercial-page mobile action area in Phase 2.
 
 Layering: page/template → public domain loader → repository → storage.
-Current service records are typed local data behind src/lib/content.ts; CMS and
-database selection are intentionally deferred. Runtime validation, storage schemas,
-permissions and a full block schema are future work; TypeScript types are not security checks.
+Service catalogue records now pass through an async, request-local public loader in
+src/lib/content.ts. Published admin snapshots override the typed seed catalogue;
+drafts never cross this boundary. Production CMS/database selection, full storage
+schemas, staff roles and a full block schema remain open.
 
 ## Canonical route conventions
 
@@ -102,6 +103,81 @@ Production domain/hosting; CMS/database/auth/media choice; actual locality regis
 approved detailed service scopes; final quote questions, consent and retention;
 lead system and receipt behaviour; pricing/GST rules; evidence and policy wording;
 existing route inventory; original preview design review.
+
+## Initial Phase 3 administration
+
+The user requested a reference-style admin and supplied hyper-apps-website locally.
+ICE has its own Content Studio rather than sharing credentials or reference data.
+Public routes use a `(public)` route group; the root holds fonts/metadata and the
+admin has a separate shell. Public URLs remain unchanged.
+
+Server-only admin modules implement salted scrypt credential verification,
+opaque revocable sessions, runtime form validation and single-node local records.
+Pages and mutation endpoints each verify staff identity. Draft and published
+service snapshots remain separate, updates require matching revisions, and only
+approved revisions can publish. Public data reads use a request-local snapshot
+to guarantee the next request sees published content and matching metadata.
+
+The admin now covers catalogue cards, reusable blocks, custom templates and new
+pages with actual public URL publication, as well as A03/A06 compositions.
+Evidence/media, other specialist block/template implementations, role
+separation and durable database migrations remain open. One local operator can
+perform every editorial step. See PHASE-3.md
+for setup, security/deployment limits and the exact next step. No CRM, price or
+indexation activation is included.
+
+## Reusable block model
+
+The original 44 block contracts and all 20 ordered template specifications are in
+src/config/block-contracts.json, deterministically extracted from the supplied
+reference by scripts/import-block-contracts.mjs. A block type is a component
+contract; a content record is reusable data; a page composition references those
+records using its template's required/conditional/optional slots.
+
+Twelve supported content block types include B21 editorial body for general pages.
+Thirteen initial records render the existing national/Sydney end-of-lease pages;
+new records are created through the admin. Shared scope/FAQ/process records have
+independent draft and published snapshots. Local introductions/context remain
+separate. Variants create independent records, selected by matching block type.
+The renderer and private saved-draft preview share implementation. Structured
+plain text is escaped by React; the editor does not execute HTML or accept scripts.
+
+The composer now embeds the authenticated preview route in an iframe. A client
+canvas receives same-origin messages only from its parent, with fixed server-
+supplied page identity/context and validated known block selections. Composition
+changes remain in browser memory until saved; block content always comes from
+the authenticated saved drafts. A ready handshake also reapplies unsaved choices
+after Refresh blocks. Device controls use real 1280px/390px iframe viewports,
+scaled to fit the admin panel. Embedded links are intercepted to retain the editing
+context; the standalone saved-draft preview remains available.
+
+Page publication checks required slots, supported refs, stable identity, order,
+metadata/intent and published approved block dependencies. Approval binds the
+current dependency revisions and becomes stale if they change before publication.
+Shared block publication intentionally updates every referencing public page;
+usage lists expose the impact for editorial review. Seeded revision-0 public
+content remains a review baseline, not business approval. Unsupported estimator,
+review, case and policy slots cannot be enabled.
+
+Composition records use an atomic, versioned, locked private workspace JSON file.
+Schema 2 adds custom templates and per-slot identities; legacy schema-1 records
+upgrade on read and persist on the next write without dropping existing content.
+Repeated block types use distinct slot IDs. Original reference contracts remain
+read-only; custom templates are editable, with structural changes locked once a
+page references them. Create a new template for a different structure.
+
+New pages reserve validated unique paths under the same write lock. The public
+catch-all renders published snapshots only. A request-time Proxy gate sends actual
+HTTP 404 for private/unmatched new public paths before streaming can send 200.
+Existing routes, private endpoints and static assets bypass it. Publishing a page
+activates its URL without a build; new drafts never create a public baseline.
+The baseline exception remains confined to the two original review-build pages.
+
+Public composed-page/catalogue reads use React request-local memoization and
+Next.js connection(), with instant=false on data-driven page routes. This favors
+immediate consistency over cross-request caching in the local adapter and resolves
+the previously intermittent stale metadata/content assertions. Production database
+and caching remain future work. See PHASE-3.md for setup, migration and limits.
 
 ## Phase 2 decisions
 

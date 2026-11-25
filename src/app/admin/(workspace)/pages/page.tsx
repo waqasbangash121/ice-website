@@ -1,0 +1,8 @@
+import Link from "next/link";
+import { requireStaff } from "@/lib/admin/auth";
+import { readCompositions } from "@/lib/blocks/store";
+export default async function Page() {
+  await requireStaff();
+  const store = await readCompositions();
+  return <><header className="admin-heading"><p className="eyebrow">Page compositions</p><h1>Pages</h1><p>Templates supply the slots. Page records select the content, order, metadata and canonical intent.</p></header><div className="actions"><Link className="button button-primary" href="/admin/pages/new">Create page</Link></div>{Object.values(store.pages).map((record) => <article key={record.draft.id} className="admin-card admin-service-row"><div><span className="admin-badge">{record.draft.template} · {record.status}</span><h2><Link href={`/admin/pages/${record.draft.id}`}>{record.draft.title}</Link></h2><p>{record.draft.path}</p><small>{record.draft.placements.filter((slot) => slot.enabled).length} visible blocks · {record.publishedRevision ? `Published revision ${record.publishedRevision}` : ["lease-national", "lease-sydney"].includes(record.draft.id) ? "Existing review-build baseline" : "Not published"}</small></div><div className="admin-link-stack"><Link className="button button-secondary" href={`/admin/pages/${record.draft.id}`}>Edit composition</Link><Link href={`/admin/preview/${record.draft.id}`}>Preview saved drafts</Link></div></article>)}<p className="admin-notice">New pages stay private until published. Custom templates must be published before page creation. Existing national and Sydney service pages remain available.</p></>;
+}

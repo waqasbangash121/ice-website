@@ -1,0 +1,1389 @@
+{
+  "source": "docs/reference/architecture-source.txt",
+  "blocks": [
+    {
+      "id": "G01",
+      "name": "Header and navigation",
+      "contract": "Full approved logo; Services, Locations, Pricing, Our Work, Resources, About; primary quote, secondary phone. Mobile is an expandable menu, not a compressed desktop menu."
+    },
+    {
+      "id": "G02",
+      "name": "Footer and business identity",
+      "contract": "Consistent full name, 1800 934 009, verified contact/profile links, service and location navigation, policies; no invented office addresses."
+    },
+    {
+      "id": "G03",
+      "name": "Mobile action area",
+      "contract": "Quote-first action; secondary call. Reserve safe-area space; suppress obstruction during form entry. Support/legal/404 variants may omit persistent sales actions."
+    },
+    {
+      "id": "G04",
+      "name": "Breadcrumbs",
+      "contract": "One meaningful parent chain with real crawlable ancestors; locality identity stays stable across region crosslinks."
+    },
+    {
+      "id": "B01",
+      "name": "Intent-led introduction",
+      "contract": "One H1, who/what/where where relevant, short customer outcome, truthful next action; optional illustrative image never presented as job proof."
+    },
+    {
+      "id": "B02",
+      "name": "Direct answer / key facts",
+      "contract": "Concise self-contained answer or summary with important scope/price qualifications beside the claim, not hidden below."
+    },
+    {
+      "id": "B03",
+      "name": "Service selection cards",
+      "contract": "Service ID, customer task, brief scope distinction and descriptive canonical link; do not create pages for synonyms."
+    },
+    {
+      "id": "B04",
+      "name": "Locality finder",
+      "contract": "Suburb/postcode input, same-name disambiguation, matched locality ID, clear coverage vs availability wording; unknown input is not automatically unserved."
+    },
+    {
+      "id": "B05",
+      "name": "Geographic directory",
+      "contract": "State/region/locality links with verified hierarchy; paginate large lists; map optional and never sole navigation."
+    },
+    {
+      "id": "B06",
+      "name": "Inclusions and exclusions",
+      "contract": "Service-specific scope, explicit exclusions and assessment conditions; same approved scope record reused consistently."
+    },
+    {
+      "id": "B07",
+      "name": "Extras and suitability",
+      "contract": "Optional items, eligibility/material limitations, scope changes and approval before additional work; no assumed cross-service inclusions."
+    },
+    {
+      "id": "B08",
+      "name": "Pricing and cost factors",
+      "contract": "Approved rates/ranges when available, charging unit, tax treatment, scope, factors, extras and date; otherwise explain assessment without inventing a figure."
+    },
+    {
+      "id": "B09",
+      "name": "Estimate component",
+      "contract": "Only use approved calculator rules; selected scope, estimate range and qualification, tailored-quote path for unpriced work, handoff to universal form."
+    },
+    {
+      "id": "B10",
+      "name": "Process and next steps",
+      "contract": "Numbered 01/02/03 steps reflecting the real enquiry-to-confirmation-to-service journey; no fabricated booking or response promise."
+    },
+    {
+      "id": "B11",
+      "name": "Case study cards",
+      "contract": "Actual approved jobs, relevant service/location relationships, observed outcome and link; omit when no appropriate evidence."
+    },
+    {
+      "id": "B12",
+      "name": "Evidence gallery",
+      "contract": "Consented same-job before/after assets, captions and honest comparison; keyboard/touch navigation; no fabricated image provenance."
+    },
+    {
+      "id": "B13",
+      "name": "Review display",
+      "contract": "Source, date, original meaning and applicable service/locality; ratings only where supported; no uncited star count."
+    },
+    {
+      "id": "B14",
+      "name": "Credentials and accountability",
+      "contract": "Only documented insurance/credentials or real responsible people; link evidence where suitable; no generic trust badge filler."
+    },
+    {
+      "id": "B15",
+      "name": "Decision FAQs",
+      "contract": "Real page-specific objections, concise answers and qualification links. Add suburb only where meaning requires it; no forced question count."
+    },
+    {
+      "id": "B16",
+      "name": "Related links",
+      "contract": "Curated contextual services, guides, pricing, checklists, cases or locations; explain the relevance rather than adding a large keyword link cloud."
+    },
+    {
+      "id": "B17",
+      "name": "Conversion handoff",
+      "contract": "One form-first action and secondary 1800 934 009 call where appropriate; preserve selected context without technical customer-facing explanation."
+    },
+    {
+      "id": "B18",
+      "name": "Policy and reassurance",
+      "contract": "Approved eligibility, scope, time window, exclusions, reporting steps and full terms link; not an unconditional guarantee."
+    },
+    {
+      "id": "B19",
+      "name": "Interactive / printable checklist",
+      "contract": "Tasks grouped by room or surface, included/extra/not included status, conditional notes, scope version and print view. No login gate for core scope."
+    },
+    {
+      "id": "B20",
+      "name": "On-page contents",
+      "contract": "Anchor links to meaningful sections; visible keyboard focus, sticky-header offset and no automatic scroll hijacking."
+    },
+    {
+      "id": "B21",
+      "name": "Editorial body",
+      "contract": "Readable sections with direct answers, concrete examples, material/safety limits and appropriate sources; no fixed word-count padding."
+    },
+    {
+      "id": "B22",
+      "name": "Comparison / decision table",
+      "contract": "Consistent comparison criteria, suitability and limitations; compare supported methods or scope, not unsupported competitor claims."
+    },
+    {
+      "id": "B23",
+      "name": "Author and review details",
+      "contract": "Actual author/reviewer and relevant experience, publication and substantive update dates; never invent a person or artificial freshness."
+    },
+    {
+      "id": "B24",
+      "name": "Sources and methodology",
+      "contract": "Source links, provenance, methods, limitations and reviewed date for factual/technical claims; distinguish job evidence from outside advice."
+    },
+    {
+      "id": "B25",
+      "name": "Filters and search",
+      "contract": "Useful service/location/topic filtering, visible active filters, result count and clear reset; keyboard accessible and no endless indexable combinations."
+    },
+    {
+      "id": "B26",
+      "name": "Content results",
+      "contract": "Cards for articles, guides, cases or reviews with accurate type-specific metadata and helpful empty states; select type as a variant."
+    },
+    {
+      "id": "B27",
+      "name": "Pagination",
+      "contract": "Crawlable next/previous and numbered pages with stable URLs when needed; optional load-more enhances rather than replaces access."
+    },
+    {
+      "id": "B28",
+      "name": "Job facts",
+      "contract": "Service, general locality, property/surface, objective, constraints, date and approved outcome; no private address or invented measurements."
+    },
+    {
+      "id": "B29",
+      "name": "Case narrative",
+      "contract": "Problem → agreed scope → process → observed result → limitations/lessons, tied to real evidence; service-specific fields."
+    },
+    {
+      "id": "B30",
+      "name": "Review provenance",
+      "contract": "Explain collection/source and moderation honestly; deduplicate records and distinguish rated reviews from unrated testimonials."
+    },
+    {
+      "id": "B31",
+      "name": "Brand story and standards",
+      "contract": "Verified identity/history plus demonstrable scope, quote and service standards; do not convert aspirations into historical facts."
+    },
+    {
+      "id": "B32",
+      "name": "Partner proposition",
+      "contract": "Approved partnership types, audience fit, responsibilities, enquiry route and next steps; no invented franchise/referral earnings."
+    },
+    {
+      "id": "B33",
+      "name": "Progressive enquiry form",
+      "contract": "Service-aware questions, accessible labels/validation, separate property/contact steps, consent, preserved entries and recovery; field configuration still awaits user input."
+    },
+    {
+      "id": "B34",
+      "name": "Editable request summary",
+      "contract": "Selected services/location, approved estimate assumptions, edit links and recalculation on scope change; technical IDs remain internal."
+    },
+    {
+      "id": "B35",
+      "name": "Submission and recovery states",
+      "contract": "Loading, inline error, network retry, accepted enquiry and duplicate protection; success only after lead acceptance, not booking confirmation."
+    },
+    {
+      "id": "B36",
+      "name": "Support pathways",
+      "contract": "New quote vs existing enquiry vs service concern; contact methods and factual expectations; sensitive information stays out of public pages."
+    },
+    {
+      "id": "B37",
+      "name": "Policy document",
+      "contract": "Owner, effective/reviewed date, readable clauses, contact route and controlled revision history; owner-approved text rather than marketing promises."
+    },
+    {
+      "id": "B38",
+      "name": "HTML sitemap groups",
+      "contract": "Hierarchical canonical links to services, resources and paginated location indexes; exclude private sessions, duplicate filters and unpublished paths."
+    },
+    {
+      "id": "B39",
+      "name": "Not-found recovery",
+      "contract": "Plain missing-page explanation, useful service/location search and main routes; actual HTTP 404, no fake successful page."
+    },
+    {
+      "id": "B40",
+      "name": "Relevant local / service context",
+      "contract": "Verified property/access or material requirements that alter the customer decision. Do not infer local housing characteristics from income, population or place names."
+    }
+  ],
+  "templates": [
+    {
+      "id": "A01",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Broad cleaning-services introduction for Australia; form-first CTA, secondary call. Do not turn the homepage into an end-of-lease or three-city landing page."
+        },
+        {
+          "order": 2,
+          "block": "B03",
+          "rule": "R",
+          "contract": "Group all 12 services by customer need; descriptive links make specialist services easy to find."
+        },
+        {
+          "order": 3,
+          "block": "B04",
+          "rule": "R",
+          "contract": "Find a suburb or postcode and retain selection when requesting a quote."
+        },
+        {
+          "order": 4,
+          "block": "B31",
+          "rule": "R",
+          "contract": "Show how clear scope, transparent extras and straightforward next steps work in practice."
+        },
+        {
+          "order": 5,
+          "block": "B08",
+          "rule": "R",
+          "contract": "Short price/assessment explanation and link to all-service pricing; no repeated long price tables."
+        },
+        {
+          "order": 6,
+          "block": "B10",
+          "rule": "R",
+          "contract": "Explain enquiry, scope/price confirmation and arranging the clean."
+        },
+        {
+          "order": 7,
+          "block": "B11",
+          "rule": "C",
+          "contract": "A balanced selection of real work across services; no invented multi-service portfolio."
+        },
+        {
+          "order": 8,
+          "block": "B13",
+          "rule": "C",
+          "contract": "Attributable brand reviews with relevant service labels."
+        },
+        {
+          "order": 9,
+          "block": "B15",
+          "rule": "R",
+          "contract": "Answer choosing a service, Australia-wide coverage, quotes and booking expectations."
+        },
+        {
+          "order": 10,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Close with the general quote action; no giant suburb list."
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Explain how services are organised; broad professional-cleaning selection intent."
+        },
+        {
+          "order": 2,
+          "block": "B03",
+          "rule": "R",
+          "contract": "All 12 services with customer task, key scope difference and canonical destination."
+        },
+        {
+          "order": 3,
+          "block": "B22",
+          "rule": "C",
+          "contract": "Short decision table for genuinely confusing choices such as ordinary versus builders cleaning."
+        },
+        {
+          "order": 4,
+          "block": "B07",
+          "rule": "R",
+          "contract": "Explain how multiple requirements are assessed; no invented bundles or automatic discounts."
+        },
+        {
+          "order": 5,
+          "block": "B04",
+          "rule": "O",
+          "contract": "Carry selected area into the chosen service or quote."
+        },
+        {
+          "order": 6,
+          "block": "B08",
+          "rule": "R",
+          "contract": "Link to national pricing and explain why some work needs assessment."
+        },
+        {
+          "order": 7,
+          "block": "B15",
+          "rule": "R",
+          "contract": "Service-selection questions only; do not replicate all service FAQs."
+        },
+        {
+          "order": 8,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Help visitors who are unsure choose a service within the quote journey."
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "One service, Australian coverage, customer outcome and service-aware quote CTA."
+        },
+        {
+          "order": 2,
+          "block": "B02",
+          "rule": "R",
+          "contract": "What it is, who it suits and principal limitation in a short answer."
+        },
+        {
+          "order": 3,
+          "block": "B06",
+          "rule": "R",
+          "contract": "Detailed approved inclusions and exclusions grouped by room, surface or task."
+        },
+        {
+          "order": 4,
+          "block": "B07",
+          "rule": "R",
+          "contract": "Relevant extras, suitability and assessment needs; cross-link additional services where useful."
+        },
+        {
+          "order": 5,
+          "block": "B08",
+          "rule": "R",
+          "contract": "Price summary/factors, unit and tax treatment; link dedicated pricing only if published."
+        },
+        {
+          "order": 6,
+          "block": "B09",
+          "rule": "C",
+          "contract": "Approved service estimator immediately beside the price explanation."
+        },
+        {
+          "order": 7,
+          "block": "B10",
+          "rule": "R",
+          "contract": "Before visit, how work is agreed, service and follow-up expectations."
+        },
+        {
+          "order": 8,
+          "block": "B11",
+          "rule": "C",
+          "contract": "Relevant service jobs; a real case can carry optional before/after gallery B12."
+        },
+        {
+          "order": 9,
+          "block": "B13",
+          "rule": "C",
+          "contract": "Service-matched review; do not imply a generic review describes this service."
+        },
+        {
+          "order": 10,
+          "block": "B18",
+          "rule": "C",
+          "contract": "Applicable rectification/reassurance and full conditions, particularly end-of-lease."
+        },
+        {
+          "order": 11,
+          "block": "B04",
+          "rule": "R",
+          "contract": "Useful location selection linking to published local service coverage."
+        },
+        {
+          "order": 12,
+          "block": "B15",
+          "rule": "R",
+          "contract": "Service-specific price, scope, access, preparation and outcome objections."
+        },
+        {
+          "order": 13,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Checklist, pricing, relevant guides and genuine related services."
+        },
+        {
+          "order": 14,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Service-prefilled quote; call remains secondary."
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Explain Australia-wide coverage separately from booking capacity."
+        },
+        {
+          "order": 2,
+          "block": "B04",
+          "rule": "R",
+          "contract": "Search by suburb or postcode; disambiguate with state and postcode."
+        },
+        {
+          "order": 3,
+          "block": "B05",
+          "rule": "R",
+          "contract": "Nine state/territory reporting groups, region links and paginated locality access."
+        },
+        {
+          "order": 4,
+          "block": "B02",
+          "rule": "R",
+          "contract": "What a coverage match means; missing data goes to review, not automatic rejection."
+        },
+        {
+          "order": 5,
+          "block": "B03",
+          "rule": "R",
+          "contract": "Link the service catalogue so the finder supports a service decision."
+        },
+        {
+          "order": 6,
+          "block": "B15",
+          "rule": "R",
+          "contract": "Postcode ambiguity, rural coverage, access and booking availability."
+        },
+        {
+          "order": 7,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Quote with selected locality; allow direct entry when no match is found."
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Name geographic entity and describe all-service coverage without claiming a local branch."
+        },
+        {
+          "order": 2,
+          "block": "B03",
+          "rule": "R",
+          "contract": "Services available in that geography with links to published service/location children."
+        },
+        {
+          "order": 3,
+          "block": "B40",
+          "rule": "R",
+          "contract": "Useful verified local access/service context; do not add trivia for apparent uniqueness."
+        },
+        {
+          "order": 4,
+          "block": "B05",
+          "rule": "R",
+          "contract": "State/region: child regions/localities. Locality: parent context, postcodes and useful nearby locality links."
+        },
+        {
+          "order": 5,
+          "block": "B08",
+          "rule": "R",
+          "contract": "Short applicable price factors and national pricing link; only claim local rates when approved."
+        },
+        {
+          "order": 6,
+          "block": "B10",
+          "rule": "R",
+          "contract": "How enquiry and service arrangements work for this area."
+        },
+        {
+          "order": 7,
+          "block": "B11",
+          "rule": "C",
+          "contract": "Actual geographically relevant jobs; clearly label regional proof when no same-suburb job exists."
+        },
+        {
+          "order": 8,
+          "block": "B13",
+          "rule": "C",
+          "contract": "Verified local review where available; never relabel a review from another area."
+        },
+        {
+          "order": 9,
+          "block": "B15",
+          "rule": "R",
+          "contract": "Questions triggered by area/service access; use the place name naturally, not in every question."
+        },
+        {
+          "order": 10,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Location-prefilled quote action."
+        }
+      ]
+    },
+    {
+      "id": "A06",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Service + location + concrete next step; use evidence-supported regional terms naturally."
+        },
+        {
+          "order": 2,
+          "block": "B02",
+          "rule": "R",
+          "contract": "Direct answer about service scope and coverage in this locality."
+        },
+        {
+          "order": 3,
+          "block": "B06",
+          "rule": "R",
+          "contract": "Approved service inclusions and exclusions; consistent with national scope source."
+        },
+        {
+          "order": 4,
+          "block": "B40",
+          "rule": "R",
+          "contract": "Local requirements that materially affect access, timing, scope or assessment, supported by evidence."
+        },
+        {
+          "order": 5,
+          "block": "B08",
+          "rule": "R",
+          "contract": "Applicable price explanation, extras and assessment factors; no invented local surcharge."
+        },
+        {
+          "order": 6,
+          "block": "B09",
+          "rule": "C",
+          "contract": "Same approved estimator with service/locality context retained."
+        },
+        {
+          "order": 7,
+          "block": "B10",
+          "rule": "R",
+          "contract": "How to organise this service here; distinguish coverage from available appointment."
+        },
+        {
+          "order": 8,
+          "block": "B11",
+          "rule": "C",
+          "contract": "Exact service/location case if available; otherwise clearly identified relevant regional example."
+        },
+        {
+          "order": 9,
+          "block": "B13",
+          "rule": "C",
+          "contract": "Review with honest service/geography provenance."
+        },
+        {
+          "order": 10,
+          "block": "B18",
+          "rule": "C",
+          "contract": "Only policies that apply to this service."
+        },
+        {
+          "order": 11,
+          "block": "B15",
+          "rule": "R",
+          "contract": "Specific customer questions; suburb in heading or answer only when it adds meaning."
+        },
+        {
+          "order": 12,
+          "block": "B16",
+          "rule": "R",
+          "contract": "National service detail, full checklist/price guide, locality hub and useful preparation guide."
+        },
+        {
+          "order": 13,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Service/location-prefilled form; call as secondary."
+        }
+      ]
+    },
+    {
+      "id": "A07",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "State national comparison or specific service cost intent, not a generic sales pitch."
+        },
+        {
+          "order": 2,
+          "block": "B02",
+          "rule": "R",
+          "contract": "Direct cost answer when approved; otherwise clearly explain what assessment is needed."
+        },
+        {
+          "order": 3,
+          "block": "B03",
+          "rule": "C",
+          "contract": "National variant: service selector across all 12 services."
+        },
+        {
+          "order": 4,
+          "block": "B08",
+          "rule": "R",
+          "contract": "Rates/ranges or factors, units, inclusions, tax, minimums, extras and effective dates from approved schedules."
+        },
+        {
+          "order": 5,
+          "block": "B22",
+          "rule": "C",
+          "contract": "Compare scope or approved cost scenarios with their assumptions, never invented illustrative prices presented as real offers."
+        },
+        {
+          "order": 6,
+          "block": "B07",
+          "rule": "R",
+          "contract": "What changes the cost and which conditions require a tailored quote."
+        },
+        {
+          "order": 7,
+          "block": "B09",
+          "rule": "C",
+          "contract": "Approved calculator with editable assumptions and transparent estimate qualification."
+        },
+        {
+          "order": 8,
+          "block": "B10",
+          "rule": "R",
+          "contract": "Estimate → enquiry → confirmed scope/price → booking."
+        },
+        {
+          "order": 9,
+          "block": "B15",
+          "rule": "R",
+          "contract": "Fees, minimum charge, optional extras, quote validity and payment questions only where facts exist."
+        },
+        {
+          "order": 10,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Corresponding service, checklist, relevant price children/parent hub."
+        },
+        {
+          "order": 11,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Get My Confirmed Quote after estimate; otherwise a clear quote action."
+        }
+      ]
+    },
+    {
+      "id": "A08",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Identify service and whether this is a booked-service scope checklist, not universal DIY advice."
+        },
+        {
+          "order": 2,
+          "block": "B02",
+          "rule": "R",
+          "contract": "Version, applicability and how to interpret included/extra/excluded labels."
+        },
+        {
+          "order": 3,
+          "block": "B20",
+          "rule": "R",
+          "contract": "Jump to rooms/surfaces; print action is a utility, not a competing sales CTA."
+        },
+        {
+          "order": 4,
+          "block": "B19",
+          "rule": "R",
+          "contract": "Full grouped task list from approved scope; state conditional tasks clearly."
+        },
+        {
+          "order": 5,
+          "block": "B07",
+          "rule": "R",
+          "contract": "Optional work and assessment-dependent exceptions."
+        },
+        {
+          "order": 6,
+          "block": "B18",
+          "rule": "C",
+          "contract": "Relevant service conditions and rectification link, not a bond refund promise."
+        },
+        {
+          "order": 7,
+          "block": "B15",
+          "rule": "R",
+          "contract": "Answer practical interpretation questions not already answered by task rows."
+        },
+        {
+          "order": 8,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Parent service, preparation guide and pricing."
+        },
+        {
+          "order": 9,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Request a quote for that scope; no gated access to essential inclusions."
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Explain which practical questions this collection answers."
+        },
+        {
+          "order": 2,
+          "block": "B03",
+          "rule": "C",
+          "contract": "National hub: twelve service-specific guide collections."
+        },
+        {
+          "order": 3,
+          "block": "B25",
+          "rule": "C",
+          "contract": "Search/topic filtering where collection size warrants it."
+        },
+        {
+          "order": 4,
+          "block": "B26",
+          "rule": "R",
+          "contract": "Guide cards grouped by preparation, aftercare, comparisons and approved subtopics."
+        },
+        {
+          "order": 5,
+          "block": "B02",
+          "rule": "C",
+          "contract": "Highlight a genuinely useful starting guide without fake popularity labels."
+        },
+        {
+          "order": 6,
+          "block": "B27",
+          "rule": "C",
+          "contract": "Pagination when needed; all published guides remain reachable."
+        },
+        {
+          "order": 7,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Related service and relevant scope checklist; link blog separately as editorial reading."
+        },
+        {
+          "order": 8,
+          "block": "B17",
+          "rule": "C",
+          "contract": "Light service-aware quote handoff after the educational navigation."
+        }
+      ]
+    },
+    {
+      "id": "A10",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Task-led title and what the reader will learn."
+        },
+        {
+          "order": 2,
+          "block": "B02",
+          "rule": "R",
+          "contract": "Answer summary, who it applies to and material limitations."
+        },
+        {
+          "order": 3,
+          "block": "B23",
+          "rule": "R",
+          "contract": "Real author/reviewer and genuine review dates."
+        },
+        {
+          "order": 4,
+          "block": "B20",
+          "rule": "C",
+          "contract": "Contents for a long guide; omit unnecessary navigation on short articles."
+        },
+        {
+          "order": 5,
+          "block": "B21",
+          "rule": "R",
+          "contract": "Prerequisites, ordered practical guidance, limitations and what to do when professional assessment is needed."
+        },
+        {
+          "order": 6,
+          "block": "B22",
+          "rule": "C",
+          "contract": "Comparison or decision table where the task involves choosing."
+        },
+        {
+          "order": 7,
+          "block": "B12",
+          "rule": "C",
+          "contract": "Original labelled instructional or job evidence; stock illustration must not imply a result."
+        },
+        {
+          "order": 8,
+          "block": "B24",
+          "rule": "R",
+          "contract": "Sources/evidence appropriate to factual claims; technical advice needs relevant review."
+        },
+        {
+          "order": 9,
+          "block": "B15",
+          "rule": "C",
+          "contract": "Only residual questions beyond the main answer."
+        },
+        {
+          "order": 10,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Service, checklist and next useful sub-guide."
+        },
+        {
+          "order": 11,
+          "block": "B17",
+          "rule": "C",
+          "contract": "Relevant low-pressure service quote action after useful instruction."
+        }
+      ]
+    },
+    {
+      "id": "A11",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Explain the editorial purpose; distinguish blog from step-by-step guide library."
+        },
+        {
+          "order": 2,
+          "block": "B25",
+          "rule": "R",
+          "contract": "Service/topic filters with clear reset and result counts."
+        },
+        {
+          "order": 3,
+          "block": "B26",
+          "rule": "R",
+          "contract": "Article title, useful excerpt, service category, real date and canonical link for the 50 proposed topics once written."
+        },
+        {
+          "order": 4,
+          "block": "B27",
+          "rule": "C",
+          "contract": "Crawlable pagination as articles accumulate."
+        },
+        {
+          "order": 5,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Guide library and related service collections."
+        },
+        {
+          "order": 6,
+          "block": "B17",
+          "rule": "C",
+          "contract": "Small helpful quote route, not a sales wall before articles."
+        }
+      ]
+    },
+    {
+      "id": "A12",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Specific question-led title; no keyword-stuffed suburb variants."
+        },
+        {
+          "order": 2,
+          "block": "B23",
+          "rule": "R",
+          "contract": "Actual author/reviewer and publication/update details."
+        },
+        {
+          "order": 3,
+          "block": "B02",
+          "rule": "R",
+          "contract": "Answer the main question early, including meaningful qualifications."
+        },
+        {
+          "order": 4,
+          "block": "B21",
+          "rule": "R",
+          "contract": "Explain causes/choices with examples, limitations and useful next steps; do not duplicate the full evergreen guide."
+        },
+        {
+          "order": 5,
+          "block": "B22",
+          "rule": "C",
+          "contract": "Decision table if useful to this specific question."
+        },
+        {
+          "order": 6,
+          "block": "B11",
+          "rule": "C",
+          "contract": "Relevant approved case example as evidence, not an unrelated promotional insertion."
+        },
+        {
+          "order": 7,
+          "block": "B24",
+          "rule": "R",
+          "contract": "Sources and review for technical claims; first-hand observations labelled accurately."
+        },
+        {
+          "order": 8,
+          "block": "B15",
+          "rule": "C",
+          "contract": "Useful unresolved follow-up questions only."
+        },
+        {
+          "order": 9,
+          "block": "B16",
+          "rule": "R",
+          "contract": "One principal service destination and the most relevant detailed guide."
+        },
+        {
+          "order": 10,
+          "block": "B17",
+          "rule": "C",
+          "contract": "Contextual quote invitation where commercial help is relevant."
+        }
+      ]
+    },
+    {
+      "id": "A13",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Explain what the work examples show without unsupported success statistics."
+        },
+        {
+          "order": 2,
+          "block": "B25",
+          "rule": "R",
+          "contract": "Service first, then location/property/challenge filters as sufficient records exist."
+        },
+        {
+          "order": 3,
+          "block": "B26",
+          "rule": "R",
+          "contract": "Real case cards with service, locality, challenge, observed outcome and permitted image."
+        },
+        {
+          "order": 4,
+          "block": "B27",
+          "rule": "C",
+          "contract": "Crawlable pagination when needed."
+        },
+        {
+          "order": 5,
+          "block": "B24",
+          "rule": "R",
+          "contract": "Short explanation of evidence/consent and any outcome limitations."
+        },
+        {
+          "order": 6,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Relevant services and reviews."
+        },
+        {
+          "order": 7,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Request a quote for a comparable job, not a promise of identical results."
+        }
+      ]
+    },
+    {
+      "id": "A14",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Specific real job title without private identifying detail."
+        },
+        {
+          "order": 2,
+          "block": "B28",
+          "rule": "R",
+          "contract": "Service, locality, property/surface, job date, objective and constraints."
+        },
+        {
+          "order": 3,
+          "block": "B29",
+          "rule": "R",
+          "contract": "Starting problem → agreed scope → work performed → observed result → limitations."
+        },
+        {
+          "order": 4,
+          "block": "B12",
+          "rule": "C",
+          "contract": "Permissioned comparable before/after evidence; explain if photographs are unavailable."
+        },
+        {
+          "order": 5,
+          "block": "B13",
+          "rule": "C",
+          "contract": "Linked customer review only with source/permission; no invented quotation."
+        },
+        {
+          "order": 6,
+          "block": "B23",
+          "rule": "R",
+          "contract": "Responsible writer/reviewer with connection to job evidence."
+        },
+        {
+          "order": 7,
+          "block": "B24",
+          "rule": "R",
+          "contract": "Evidence provenance, outcome measurement method where applicable and consent record held privately."
+        },
+        {
+          "order": 8,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Relevant service, local service page if published and related case."
+        },
+        {
+          "order": 9,
+          "block": "B17",
+          "rule": "R",
+          "contract": "Quote for a similar requirement with no identical-outcome guarantee."
+        }
+      ]
+    },
+    {
+      "id": "A15",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Plain introduction without an invented aggregate rating."
+        },
+        {
+          "order": 2,
+          "block": "B30",
+          "rule": "R",
+          "contract": "Explain review sources and verification/moderation truthfully."
+        },
+        {
+          "order": 3,
+          "block": "B25",
+          "rule": "R",
+          "contract": "Service/location filters only where relationships are known."
+        },
+        {
+          "order": 4,
+          "block": "B13",
+          "rule": "R",
+          "contract": "Accessible review cards: source, date, permitted name, text and rating scale if present."
+        },
+        {
+          "order": 5,
+          "block": "B27",
+          "rule": "C",
+          "contract": "Pagination with stable accessible records."
+        },
+        {
+          "order": 6,
+          "block": "B02",
+          "rule": "C",
+          "contract": "Aggregate only from an eligible, deduplicated and clearly scoped dataset; never combine incompatible ratings."
+        },
+        {
+          "order": 7,
+          "block": "B36",
+          "rule": "R",
+          "contract": "Route service concerns to support; no review-gating based on positive sentiment."
+        },
+        {
+          "order": 8,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Related cases and services."
+        },
+        {
+          "order": 9,
+          "block": "B17",
+          "rule": "C",
+          "contract": "Quote action after visitors can inspect evidence."
+        }
+      ]
+    },
+    {
+      "id": "A16",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "About: clear identity. Partner: who the opportunity is for and truthful enquiry action."
+        },
+        {
+          "order": 2,
+          "block": "B31",
+          "rule": "R",
+          "contract": "Verified business story and practical service standards, or partner-facing delivery standards."
+        },
+        {
+          "order": 3,
+          "block": "B32",
+          "rule": "C",
+          "contract": "Partner variant requires approved models, fit criteria and mutual responsibilities."
+        },
+        {
+          "order": 4,
+          "block": "B14",
+          "rule": "C",
+          "contract": "Real responsible people and evidenced credentials, no fictional team biographies."
+        },
+        {
+          "order": 5,
+          "block": "B11",
+          "rule": "C",
+          "contract": "Relevant work illustrating standards or an approved partnership example."
+        },
+        {
+          "order": 6,
+          "block": "B10",
+          "rule": "R",
+          "contract": "About: customer process. Partner: enquiry → suitability discussion → agreed arrangement."
+        },
+        {
+          "order": 7,
+          "block": "B15",
+          "rule": "C",
+          "contract": "Meaningful identity/partnership questions; avoid invented fees or earnings."
+        },
+        {
+          "order": 8,
+          "block": "B17",
+          "rule": "R",
+          "contract": "About: cleaning quote. Partner: labelled partnership enquiry using an explicit enquiry-type path, not a misleading cleaning-price form."
+        }
+      ]
+    },
+    {
+      "id": "A17",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Short quote-purpose introduction; no long sales hero pushing fields down."
+        },
+        {
+          "order": 2,
+          "block": "B34",
+          "rule": "C",
+          "contract": "For estimator/service entry, show editable selected service/location and indicative estimate."
+        },
+        {
+          "order": 3,
+          "block": "B33",
+          "rule": "R",
+          "contract": "Service selection, relevant property/scope details, preferred timing and contact steps; final fields supplied by user."
+        },
+        {
+          "order": 4,
+          "block": "B18",
+          "rule": "R",
+          "contract": "Required service terms/privacy and optional marketing choice remain separate; estimate/booking distinction visible."
+        },
+        {
+          "order": 5,
+          "block": "B35",
+          "rule": "R",
+          "contract": "Validation, loading, accepted submission, retry and duplicate protection states; retain entered values."
+        },
+        {
+          "order": 6,
+          "block": "B10",
+          "rule": "R",
+          "contract": "Explain what happens after enquiry without unapproved response-time promises."
+        },
+        {
+          "order": 7,
+          "block": "B13",
+          "rule": "C",
+          "contract": "Separate supporting proof section outside the form, never inserted between form fields."
+        },
+        {
+          "order": 8,
+          "block": "B36",
+          "rule": "R",
+          "contract": "Accessible call alternative and assistance for a stuck customer."
+        }
+      ]
+    },
+    {
+      "id": "A18",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Name support task and provide the shortest useful route."
+        },
+        {
+          "order": 2,
+          "block": "B36",
+          "rule": "R",
+          "contract": "Contact: new quote vs existing request vs concern. FAQ: service/topic routes. Rectification: report a scoped concern."
+        },
+        {
+          "order": 3,
+          "block": "B02",
+          "rule": "R",
+          "contract": "Direct answer and any eligibility/time qualification beside it."
+        },
+        {
+          "order": 4,
+          "block": "B18",
+          "rule": "C",
+          "contract": "Rectification variant requires the full approved eligible 72-hour process, exclusions and reporting requirements; no unconditional guarantee."
+        },
+        {
+          "order": 5,
+          "block": "B15",
+          "rule": "C",
+          "contract": "FAQ variant requires grouped real questions; contact variant only if useful."
+        },
+        {
+          "order": 6,
+          "block": "B33",
+          "rule": "C",
+          "contract": "Support enquiry if configured, with accessible recovery and secure evidence upload where approved."
+        },
+        {
+          "order": 7,
+          "block": "B10",
+          "rule": "R",
+          "contract": "Clear next steps and truthful acknowledgement; no unsupported response SLA."
+        },
+        {
+          "order": 8,
+          "block": "B16",
+          "rule": "R",
+          "contract": "Applicable service, checklist, full terms and contact route."
+        },
+        {
+          "order": 9,
+          "block": "B17",
+          "rule": "C",
+          "contract": "Cleaning quote only for new-service enquiry; never make a complaining customer restart a sales journey."
+        }
+      ]
+    },
+    {
+      "id": "A19",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B01",
+          "rule": "R",
+          "contract": "Clear document or sitemap title; no promotional hero."
+        },
+        {
+          "order": 2,
+          "block": "B20",
+          "rule": "C",
+          "contract": "Contents for long policies; useful for quick access to clauses."
+        },
+        {
+          "order": 3,
+          "block": "B37",
+          "rule": "C",
+          "contract": "Policy/accessibility variant requires approved text, owner, effective date and contact path."
+        },
+        {
+          "order": 4,
+          "block": "B38",
+          "rule": "C",
+          "contract": "Sitemap variant requires grouped canonical published links with scalable location pagination."
+        },
+        {
+          "order": 5,
+          "block": "B36",
+          "rule": "R",
+          "contract": "Appropriate privacy/accessibility/support contact or a contact link in the shell."
+        },
+        {
+          "order": 6,
+          "block": "B24",
+          "rule": "C",
+          "contract": "Document change/standards references where relevant; do not make unsupported accessibility-conformance claims."
+        }
+      ]
+    },
+    {
+      "id": "A20",
+      "placements": [
+        {
+          "order": 1,
+          "block": "B39",
+          "rule": "R",
+          "contract": "Plain missing-page message; never imply the requested service or location is unavailable merely because the URL is missing."
+        },
+        {
+          "order": 2,
+          "block": "B04",
+          "rule": "C",
+          "contract": "Location lookup when the failed path suggests location intent."
+        },
+        {
+          "order": 3,
+          "block": "B03",
+          "rule": "R",
+          "contract": "Useful core service links plus homepage and contact navigation."
+        },
+        {
+          "order": 4,
+          "block": "B36",
+          "rule": "C",
+          "contract": "Help route if visitor cannot find what they need."
+        }
+      ]
+    }
+  ]
+}

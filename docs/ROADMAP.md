@@ -49,7 +49,25 @@ flow work without transmitting an enquiry. Achieved. Original production accepta
 (real lead receipt and approved operational data) remains deferred, not silently passed.
 
 ## Phase 3 — Content administration
-Status: not started.
+Status: in progress (25 November 2026); initial local service-admin review build.
+
+- [x] Add protected Content Studio shell and local single-operator sign-in.
+- [x] Edit service catalogue cards with private previews, revision history and
+  draft/review/approval/publication transitions; isolate unpublished changes.
+- [x] Verify authentication, expiry/logout, workflow, cache invalidation and conflicts.
+- [x] Import all 44 block contracts and 20 template placement specifications.
+- [x] Add shared-block editing/variants and A03/A06 composition, preview and
+  dependency-aware publication for the two existing end-of-lease pages.
+- [x] Embed desktop/mobile preview in the composer with live unsaved composition
+  updates and refresh of saved shared blocks.
+- [x] Create new blocks, custom templates with repeated slots and pages with
+  unique public URLs; verify private 404 and actual publication without rebuilding.
+- [x] Upgrade version-1 composition storage without losing existing records and
+  resolve stale publication metadata with request-local public snapshots.
+
+These checks cover service cards, twelve block renderers, custom page compositions
+and one operator, not the full acceptance
+below. See PHASE-3.md for setup, reference, local storage and remaining limits.
 
 - [ ] Decide database, media storage and staff authentication.
 - [ ] Implement repositories and migrations behind existing public loaders.

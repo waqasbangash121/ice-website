@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+.block-copy { white-space: pre-line; }
+.block-links { display: flex; flex-wrap: wrap; gap: 1.5rem; padding-left: 1.25rem; }
+
 :root {
   --navy: #092f4d;
   --lime: #94d60c;

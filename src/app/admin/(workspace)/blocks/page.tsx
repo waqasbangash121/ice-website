@@ -1,0 +1,9 @@
+import Link from "next/link";
+import { requireStaff } from "@/lib/admin/auth";
+import { readCompositions, usageOf } from "@/lib/blocks/store";
+import { blockContracts, supportsBlock } from "@/lib/blocks/schema";
+export default async function Page() {
+  await requireStaff();
+  const store = await readCompositions();
+  return <><header className="admin-heading"><p className="eyebrow">Reusable content</p><h1>Block library</h1><p>A block type defines structure and behavior. Content records supply the words for a specific purpose and can be reused across pages.</p></header><div className="actions"><Link className="button button-primary" href="/admin/blocks/new">Create block</Link></div><section className="admin-card"><h2>Shared content records</h2><p>Publishing a shared record updates every page that references it. Editing a draft leaves the last published content visible.</p><div className="admin-block-grid">{Object.values(store.blocks).map((record) => <article className="admin-card" key={record.draft.id}><span className="admin-badge">{record.draft.type} · {record.status}</span><h3><Link href={`/admin/blocks/${record.draft.id}`}>{record.draft.title}</Link></h3><p>{usageOf(record.draft.id, store).length} page(s) use this record</p><small>{record.draft.id}</small></article>)}</div></section><section className="admin-card"><h2>Original registry · 44 block types</h2><p>Shell blocks belong to the layout. Other planned types become editable when their renderer, data validation and evidence rules are implemented.</p>{blockContracts.map((block) => <details key={block.id} className="admin-contract"><summary>{block.id} · {block.name} — {supportsBlock(block.id) ? "Implemented" : block.id.startsWith("G") ? "Shared shell contract" : "Planned"}</summary><p>{block.contract}</p></details>)}</section></>;
+}

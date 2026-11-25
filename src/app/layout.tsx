@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { SiteShell } from "@/components/layout/site-shell";
 import { site } from "@/config/site";
 import "./globals.css";
 
@@ -39,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en-AU"
       className={`${bodyFont.variable} ${headingFont.variable}`}
     >
-      <body><SiteShell>{children}</SiteShell></body>
+      <body>{children}</body>
     </html>
   );
 }

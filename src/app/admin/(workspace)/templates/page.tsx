@@ -1,0 +1,10 @@
+import { requireStaff } from "@/lib/admin/auth";
+import { templates } from "@/config/templates";
+import { blockContracts, templateContracts } from "@/lib/blocks/schema";
+import Link from "next/link";
+import { readCompositions } from "@/lib/blocks/store";
+export default async function Page() {
+  await requireStaff();
+  const store = await readCompositions();
+  return <><header className="admin-heading"><p className="eyebrow">Architecture reference</p><h1>Template registry</h1><p>Twenty specifications extracted from the original reference. Each defines default order, required answers and evidence-dependent slots.</p></header><div className="actions"><Link className="button button-primary" href="/admin/templates/new">Create template</Link></div>{Object.values(store.templates).map((record) => <article key={record.draft.id} className="admin-card"><span className="admin-badge">{record.status}</span><h2><Link href={`/admin/templates/${record.draft.id}`}>{record.draft.name}</Link></h2><p>{record.draft.description}</p><p>{record.draft.placements.length} slots</p></article>)}<p className="admin-notice">A03 and A06 are connected to the page composer. Other specifications remain planned; listing them does not enable page creation or publication. G01/G02 are shared shell contracts; G03/G04 apply by page context.</p>{templateContracts.map((template) => <section className="admin-card" key={template.id}><h2>{template.id} · {templates[template.id as keyof typeof templates].name}</h2><p>{templates[template.id as keyof typeof templates].pattern}</p><details><summary>{template.placements.length} placements · View specification</summary><ol>{template.placements.map((placement) => <li className="admin-template-slot" key={`${placement.order}-${placement.block}`}><strong>{placement.block} · {blockContracts.find((block) => block.id === placement.block)?.name}</strong><span className="admin-badge">{placement.rule === "R" ? "Required" : placement.rule === "C" ? "Conditional" : "Optional"}</span><p>{placement.contract}</p></li>)}</ol></details></section>)}</>;
+}
