@@ -11,7 +11,7 @@ test("staff authentication, publication isolation, concurrency and revocation", 
   const password = randomBytes(24).toString("hex");
   const salt = randomBytes(16).toString("hex");
   const base = "http://localhost:3002";
-  const server = spawn(process.execPath, ["node_modules/next/dist/bin/next", "start", "--port", "3002"], { env: { ...process.env, ADMIN_USERNAME: "test-editor", ADMIN_PASSWORD_HASH: salt + ":" + scryptSync(password, salt, 64).toString("hex"), ADMIN_DATA_DIR: data }, stdio: ["ignore", "pipe", "pipe"] });
+  const server = spawn(process.execPath, ["node_modules/next/dist/bin/next", "start", "--port", "3002"], { env: { ...process.env, ICE_STORAGE: "filesystem", ADMIN_USERNAME: "test-editor", ADMIN_PASSWORD_HASH: salt + ":" + scryptSync(password, salt, 64).toString("hex"), ADMIN_DATA_DIR: data }, stdio: ["ignore", "pipe", "pipe"] });
   let logs = "";
   server.stdout.on("data", (chunk) => { logs += chunk; });
   server.stderr.on("data", (chunk) => { logs += chunk; });

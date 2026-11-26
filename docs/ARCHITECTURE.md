@@ -239,3 +239,80 @@ Reference-required functions remain required, including B39-first A20. A03/A06 p
 creation validates service/locality context using the published template family.
 Variant-specific executable requirements, canonical family routes and evidence models
 remain future work, as documented in TEMPLATE-REFERENCE-AUDIT.md.
+
+## Supabase connection boundary — 26 November 2026
+
+Supabase JS is available through the server-only src/lib/supabase/server.ts factory.
+It uses NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY with
+session persistence/refresh disabled. This anonymous client obeys database RLS;
+local staff login does not establish a Supabase user identity. Settings performs a
+bounded uncached API check after staff authorization. The CLI probe reads Next.js
+environment settings and reports HTTP status and exposed resource names only.
+The configured pair currently returns HTTP 401. No storage migration or policy
+changes have occurred. Plan private transactional storage only after credentials
+and existing schema are verified; never expose drafts through anonymous policies.
+
+Credential recheck on 26 November: SUPABASE_SECRET_KEY successfully authenticated
+(HTTP 200); the public key still returns 401. This verifies server access only;
+the current public-client status indicator may still show rejection. Storage
+adapters remain local pending private transactional integration.
+
+Supabase SSR package is installed for future cookie-based auth integration; no
+Supabase Auth flow has been activated. Use pnpm for all dependency changes to
+preserve the lockfile and linked dependency layout.
+
+Correction, 26 November: /rest/v1/ schema discovery requires a secret key in this
+project. Its 401 did not establish an invalid publishable key. The corrected
+connection check uses /rest/v1/__ice_connection_probe__?select=*&limit=0 and
+accepts success or the specific 404/PGRST205 missing-table response as evidence
+of authenticated Data API reachability. It does not assert table grants or RLS
+behavior. Both keys are verified; no key replacement is required. Previous
+credential-failure notes are superseded; storage migration remains open.
+
+## Active Supabase persistence — 26 November 2026
+
+Supersedes earlier filesystem-only decisions for runtime. ICE_STORAGE=supabase
+selects the private Data API adapter; filesystem is explicit local QA/rollback mode.
+A single RLS-protected ice_documents table namespaces services/workspace/staff/
+sessions/quotes. Only service_role has table grants; no browser policies exist.
+The complete composition workspace remains one schema-2 document. Its CAS revision
+makes dependency checks and a workspace write atomic; independent builder requests
+retain partial-save semantics. Service and quote updates also compare revisions.
+Missing data or database failure never triggers silent local fallback.
+Staff usernames and salted scrypt hashes migrate unchanged into a private Postgres
+record; existing authentication remains, rather than creating Supabase Auth users.
+Sessions are database-backed, opaque-token-hashed, expire in eight hours and bind
+the exact password hash verified at login. Rotating database credentials invalidates
+sessions. Quote tokens stay hashed, drafts retain fixed expiry and reset deletes DB
+rows. Local staff variables were removed only after migration/hash verification.
+SQL bootstrap and import run in one transaction via the pooler. Private backups and
+local source records remain ignored. See SUPABASE.md for commands and rollback.
+Single-operator roles, process-local login limiting and traffic-triggered cleanup
+remain explicit production limits; full Phase 3 acceptance is still open.
+
+Admin uncached reads require page-segment Suspense boundaries for instant
+navigation. Layout-level Suspense covers initial loads but can sit above the
+shared-layout render scope on client transitions. Each workspace page directory
+now has loading.tsx reusing the accessible workspace fallback. Staff/private reads
+remain uncached; no auth or content cache was introduced. Live integration supports
+SUPABASE_TEST_DEV=1 to check the installed Next.js development validation diagnostics.
+
+## Domain table projection boundary — 26 November 2026
+
+The private atomic ice_documents API remains authoritative for existing CMS/auth/
+quote writes. Twenty-five added domain tables make records, snapshots, template
+slots, page/block relationships and histories queryable and constrained. A fixed-
+search-path SECURITY INVOKER trigger maintains document-derived tables within the
+original transaction. Source deletion cascades; invalid relationships roll back
+source and projections. Do not manually edit projections as a second write path.
+Separate business/geography/contract models are seeded from actual source data;
+service scopes, evidence, price metadata and unknown regions remain empty pending
+editors and provenance. All 26 application tables have RLS and restricted grants.
+Every FK has a leading index. Stable locality IDs survive postcode relationships.
+Private login counters now use an atomic invoker RPC instead of process-local state.
+Full audit, deployment commands, schema limitations and verification in DATABASE-AUDIT.md.
+
+Source handoff, 26 November: retain the documented 26-table transaction/projection
+boundary and separate active editors from seeded/future models. Resume B03/B05 via
+repositories rather than enabling unapproved evidence/pricing/contact persistence.
+No architecture or production-activation change is implied by repository push.

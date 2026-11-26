@@ -12,9 +12,17 @@
     "test:journey": "node --test tests/quote-journey.test.mjs",
     "test:admin": "node --test tests/admin.test.mjs",
     "test:builder": "node --experimental-strip-types --test tests/builder.test.mjs",
+    "test:database": "tsx tests/database-schema.mts",
+    "migrate:domains": "tsx scripts/migrate-domain-schema.mts",
+    "test:supabase": "tsx tests/supabase.mts",
+    "migrate:supabase": "tsx scripts/migrate-supabase.mts",
+    "verify:supabase": "node scripts/check-supabase.mjs",
     "admin:setup": "node scripts/setup-admin.mjs"
   },
   "dependencies": {
+    "@next/env": "16.4.6",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.2",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
@@ -26,7 +34,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "postgres": "^4.1.1",
     "tailwindcss": "4.3.3",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   },
   "packageManager": "pnpm@10.10.0"

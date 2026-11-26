@@ -1,3 +1,4 @@
+import { databaseEnabled, readDocument, writeDocument, StorageConflict } from "@/lib/supabase/storage";
 import "server-only";
 import { mkdir, readFile, writeFile, rename, rm } from "node:fs/promises";
 import { randomBytes } from "node:crypto";
@@ -11,7 +12,10 @@ const directory = (dataRoot?: string) => path.join(dataRoot || process.env.ADMIN
 const file = (dataRoot?: string) => path.join(directory(dataRoot), "workspace.json");
 export async function readCompositions(dataRoot?: string): Promise<CompositionStore> {
   try {
-    const store = JSON.parse(await readFile(file(dataRoot), "utf8"));
+    const store = databaseEnabled() && !dataRoot
+      ? (await readDocument<CompositionStore>("workspace", "main"))?.payload
+      : JSON.parse(await readFile(file(dataRoot), "utf8"));
+    if (!store) throw new Error("Database workspace missing. Run migration before activation.");
     if (store.schemaVersion === 1) return { ...store, schemaVersion: 2, templates: {} };
     if (store.schemaVersion !== 2) throw new Error("Unsupported composition storage version.");
     return store;
@@ -50,15 +54,18 @@ function revision<T>(draft: T, actor: string): Revision<T> {
   return { draft, published: structuredClone(draft), publishedRevision: 0, status: "draft", version: 0, owner: actor, source: "", history: [] };
 }
 export async function mutateComposition(kind: RecordKind, id: string, form: FormData, actor: string) {
-  await mkdir(directory(), { recursive: true, mode: 0o700 });
+  const remote = databaseEnabled();
+  const snapshot = remote ? await readDocument<CompositionStore>("workspace", "main") : null;
+  if (remote && !snapshot) throw new Error("Database workspace missing.");
+  if (!remote) await mkdir(directory(), { recursive: true, mode: 0o700 });
   const lock = path.join(directory(), "workspace.lock");
-  try { await mkdir(lock); }
+  try { if (!remote) await mkdir(lock); }
   catch (error) {
     if ((error as NodeJS.ErrnoException).code === "EEXIST") throw new CompositionInputError("The workspace is being updated. Try again. An operator must clear the lock after a stopped writer.");
     throw error;
   }
   try {
-    const store = await readCompositions();
+    const store = snapshot?.payload ?? await readCompositions();
     let creatingPage = false;
     if (id === "new") {
       const nextId = form.get("newId");
@@ -151,11 +158,16 @@ export async function mutateComposition(kind: RecordKind, id: string, form: Form
     }
     record.version++;
     record.history.push({ action: String(action), actor, at: new Date().toISOString(), version: record.version });
+    if (remote) {
+      try { await writeDocument("workspace", "main", store, snapshot!.revision); }
+      catch (error) { if (error instanceof StorageConflict) throw new CompositionInputError(error.message); throw error; }
+      return record;
+    }
     const temporary = file() + "." + randomBytes(8).toString("hex") + ".tmp";
     try {
       await writeFile(temporary, JSON.stringify(store), { flag: "wx", mode: 0o600 });
       await rename(temporary, file());
     } finally { await rm(temporary, { force: true }); }
     return record;
-  } finally { await rm(lock, { recursive: true, force: true }); }
+  } finally { if (!remote) await rm(lock, { recursive: true, force: true }); }
 }

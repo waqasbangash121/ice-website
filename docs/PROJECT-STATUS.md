@@ -1,8 +1,8 @@
 # Project checkpoint
 
-Updated: 25 November 2026 (Asia/Karachi).
+Updated: 26 November 2026 (Asia/Karachi).
 Current phase: Phase 3 — Content administration.
-Status: local block/template/page creation, previews and working publication delivered; full CMS acceptance
+Status: Supabase content, quote and staff persistence migrated and active; block/template/page creation, previews and working publication delivered; full CMS acceptance
 remains open. Phase 2 review build remains complete with production activation deferred.
 
 ## Start here when resuming
@@ -10,7 +10,7 @@ remains open. Phase 2 review build remains complete with production activation d
 1. Read this file, ROADMAP.md, ARCHITECTURE.md, PHASE-2.md and PHASE-3.md.
 2. Run git status and inspect any uncommitted changes.
 3. Read the relevant installed Next.js documentation before editing.
-4. Next: read TEMPLATE-REFERENCE-AUDIT.md; implement B03/B05 and connect managed
+4. Next: review DATABASE-AUDIT.md and SUPABASE.md, then restart any existing dev server; read TEMPLATE-REFERENCE-AUDIT.md, implement B03/B05 and connect managed
    homepage/directory families, then variant rules and checklist contents/printing.
 5. Do not enable CRM submission, publish prices or remove noindex automatically.
    The user explicitly requested disabled delivery and draft content.
@@ -239,3 +239,148 @@ content or its quote integration while working on this custom site.
 
 Update this file and phase checkboxes at session end with actual checks, remaining
 limits and an exact next step. Keep the handoff and code in the same commit.
+
+## Supabase connection setup — 26 November 2026
+
+Added the Supabase JS server client, a credential-safe `pnpm verify:supabase`
+command and an authenticated Settings connection indicator. Existing .env.local
+contains the project URL and publishable key; values were not printed or committed.
+The live Data API probe returned HTTP 401: credentials are not yet verified.
+CMS records, staff sessions and quote drafts continue to use the local adapters.
+No records or database policies were changed. Private CMS migration needs a server
+secret or a Supabase Auth design; a publishable key alone does not authorize the
+existing local staff identity. Next: correct the URL/key pair and rerun the probe,
+then inspect the existing schema and implement transactional private storage.
+Phase 3 acceptance remains open.
+Verification: lint, typecheck and production build passed on 26 November 2026.
+Live connectivity check failed with HTTP 401; no successful database connection
+or migrated data is claimed. Correct credentials are the next required input.
+
+## Supabase credential recheck — 26 November 2026
+
+Updated credentials checked without printing values or reading table rows.
+The SUPABASE_SECRET_KEY successfully authenticated to the Data API (HTTP 200).
+The NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY still returned HTTP 401 despite having
+the expected prefix. Server connectivity is verified; the public key needs correction.
+Existing CMS/draft adapters remain local; no migration or policy changes performed.
+Next: use the verified server credential for private transactional storage after
+schema inspection, and replace the rejected publishable key with the project key.
+
+## Package installation recovery — 26 November 2026
+
+The user's npm install crashed in Arborist Link.matches while traversing the
+pnpm-managed node_modules tree. Installed the requested Supabase JS/SSR packages
+using pnpm; @supabase/ssr 0.12.7 added, existing JS client retained. Typecheck passed.
+No package-lock.json was created. Continue using pnpm for this checkout.
+Next: inspect Supabase schema and implement the private transactional adapter;
+public key correction and full Phase 3 acceptance remain open.
+
+Latest requested credential recheck (26 November 2026): publishable key HTTP 401;
+server secret HTTP 200. Read-only requests only, no records retrieved or changed.
+Next step remains correcting the publishable key and inspecting schema before
+private storage migration. No milestone or acceptance status changed.
+
+## Correction: publishable key verified — 26 November 2026
+
+Supersedes earlier reports that the publishable key was invalid. The previous
+probe requested /rest/v1/, whose schema endpoint rejects publishable keys with
+"Secret API key required". The key was not the problem. No inherited environment
+overrides or duplicate definitions were found. Official SDK table request reached
+PostgREST successfully (PGRST205 missing-table response).
+Corrected both CLI verification and admin Settings to probe a reserved nonexistent
+table with limit=0, accepting only success or HTTP 404/PGRST205. This verifies API
+authentication without reading records; it does not verify table permissions.
+pnpm verify:supabase now passes. Server secret was already verified. No key
+replacement is needed. CMS storage remains local; next inspect schema using the
+server secret and implement private transactional adapters. Phase 3 remains open.
+Verification after probe correction: live Supabase check, lint, typecheck and
+production build all passed. No database rows or policies were changed.
+
+## Supabase migration — 26 November 2026
+
+Supersedes local-storage instructions above for the normal checkout. See SUPABASE.md.
+Migrated 15 records transactionally: all catalogue seeds/current records, the complete
+saved composition workspace, the existing operator username/salted password hash and
+an unexpired staff session. No unexpired quote drafts existed at import; new drafts
+now use the database adapter. Existing files and private backups remain retained.
+Enabled ICE_STORAGE=supabase after verifying the migrated credentials; removed the
+local staff credential variables. Admin login/password are preserved, using private
+Postgres records rather than Supabase Auth. Credential rotation now updates the DB.
+CAS revisions protect service/workspace/quote writes; no anonymous table access.
+Initial live checks passed: DB-only staff login, logout/rotation revocation, private
+CMS saves, anonymous denial, concurrent service/quote writes and quote expiry.
+Lint/typecheck/build, local admin and builder regressions passed. Final reset/public
+foundation follow-up is being recorded below. Full CMS/template acceptance stays open.
+Next: restart any already-running user dev server, review admin saves on Supabase,
+then resume B03/B05/template family wiring. Shared login throttling, scheduled expiry
+cleanup and production backup restore verification remain launch limitations.
+
+Final verification: lint, typecheck and production build passed with Supabase active.
+Live isolated Supabase suite passed, including actual quote reset deletion and the
+8-page/12-service foundation checks (links, metadata, robots and HTTP 404).
+Existing admin and builder regressions passed. QA rows were cleaned and owned QA
+servers stopped. No website deployment or Git push performed. Restart the user's
+already-running development server to load the new environment selection.
+
+## Admin instant-navigation fix — 26 November 2026
+
+Added a shared accessible loading fallback and loading.tsx boundaries at every
+workspace page segment. A boundary only in the shared workspace layout (or only
+at its root loading file) cannot cover all narrower client-navigation render scopes.
+Supabase reads stay uncached and staff authorization remains in each page.
+Extended the live integration test with SUPABASE_TEST_DEV=1 and authenticated
+requests across dashboard, blocks/pages/templates/services/settings, plus checks
+for uncached-data validation diagnostics in response bodies and server output.
+Passed development live Supabase suite and public foundation, lint/typecheck/build.
+No schema or policy changes. Physical browser navigation was not automated in this
+check; development validation runs at the shared-layout boundaries on these loads.
+Next: reload the user's admin and verify navigation, then resume B03/B05 wiring.
+Final follow-up: production live Supabase/public foundation and admin regressions also passed. Isolated QA rows removed and owned servers stopped.
+
+## Domain table audit — 26 November 2026
+
+See DATABASE-AUDIT.md for the full source-to-table inventory and actual editor wiring.
+Created 25 additional tables (26 including ice_documents), indexed FK relationships,
+private RLS/grants and invoker-rights transactional projection synchronization.
+Preserved all 16 current source records unchanged. Existing application saves update
+services, blocks/templates/pages, both snapshot placement/slot relationships,
+histories, staff credentials/sessions and quote rows in the same DB transaction.
+Seeded existing business/NSW/planning Sydney and all 44/20/177 reference contracts.
+Scope/evidence/pricing/regions stay empty pending real data and editors. Static
+settings/geography are seeded models, not yet live admin-managed repositories.
+Moved process-memory login limits to a private shared atomic database counter.
+Passed schema catalog/API checks, source equality, constraints, indexed FKs,
+concurrent throttle behavior, live app-to-projection saves/cascades, public foundation,
+lint/typecheck/build, local admin and builder regressions. Hosted Advisors attempted
+but unavailable without a Management API token; SQL/API checks are recorded instead.
+No contact persistence, CRM activation, pricing publication, indexation or deployment.
+Next: review DATABASE-AUDIT.md/tables; wire business/geography repositories when
+implementing B03/B05, then resume family coverage. Full Phase 3 acceptance stays open.
+
+Supabase CLI local migration listing is unavailable because the local stack is not
+running. Hosted table creation and live SQL/API checks are verified independently;
+no local/hosted CLI migration-history synchronization is claimed.
+
+Final audit verification: migration rerun preserved all 16 source records; final
+live Supabase tests passed after context FKs were applied (including related-table
+updates, cascade cleanup, concurrent saves, expiry/reset and public foundation).
+Expiry QA uses a fixed historic fixture and checks the fixture update succeeded.
+Lint/typecheck/build, database catalog/constraint/index tests, admin and builder
+regressions passed. Owned QA rows/servers cleaned up. No source push or deployment.
+
+## End-of-session source checkpoint — 26 November 2026
+
+User requested committing/pushing this verified checkpoint and resuming tomorrow
+(27 November 2026, Asia/Karachi). Includes Supabase persistence/credential migration,
+all 26 application tables, transactional domain synchronization, shared login
+throttling, admin loading boundaries, operational/audit docs and installed Supabase
+skills/lock metadata. Secrets/private data/backups and CLI temp files stay ignored.
+Verification: lint, typecheck, build, database schema/privacy/constraint/index audit,
+live Supabase saves/projection checks, public foundation, admin and builder suites
+passed. Source documents preserved. Hosted Advisors and local CLI history limits
+are recorded in DATABASE-AUDIT.md; full Phase 3/4 acceptance remains open.
+Exact next session: read this checkpoint, DATABASE-AUDIT.md, SUPABASE.md and
+TEMPLATE-REFERENCE-AUDIT.md; check git status; review the user's restarted admin
+against Supabase; then implement B03/B05 and managed homepage/directory wiring.
+CRM/contact submission, estimator and indexing remain disabled. Git publication
+is not website deployment. No reminder or automatic follow-up scheduled.

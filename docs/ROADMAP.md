@@ -49,7 +49,7 @@ flow work without transmitting an enquiry. Achieved. Original production accepta
 (real lead receipt and approved operational data) remains deferred, not silently passed.
 
 ## Phase 3 — Content administration
-Status: in progress (25 November 2026); initial local service-admin review build.
+Status: in progress (26 November 2026); Supabase persistence and staff credential migration active.
 
 - [x] Add protected Content Studio shell and local single-operator sign-in.
 - [x] Edit service catalogue cards with private previews, revision history and
@@ -133,3 +133,55 @@ Status: not started.
 
 Acceptance: production journeys work and approved pages are discoverable.
 GitHub push is source publication; it is not website hosting.
+
+26 November 2026 connection setup: Supabase server client, admin connection status
+and verification command added. Live verification returned HTTP 401 with the
+configured public credentials; database storage migration remains open. Next:
+correct credentials, verify connectivity and inspect schema before adapter migration.
+
+26 November credential recheck: server secret authenticated to the Data API
+(HTTP 200); publishable key remains rejected (HTTP 401). Storage migration remains
+open; server reachability is now verified. Next: schema inspection/private adapter.
+
+26 November package recovery: installed requested @supabase/ssr with pnpm after
+npm Arborist failed against pnpm links. Typecheck passed; migration remains open.
+
+Correction, 26 November: both Supabase keys work. Earlier publishable-key failures
+were caused by probing secret-only schema discovery. CLI/admin checks corrected;
+live public-key probe passes. No credential correction needed. Private database
+storage migration remains the next integration step; Phase 3 acceptance stays open.
+
+## Supabase migration checkpoint — 26 November 2026
+
+- [x] Migrate existing catalogue/composition and staff hash/session records to Supabase.
+- [x] Enable private server-only storage with RLS/grants and CAS write conflicts.
+- [x] Preserve username/password login and database-backed credential rotation.
+- [x] Add database quote draft recovery, expiry and conflicting-write handling.
+
+15 records migrated and verified; local private backups retained. Database mode is
+active. Staff roles, specialist editors and other Phase 3 acceptance remain open.
+Next: review actual admin behavior after restart, then B03/B05/template wiring.
+Production shared throttling, scheduled cleanup and backup restore drills remain open.
+
+26 November navigation follow-up: all workspace page segments now have loading
+boundaries below shared layouts. Development-mode authenticated admin checks and
+live Supabase suite pass without uncached-data validation errors. Lint/typecheck/
+build pass; no Phase 3 milestone status changes. Next: user admin navigation review.
+
+## Database audit follow-up — 26 November 2026
+
+- [x] Audit all current persistence/state/config and explicit domain interfaces.
+- [x] Create 25 missing domain tables and preserve existing source records.
+- [x] Synchronize current CMS/auth/quote saves transactionally with queryable tables.
+- [x] Persist shared login throttling with atomic database attempt reservations.
+- [x] Verify privacy, relational constraints, source equality and live saving behavior.
+- [ ] Wire business/geography table repositories and their editors as B03/B05 expands.
+- [ ] Implement scope/evidence/pricing editors with actual approved content.
+
+See DATABASE-AUDIT.md. Seeded/reference/future tables are distinguished from active
+saving paths. No extra template-family/editor completion claimed; Phase 3 stays open.
+
+26 November session checkpoint: user requested source commit/push and continuation
+on 27 November (Asia/Karachi). Resume with DATABASE-AUDIT.md/SUPABASE.md, user admin
+review, then B03/B05 and managed homepage/directory wiring. Phase acceptance stays
+open; no production website deployment or feature activation is part of this push.

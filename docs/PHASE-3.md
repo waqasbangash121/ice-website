@@ -1,7 +1,7 @@
 # Phase 3 — Content administration
 
-Updated: 25 November 2026 (Asia/Karachi).
-Status: local creation, composition, preview and publication implemented. Full
+Updated: 26 November 2026 (Asia/Karachi).
+Status: creation, composition, preview, publication and Supabase persistence implemented. Full
 production CMS acceptance remains open.
 
 ## Scope and reference
@@ -290,3 +290,20 @@ Next implementation milestone: B03 service selection and B05 geography directory
 repositories/renderers, followed by managed A01/A02/A04/A05 wiring. Variant-specific
 requirements and B19/B20 shared-scope checklist/contents/print are the next bounded
 follow-ups. Full production Phase 3/4 acceptance is still open.
+
+## Supabase cutover — 26 November 2026
+
+Normal runtime now uses private Supabase storage for content, staff credential hash,
+sessions and quote drafts. Existing username/password is preserved. Local setup and
+filesystem paths above describe fallback/QA only. See SUPABASE.md for active setup,
+credential rotation, transaction model, backup/rollback and remaining launch limits.
+Full content administration acceptance remains open.
+
+## Database schema audit follow-up — 26 November 2026
+
+26 private application tables now cover the current saves plus explicit domain
+contracts. Document-to-domain synchronization is transactional; source records and
+current editors remain compatible. Business/geography/specification seeds are
+separate from active admin editor wiring. The shared login limiter is now persisted
+atomically in Postgres. See DATABASE-AUDIT.md for the complete inventory and tests.
+Full Phase 3 CMS/family/editor acceptance is still open.

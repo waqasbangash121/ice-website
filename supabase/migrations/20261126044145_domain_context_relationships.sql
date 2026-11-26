@@ -1,0 +1,10 @@
+alter table public.ice_pages add constraint ice_pages_service_fk foreign key(service_id) references public.ice_services(id) deferrable initially deferred;
+alter table public.ice_quote_drafts add constraint ice_quote_drafts_service_fk foreign key(service_id) references public.ice_services(id) deferrable initially deferred;
+alter table public.ice_pages add column template_id text generated always as (record->'draft'->>'template') stored not null;
+alter table public.ice_pages add column builtin_template_id text generated always as (case when (record->'draft'->>'template') ~ '^A[0-9]{2}$' then record->'draft'->>'template' end) stored references public.ice_template_contracts(id);
+alter table public.ice_pages add column custom_template_id text generated always as (case when (record->'draft'->>'template') !~ '^A[0-9]{2}$' then record->'draft'->>'template' end) stored;
+alter table public.ice_pages add constraint ice_pages_template_identity check(num_nonnulls(builtin_template_id,custom_template_id)=1);
+alter table public.ice_pages add constraint ice_pages_custom_template_fk foreign key(workspace_id,custom_template_id) references public.ice_templates(workspace_id,id) deferrable initially deferred;
+create index ice_pages_builtin_template on public.ice_pages(builtin_template_id);
+create index ice_pages_custom_template on public.ice_pages(workspace_id,custom_template_id);
+notify pgrst,'reload schema';

@@ -1,0 +1,16 @@
+import nextEnv from "@next/env";
+import { createClient } from "@supabase/supabase-js";
+import { readFile, writeFile, rename, mkdir } from "node:fs/promises";
+nextEnv.loadEnvConfig(process.cwd());
+const db = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SECRET_KEY, { auth: { persistSession: false, autoRefreshToken: false } });
+const { data, error } = await db.from("ice_documents").select("payload").eq("namespace", "staff").eq("id", "operator").single();
+if (error || !data || data.payload.username !== process.env.ADMIN_USERNAME || data.payload.passwordHash !== process.env.ADMIN_PASSWORD_HASH) throw new Error("Migrated staff credentials do not match; refusing cutover.");
+const workspace = await db.from("ice_documents").select("id").eq("namespace", "workspace").eq("id", "main").single();
+if (workspace.error) throw new Error("Workspace missing; refusing cutover.");
+const existing = await readFile(".env.local", "utf8");
+await mkdir(".data/backups", { recursive: true, mode: 0o700 });
+await writeFile(`.data/backups/env-before-supabase-${Date.now()}`, existing, { mode: 0o600, flag: "wx" });
+const updated = existing.split(/\r?\n/).filter(line => !/^\s*(?:export\s+)?(?:ADMIN_USERNAME|ADMIN_PASSWORD_HASH|ICE_STORAGE)\s*=/.test(line)).join("\n").trimEnd() + "\nICE_STORAGE=supabase\n";
+await writeFile(".env.local.supabase.tmp", updated, { mode: 0o600, flag: "wx" });
+await rename(".env.local.supabase.tmp", ".env.local");
+console.log("Supabase activated. Staff credentials removed from .env.local; private backup retained. Restart the website server.");

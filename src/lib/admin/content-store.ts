@@ -1,3 +1,4 @@
+import { databaseEnabled, readDocument, writeDocument, StorageConflict } from "@/lib/supabase/storage";
 import "server-only";
 import { mkdir, readFile, writeFile, rename, rm } from "node:fs/promises";
 import { randomBytes } from "node:crypto";
@@ -23,7 +24,15 @@ function seed(id: string): Service {
 }
 const file = (id: string, dataRoot?: string) => { seed(id); return path.join(directory(dataRoot), id + ".json"); };
 export async function readService(id: string, dataRoot?: string): Promise<ManagedService> {
-  try { return JSON.parse(await readFile(file(id, dataRoot), "utf8")); }
+  try {
+    if (databaseEnabled() && !dataRoot) {
+      seed(id);
+      const row = await readDocument<ManagedService>("services", id);
+      if (!row) throw new Error("Database service missing. Run migration before activation.");
+      return row.payload;
+    }
+    return JSON.parse(await readFile(file(id, dataRoot), "utf8"));
+  }
   catch (error) {
     if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
     return { draft: seed(id), status: "draft", version: 0, owner: "", source: "docs/SOURCE-INVENTORY.md", history: [] };
@@ -39,15 +48,18 @@ function text(value: FormDataEntryValue | null, label: string, max: number) {
 }
 export async function mutateService(id: string, form: FormData, actor: string) {
   seed(id);
-  await mkdir(directory(), { recursive: true, mode: 0o700 });
+  const remote = databaseEnabled();
+  const snapshot = remote ? await readDocument<ManagedService>("services", id) : null;
+  if (remote && !snapshot) throw new Error("Database service missing.");
+  if (!remote) await mkdir(directory(), { recursive: true, mode: 0o700 });
   const lock = file(id) + ".lock";
-  try { await mkdir(lock); }
+  try { if (!remote) await mkdir(lock); }
   catch (error) {
     if ((error as NodeJS.ErrnoException).code === "EEXIST") throw new ContentInputError("Another edit is in progress. Try again; if a process stopped, ask the operator to clear its lock.");
     throw error;
   }
   try {
-    const record = await readService(id);
+    const record = snapshot?.payload ?? await readService(id);
     if (Number(form.get("version")) !== record.version) throw new ContentInputError("This service changed in another tab. Reload before editing.");
     const action = form.get("action");
     if (action === "save") {
@@ -65,11 +77,16 @@ export async function mutateService(id: string, form: FormData, actor: string) {
     }
     record.version++;
     record.history.push({ action: String(action), actor, at: new Date().toISOString(), version: record.version });
+    if (remote) {
+      try { await writeDocument("services", id, record, snapshot!.revision); }
+      catch (error) { if (error instanceof StorageConflict) throw new ContentInputError(error.message); throw error; }
+      return record;
+    }
     const temp = file(id) + "." + randomBytes(8).toString("hex") + ".tmp";
     try {
       await writeFile(temp, JSON.stringify(record), { flag: "wx", mode: 0o600 });
       await rename(temp, file(id));
     } finally { await rm(temp, { force: true }); }
     return record;
-  } finally { await rm(lock, { recursive: true, force: true }); }
+  } finally { if (!remote) await rm(lock, { recursive: true, force: true }); }
 }

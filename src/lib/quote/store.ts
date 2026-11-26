@@ -1,3 +1,4 @@
+import { databaseEnabled, readDocument, writeDocument, deleteDocument, cleanExpiredDocuments, StorageConflict } from "@/lib/supabase/storage";
 import { sydney, sydneyLabel } from "../../data/locations";
 import "server-only";
 import { createHash, randomBytes } from "node:crypto";
@@ -16,9 +17,12 @@ export function newToken() { return randomBytes(32).toString("hex"); }
 export async function readDraft(token?: string): Promise<SavedQuote | null> {
   if (!token || !validToken(token)) return null;
   try {
-    const record = JSON.parse(await readFile(filePath(token), "utf8")) as SavedQuote;
+    const snapshot = databaseEnabled() ? await readDocument<SavedQuote>("quotes", key(token)) : null;
+    const record = databaseEnabled() ? snapshot?.payload : JSON.parse(await readFile(filePath(token), "utf8")) as SavedQuote;
+    if (!record) return null;
     if (Date.parse(record.expiresAt) <= Date.now()) {
-      await rm(filePath(token), { force: true });
+      if (databaseEnabled()) await deleteDocument("quotes", key(token), snapshot!.revision);
+      else await rm(filePath(token), { force: true });
       return null;
     }
     return record;
@@ -28,10 +32,18 @@ export async function readDraft(token?: string): Promise<SavedQuote | null> {
   }
 }
 
-// Atomic per-session file writes for this single-node development deployment.
-// Replace this adapter with transactional durable storage before multi-instance hosting.
+// Supabase uses compare-and-swap writes; filesystem mode retains local review locks.
 export async function saveDraft(token: string, details: QuoteDetails, version: number, sourcePath: string, entryKey: string) {
   if (!validToken(token)) throw new Error("Invalid draft token");
+  if (databaseEnabled()) {
+    const snapshot = await readDocument<SavedQuote>("quotes", key(token));
+    const previous = snapshot && Date.parse(snapshot.payload.expiresAt) > Date.now() ? snapshot.payload : null;
+    if ((previous?.version ?? 0) !== version) throw new DraftConflict("Your draft changed in another tab. Reload to use the latest saved version.");
+    const record: SavedQuote = { details, version: version + 1, localityId: details.location.toLowerCase() === sydneyLabel.toLowerCase() ? sydney.id : undefined, expiresAt: previous?.expiresAt ?? new Date(Date.now() + draftLifetimeMs).toISOString(), sourcePath: previous?.sourcePath ?? sourcePath, entryKey: entryKey || previous?.entryKey || "" };
+    try { await writeDocument("quotes", key(token), record, snapshot?.revision ?? 0, record.expiresAt); }
+    catch (error) { if (error instanceof StorageConflict) throw new DraftConflict(error.message); throw error; }
+    return record;
+  }
   await mkdir(directory(), { recursive: true, mode: 0o700 });
   const lock = path.join(directory(), key(token) + ".lock");
   let acquired = false;
@@ -65,12 +77,16 @@ export async function saveDraft(token: string, details: QuoteDetails, version: n
 }
 
 export async function removeDraft(token?: string) {
-  if (token && validToken(token)) await rm(filePath(token), { force: true });
+  if (token && validToken(token)) {
+    if (databaseEnabled()) await deleteDocument("quotes", key(token));
+    else await rm(filePath(token), { force: true });
+  }
 }
 
 // Best-effort cleanup on API use; expired records are never returned.
 // Production retention also needs scheduled deletion independent of site traffic.
 export async function cleanExpiredDrafts() {
+  if (databaseEnabled()) { await cleanExpiredDocuments("quotes"); return; }
   const entries = await readdir(/* turbopackIgnore: true */ directory()).catch(() => []);
   for (const name of entries.filter((name) => /^[a-f0-9]{64}\.json$/.test(name)).slice(0, 500)) {
     const file = path.join(/* turbopackIgnore: true */ directory(), name);
